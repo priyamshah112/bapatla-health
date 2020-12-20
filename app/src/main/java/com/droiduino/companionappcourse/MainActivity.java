@@ -117,6 +117,57 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // my buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+        Button callSupportButton = findViewById(R.id.callSupportButton);
+        callSupportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, CallSupport.class);
+                startActivity(intent);
+            }
+        });
+
+        Button successfulThermometerPairingButton = findViewById(R.id.successfulThermometerPairingButton);
+        successfulThermometerPairingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, SuccessfulThermometerPairing.class);
+                startActivity(intent);
+            }
+        });
+
+        Button unsuccessfulThermometerPairingButton = findViewById(R.id.unsuccessfulThermometerPairingButton);
+        unsuccessfulThermometerPairingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, UnsuccessfulThermometerPairing.class);
+                startActivity(intent);
+            }
+        });
+
+        Button deviceSetup1Button = findViewById(R.id.deviceSetup1Button);
+        deviceSetup1Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, DeviceSetup1.class);
+                startActivity(intent);
+            }
+        });
+
+        Button splashScreenButton = findViewById(R.id.splashScreenButton);
+        splashScreenButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, SplashScreen.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     /* ============================ Thread to Create Connection ================================= */

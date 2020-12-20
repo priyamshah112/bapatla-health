@@ -69,5 +69,40 @@
             android:textAlignment="center"
             android:textSize="24sp" />
 
+        <Button
+            android:id="@+id/splashScreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Splash Screen" />
+
+        <Button
+            android:id="@+id/callSupportButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Call Support" />
+
+        <Button
+            android:id="@+id/successfulThermometerPairingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Successful Thermometer Pairing" />
+
+        <Button
+            android:id="@+id/unsuccessfulThermometerPairingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Unsuccessful Thermometer Pairing" />
+
+        <Button
+            android:id="@+id/deviceSetup1Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Device Setup" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

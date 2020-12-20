@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuccessfulThermometerPairing">
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="-127dp">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tickmark"
+                android:layout_gravity="center"
+                android:layout_marginTop="69.5dp"/>
+
+            <ImageView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/temperature_range"
+                android:layout_gravity="center"
+                android:layout_marginTop="34.7dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thermometer Pairing Successful"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:layout_marginStart="24.5dp"
+                android:layout_marginTop="62.79dp"
+                android:layout_marginEnd="24.5dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewregular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical" >
+
+                <Button
+                    android:layout_height="56dp"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/rounded_corner_button"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:text="Start Measuring"
+                    android:layout_gravity="center|bottom"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+<!--    </ScrollView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

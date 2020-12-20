@@ -15,10 +15,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SelectDeviceActivity"></activity>
+        <activity android:name=".CallSupport"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SuccessfulThermometerPairing"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".UnsuccessfulThermometerPairing"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".DeviceSetup1"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SplashScreen"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".DeviceSetup2"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
