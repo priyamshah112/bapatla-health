@@ -105,6 +105,13 @@
             android:text="Device Setup" />
 
         <Button
+            android:id="@+id/deviceSetupInfoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Device Setup Info" />
+
+        <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

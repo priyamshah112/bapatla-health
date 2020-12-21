@@ -158,6 +158,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button deviceSetupInfoButton = findViewById(R.id.deviceSetupInfoButton);
+        deviceSetupInfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, DeviceSetupInfo.class);
+                startActivity(intent);
+            }
+        });
+
         Button splashScreenButton = findViewById(R.id.splashScreenButton);
         splashScreenButton.setOnClickListener(new View.OnClickListener() {
             @Override
