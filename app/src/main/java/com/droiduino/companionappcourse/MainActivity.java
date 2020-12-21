@@ -188,6 +188,26 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button registerButton = findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Registration.class);
+                startActivity(intent);
+            }
+        });
+
+        Button recordButton = findViewById(R.id.recordButton);
+        recordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     /* ============================ Thread to Create Connection ================================= */
