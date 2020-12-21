@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-127dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="263.23dp"
+                android:src="@drawable/mobile_login"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email ID"
+                android:layout_gravity="left"
+                android:textSize="14sp"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@android:color/black"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewbook"/>
+
+            <EditText
+                android:layout_height="56dp"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_marginTop="2.5dp"
+                android:textSize="14sp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:hint="@string/forgot_password_email"
+                android:background="@drawable/rounded_corners"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/attenroundnewbook"
+                android:drawableLeft="@drawable/forgot_password_email_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:layout_gravity="left"
+                android:textSize="14sp"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="17.5dp"
+                android:textColor="@android:color/black"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewbook"/>
+
+            <EditText
+                android:layout_height="56dp"
+                android:layout_width="match_parent"
+                android:inputType="text"
+                android:textColorHint="@color/colorPrimary"
+                android:layout_marginTop="2.5dp"
+                android:textSize="14sp"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="17dp"
+                android:hint="@string/login_password"
+                android:background="@drawable/rounded_corners"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/attenroundnewbook"
+                android:drawableLeft="@drawable/login_password_icon"
+                android:drawableRight="@drawable/login_password_visibility_icon"
+                />
+
+            <Button
+                android:layout_height="56dp"
+                android:layout_width="fill_parent"
+                android:background="@drawable/rounded_corner_button"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:text="Login"
+                android:layout_gravity="center|bottom"
+                android:fontFamily="@font/attenroundnewbook"/>
+
+            <TextView
+                android:id="@+id/forgotPasswordButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgot Password"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="11.5dp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/attenroundnewbook"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="7.5dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/registerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:text="Haven't registered yet? "
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:text="Register here"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

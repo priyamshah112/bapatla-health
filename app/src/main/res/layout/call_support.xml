@@ -64,7 +64,8 @@
                             android:text="Give us a call"
                             android:textAlignment="textStart"
                             android:textSize="20sp"
-                            android:textColor="@android:color/black"/>
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/attenroundnewbook"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -72,7 +73,8 @@
                             android:text="0123456789"
                             android:textAlignment="textStart"
                             android:textSize="20sp"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/attenroundnewbook"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -110,7 +112,8 @@
                             android:text="Send us a message"
                             android:textAlignment="textStart"
                             android:textSize="20sp"
-                            android:textColor="@android:color/black"/>
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/attenroundnewbook"/>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -118,7 +121,8 @@
                             android:text="hello@bapatlahealth.co.in"
                             android:textAlignment="textStart"
                             android:textSize="20sp"
-                            android:textColor="@color/colorPrimary" />
+                            android:textColor="@color/colorPrimary"
+                            android:fontFamily="@font/attenroundnewbook" />
 
                     </LinearLayout>
 
@@ -135,7 +139,8 @@
                 android:layout_marginStart="28.5dp"
                 android:layout_marginTop="26dp"
                 android:layout_marginEnd="28.5dp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/attenroundnewbook" />
 
             <Spinner
                 android:id="@+id/productnamespinner"
@@ -159,7 +164,8 @@
                 android:hint="@string/call_support_sr_no"
                 android:background="@drawable/rounded_corners"
                 android:textColor="@color/colorPrimary"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:fontFamily="@font/attenroundnewbook" />
 
             <EditText
                 android:layout_height="56dp"
@@ -171,7 +177,8 @@
                 android:hint="@string/call_support_email"
                 android:background="@drawable/rounded_corners"
                 android:textColor="@color/colorPrimary"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:fontFamily="@font/attenroundnewbook"/>
 
             <EditText
                 android:layout_height="135dp"
@@ -183,7 +190,8 @@
                 android:hint="@string/call_support_pdescription"
                 android:background="@drawable/rounded_corners"
                 android:textColor="@color/colorPrimary"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:fontFamily="@font/attenroundnewbook"/>
 
             <Button
                 android:layout_height="56dp"
@@ -193,6 +201,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="17sp"
+                android:fontFamily="@font/attenroundnewbook"
                 android:text="Submit" />
 
         </LinearLayout>

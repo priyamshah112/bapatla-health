@@ -4,4 +4,8 @@
     <string name="call_support_sr_no">Serial Number</string>
     <string name="call_support_email">Email Address</string>
     <string name="call_support_pdescription">Problem Description</string>
+
+    <string name="forgot_password_email">Enter Email ID</string>
+
+    <string name="login_password">Password (6 or more characters)</string>
 </resources>
