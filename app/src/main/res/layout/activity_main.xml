@@ -112,11 +112,18 @@
             android:text="Device Setup Info" />
 
         <Button
-            android:id="@+id/loginButton"
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Login Button" />
+
+        <Button
+            android:id="@+id/manageButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Login Button" />
+            android:text="Manage Button" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
