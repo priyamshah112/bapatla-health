@@ -22,16 +22,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="56dp"
-                android:layout_gravity="center|bottom"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_corner_button"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="0"
                 android:fontFamily="@font/attenroundnewbook"
-                android:text="Register"
-                android:textColor="@android:color/white"
+                android:text="First Name"
+                android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -51,6 +51,19 @@
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="14sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="17.5dp"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Last Name"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
@@ -66,6 +79,19 @@
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="17.5dp"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Aadhar Number"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -83,6 +109,19 @@
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="14sp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="17.5dp"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Birth Date"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
@@ -98,89 +137,6 @@
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
                 android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="2.5dp"
-                android:layout_marginEnd="17dp"
-                android:background="@drawable/rounded_corners"
-                android:drawableLeft="@drawable/login_password_icon"
-                android:fontFamily="@font/attenroundnewbook"
-                android:hint="@string/register_mobile_no"
-                android:inputType="text"
-                android:textAlignment="textStart"
-                android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="2.5dp"
-                android:layout_marginEnd="17dp"
-                android:background="@drawable/rounded_corners"
-                android:drawableLeft="@drawable/forgot_password_email_icon"
-                android:fontFamily="@font/attenroundnewbook"
-                android:hint="@string/register_email_id"
-                android:inputType="text"
-                android:textAlignment="textStart"
-                android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginStart="17dp"
-                android:layout_marginTop="2.5dp"
-                android:layout_marginEnd="17dp"
-                android:background="@drawable/rounded_corners"
-                android:drawableLeft="@drawable/forgot_password_email_icon"
-                android:fontFamily="@font/attenroundnewbook"
-                android:hint="@string/register_home_address"
-                android:inputType="text"
-                android:textAlignment="textStart"
-                android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginTop="7.5dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/registerButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/attenroundnewbook"
-                    android:paddingRight="10dp"
-                    android:text="Already have an account? "
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/attenroundnewbook"
-                    android:paddingBottom="16dp"
-                    android:text="Sign in"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
 
             <RadioGroup
                 android:id="@+id/radio_group"
@@ -226,58 +182,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginStart="17.5dp"
-                android:layout_marginTop="15dp"
-                android:layout_weight="0"
-                android:fontFamily="@font/attenroundnewbook"
-                android:text="First Name"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginStart="17.5dp"
-                android:layout_marginTop="17.5dp"
-                android:layout_weight="0"
-                android:fontFamily="@font/attenroundnewbook"
-                android:text="Last Name"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginStart="17.5dp"
-                android:layout_marginTop="17.5dp"
-                android:layout_weight="0"
-                android:fontFamily="@font/attenroundnewbook"
-                android:text="Aadhar Number"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginStart="17.5dp"
-                android:layout_marginTop="17.5dp"
-                android:layout_weight="0"
-                android:fontFamily="@font/attenroundnewbook"
-                android:text="Birth Date"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:layout_marginStart="17.5dp"
                 android:layout_marginTop="17.5dp"
                 android:layout_weight="0"
                 android:fontFamily="@font/attenroundnewbook"
@@ -285,6 +189,22 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/login_password_icon"
+                android:fontFamily="@font/attenroundnewbook"
+                android:hint="@string/register_mobile_no"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -299,6 +219,22 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/forgot_password_email_icon"
+                android:fontFamily="@font/attenroundnewbook"
+                android:hint="@string/register_email_id"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="14sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -311,6 +247,22 @@
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/forgot_password_email_icon"
+                android:fontFamily="@font/attenroundnewbook"
+                android:hint="@string/register_home_address"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -326,6 +278,53 @@
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner_button"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Register"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="7.5dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/registerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:paddingRight="10dp"
+                    android:text="Already have an account? "
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:paddingBottom="16dp"
+                    android:text="Sign in"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

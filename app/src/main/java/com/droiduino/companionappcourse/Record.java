@@ -9,7 +9,7 @@ public class Record extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.registration);
+        setContentView(R.layout.record);
 
         // final TextView heading = findViewById(R.id.heading);
         // heading.setText("Did you know");
