@@ -7,6 +7,359 @@
     android:layout_height="match_parent"
     tools:context=".Vitals">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="259dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="22.5dp"
+            android:layout_marginEnd="22.5dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please enter the vitals signs data."
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/attenroundnewbook"
+                android:textStyle="bold"
+                android:layout_marginTop="18.5dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginStart="40.5dp"
+                android:layout_marginEnd="40.5dp"
+                android:layout_marginTop="17.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="68dp"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="000"
+                            android:paddingStart="8dp"
+                            android:paddingTop="7dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="4dp"
+                            android:background="@drawable/vitals_border_green"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/attenroundnewregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Normal"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/attenroundnewbook"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="24.5dp"
+                            android:layout_marginEnd="68.5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="68dp"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="000"
+                            android:paddingStart="8dp"
+                            android:paddingTop="7dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="4dp"
+                            android:background="@drawable/vitals_border_yellow"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/attenroundnewregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Elevated"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/attenroundnewbook"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="24.5dp"
+                            android:layout_marginEnd="68.5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="68dp"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="000"
+                            android:paddingStart="8dp"
+                            android:paddingTop="7dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="4dp"
+                            android:background="@drawable/vitals_border_red"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="12dp"
+                            android:fontFamily="@font/attenroundnewregular"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="High"
+                            android:textColor="@android:color/black"
+                            android:fontFamily="@font/attenroundnewbook"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="24.5dp"
+                            android:layout_marginEnd="68.5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Body Temperature (BT) [°F]   "
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="66.5dp"
+                    android:layout_marginTop="36.5dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners"
+                    android:text="000"
+                    android:textColor="@color/colorGrey"
+                    android:layout_marginTop="32dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="21.5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Heart Rate (HR)\n[beats per minute]"
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="139dp"
+                    android:layout_marginTop="27dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners"
+                    android:text="000"
+                    android:layout_marginTop="32dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="7dp"
+                    android:textColor="@color/colorGrey"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="21.5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Respiratory Rate (RR)\n[breaths per minute]"
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="115dp"
+                    android:layout_marginTop="27dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vitals_border_green"
+                    android:text="014"
+                    android:textColor="@color/colorGrey"
+                    android:layout_marginTop="32dp"
+                    android:paddingStart="8dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="21.5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Blood Pressure (BP)\n[mm Hg] (Systolic)"
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="128.5dp"
+                    android:layout_marginTop="27dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vitals_border_green"
+                    android:text="100"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/colorGrey"
+                    android:paddingStart="8dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="21.5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Blood Pressure (BP)\n[mm Hg] (Diastolic)"
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="128.5dp"
+                    android:layout_marginTop="27dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vitals_border_yellow"
+                    android:text="060"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/colorGrey"
+                    android:paddingStart="8dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="21.5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Blood Oxygen Saturation (SpO2)\n[% oxygen in blood]"
+                    android:textSize="16sp"
+                    android:layout_marginStart="15dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="27dp"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/vitals_border_red"
+                    android:text="110"
+                    android:layout_marginTop="32dp"
+                    android:textColor="@color/colorGrey"
+                    android:paddingStart="8dp"
+                    android:paddingTop="7dp"
+                    android:paddingRight="7dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginEnd="21.5dp"/>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corner_button"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
