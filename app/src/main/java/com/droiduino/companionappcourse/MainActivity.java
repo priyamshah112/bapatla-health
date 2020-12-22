@@ -194,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // This is the code to move to another screen
                 Intent intent = new Intent(MainActivity.this, Manage.class);
+                startActivity(intent);
             }
         });
 
