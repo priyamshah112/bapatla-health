@@ -188,6 +188,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button manageButton = findViewById(R.id.manageButton);
+        manageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Manage.class);
+            }
+        });
+
         Button registerButton = findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override

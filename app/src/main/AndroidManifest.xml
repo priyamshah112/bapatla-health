@@ -33,6 +33,8 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".DeviceSetupInfo"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Manage"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Registration"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Record"
