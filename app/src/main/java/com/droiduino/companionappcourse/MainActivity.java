@@ -227,6 +227,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button healthButton = findViewById(R.id.healthButton);
+        healthButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
+        Button travelButton = findViewById(R.id.travelButton);
+        travelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
+        Button habitatButton = findViewById(R.id.habitatButton);
+        habitatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     /* ============================ Thread to Create Connection ================================= */

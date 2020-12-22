@@ -41,6 +41,12 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Vitals"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Health"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Travel"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Habitat"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

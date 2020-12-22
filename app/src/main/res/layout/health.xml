@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Health">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="259dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please enter the health history data."
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/attenroundnewbook"
+                android:textStyle="bold"
+                android:layout_marginStart="26.5dp"
+                android:layout_marginEnd="15.5dp"
+                android:layout_marginTop="15.5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have any of the following symptoms ?"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/attenroundnewbook"
+                android:textStyle="bold"
+                android:layout_marginStart="26.5dp"
+                android:layout_marginEnd="46.5dp"
+                android:layout_marginTop="14dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginStart="40.5dp"
+                android:layout_marginEnd="40.5dp"
+                android:layout_marginTop="17.5dp">
+
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Cough"
+                    android:layout_marginStart="11.5dp"
+                    android:layout_marginTop="11dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Chills"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Shortness of Breath or Difficulty Breathing"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Muscle or Body Aches"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Sore Throat"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  New loss of Taste or Smell"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Diarrhea"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Headache"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Nausea or Vomiting"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  New Fatigue"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Congestion or Runny Nose"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Seizures"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Congestion or Runny Nose"
+                    android:layout_marginStart="11.5dp"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you have any of these pre-existing conditions?"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/attenroundnewbook"
+                android:textStyle="bold"
+                android:layout_marginStart="19.5dp"
+                android:layout_marginEnd="37.5dp"
+                android:layout_marginTop="13dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/rounded_corners"
+                android:layout_marginStart="40.5dp"
+                android:layout_marginEnd="40.5dp"
+                android:layout_marginTop="17.5dp">
+
+                <CheckBox
+                    android:id="@+id/checkBox14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Asthma or lung disease"
+                    android:layout_marginStart="11.5dp"
+                    android:layout_marginTop="11dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Heart disease"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Hypertension"
+                    android:layout_marginStart="11.5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+                <CheckBox
+                    android:id="@+id/checkBox17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Diabetes"
+                    android:layout_marginStart="11.5dp"
+                    android:layout_marginBottom="12dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginStart="26.5dp"
+                android:layout_marginEnd="26.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20.5dp"
+                android:background="@drawable/rounded_corner_button"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Save"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
