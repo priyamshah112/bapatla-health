@@ -13,18 +13,46 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
+        android:layout_marginBottom="16dp"
         android:layout_alignParentBottom="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Custom Button1"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Custom Button2"/>
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:src="@drawable/bnav1"
+            android:layout_marginTop="6.66dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:src="@drawable/bnav2"
+            android:layout_marginTop="6.66dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:src="@drawable/bnav3"
+            android:layout_marginTop="6.66dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:src="@drawable/bnav4"
+            android:layout_marginTop="6.66dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:layout_width="63dp"
+            android:layout_height="63dp"
+            android:src="@drawable/bnav5"
+            android:layout_marginTop="6.66dp"
+            android:layout_gravity="center"/>
     </LinearLayout>
 
     <ScrollView
@@ -66,6 +94,13 @@
                         android:fontFamily="@font/attenroundnewregular"
                         android:layout_marginTop="10dp"/>
 
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/name_icon"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -87,6 +122,13 @@
                         android:textColor="@color/colorPrimary"
                         android:fontFamily="@font/attenroundnewregular"
                         android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/family_icon"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
 
                 </LinearLayout>
 
