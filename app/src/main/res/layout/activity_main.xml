@@ -167,5 +167,12 @@
             android:layout_weight="1"
             android:text="Habitat Button" />
 
+        <Button
+            android:id="@+id/doctorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Doctor Button" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
