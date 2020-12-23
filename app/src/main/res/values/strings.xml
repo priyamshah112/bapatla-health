@@ -23,5 +23,8 @@
     <string name="doctor_date">12-Nov-2020</string>
     <string name="doctor_time">7:50 PM</string>
 
+    <string name="prescription_doctor_name">Enter Doctor Name</string>
+    <string name="prescription_medication_name">Enter Medication</string>
+
 
 </resources>
