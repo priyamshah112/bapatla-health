@@ -16,8 +16,12 @@
     <string name="register_email_id">Enter Email ID</string>
     <string name="register_home_address">House No, Landmark, Village, Mandal</string>
 
+    <string name="travel_city">Enter City</string>
+    <string name="travel_state">Enter State</string>
+    <string name="travel_country">Enter Country</string>
 
-
+    <string name="doctor_date">12-Nov-2020</string>
+    <string name="doctor_time">7:50 PM</string>
 
 
 </resources>

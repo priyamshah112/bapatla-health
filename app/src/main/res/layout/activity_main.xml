@@ -112,11 +112,11 @@
             android:text="Device Setup Info" />
 
         <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Login Button" />
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Login Button" />
 
         <Button
             android:id="@+id/manageButton"
@@ -145,6 +145,34 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Vitals Button" />
+
+        <Button
+            android:id="@+id/healthButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Health Button" />
+
+        <Button
+            android:id="@+id/travelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Travel Button" />
+
+        <Button
+            android:id="@+id/habitatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Habitat Button" />
+
+        <Button
+            android:id="@+id/doctorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Doctor Button" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
