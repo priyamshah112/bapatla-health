@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Vitals.class);
                 startActivity(intent);
             }
         });
@@ -233,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Health.class);
                 startActivity(intent);
             }
         });
@@ -243,7 +243,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Travel.class);
                 startActivity(intent);
             }
         });
@@ -253,7 +253,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Habitat.class);
                 startActivity(intent);
             }
         });
@@ -263,7 +263,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Profile.class);
                 startActivity(intent);
             }
         });
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Family.class);
                 startActivity(intent);
             }
         });
@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Doctor.class);
                 startActivity(intent);
             }
         });
@@ -293,7 +293,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
+                Intent intent = new Intent(MainActivity.this, Prescription.class);
+                startActivity(intent);
+            }
+        });
+
+        Button bottomNavButton = findViewById(R.id.bottomNavButton);
+        bottomNavButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, BottomNav.class);
                 startActivity(intent);
             }
         });

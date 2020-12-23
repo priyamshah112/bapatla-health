@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="BottomNavigation">
+        <item name="itemIconTint">@color/colorAccent</item>
+        <item name="itemTextColor">@color/colorAccent</item>
+    </style>
 </resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_home"
+        android:title="Home"
+        android:icon="@drawable/bnav_home_icon" />
+
+    <item
+        android:id="@+id/item_record"
+        android:title="Record"
+        android:icon="@drawable/record" />
+
+    <item
+        android:id="@+id/item_monitor"
+        android:title="Monitor"
+        android:icon="@drawable/monitor" />
+
+    <item
+        android:id="@+id/item_manage"
+        android:title="Manage"
+        android:icon="@drawable/manage" />
+
+    <item
+        android:id="@+id/item_dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/bnav_dashboard" />
+
+</menu>

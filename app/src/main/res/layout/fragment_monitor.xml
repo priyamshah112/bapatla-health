@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MonitorFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-127dp">
+        <!--Scrollable content here-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="22dp" >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginRight="3dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Report"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/chart"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Stats"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/stats"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:orientation="vertical"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Trend"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/timeline"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Track Health"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/heart"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginRight="3dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Seek Advice"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/sthetoscope"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="135dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/rounded_corners"
+                    android:layout_marginLeft="3dp"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Call Support"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:layout_marginTop="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/call_support"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
