@@ -174,5 +174,19 @@
             android:layout_weight="1"
             android:text="Doctor Button" />
 
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Profile Button" />
+
+        <Button
+            android:id="@+id/familyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Family Button" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

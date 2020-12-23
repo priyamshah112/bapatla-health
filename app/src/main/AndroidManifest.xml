@@ -49,6 +49,10 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Doctor"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Profile"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Family"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
