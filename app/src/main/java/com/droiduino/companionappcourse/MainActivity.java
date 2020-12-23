@@ -258,8 +258,38 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button profileButton = findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
+        Button familyButton = findViewById(R.id.familyButton);
+        familyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
         Button doctorButton = findViewById(R.id.doctorButton);
         doctorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
+        Button prescriptionButton = findViewById(R.id.prescriptionButton);
+        prescriptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
