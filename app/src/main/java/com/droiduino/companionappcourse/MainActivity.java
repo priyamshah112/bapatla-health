@@ -288,6 +288,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button prescriptionButton = findViewById(R.id.prescriptionButton);
+        prescriptionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Record.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
