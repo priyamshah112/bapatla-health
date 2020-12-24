@@ -23,29 +23,46 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="53dp"
-                    android:layout_height="53dp"
-                    android:src="@drawable/logo" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BAPATLA"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center_vertical"
-                    android:textColor="@color/colorPrimary"
-                    android:fontFamily="@font/attenroundnewregular"
-                    android:textSize="28sp"/>
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="53dp"
+                        android:layout_height="53dp"
+                        android:src="@drawable/logo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BAPATLA"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/colorPrimary"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:textSize="28sp"/>
 
 
-            </LinearLayout>
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/circuler_teal"
+                    android:src="@drawable/hamburger"
+                    android:layout_alignParentEnd="true"
+                    />
+
+            </RelativeLayout>
+
+
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -225,6 +242,7 @@
             </GridLayout>
 
             <LinearLayout
+                android:id="@+id/timelineButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
