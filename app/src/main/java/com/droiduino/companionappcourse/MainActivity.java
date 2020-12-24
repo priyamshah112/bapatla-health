@@ -308,6 +308,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button healthGuidanceButton = findViewById(R.id.healthGuidanceButton);
+        healthGuidanceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, HealthGuidance.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
