@@ -8,17 +8,17 @@
     <item
         android:id="@+id/item_record"
         android:title="Record"
-        android:icon="@drawable/record" />
+        android:icon="@drawable/record_icon" />
 
     <item
         android:id="@+id/item_monitor"
         android:title="Monitor"
-        android:icon="@drawable/monitor" />
+        android:icon="@drawable/monitor_icon" />
 
     <item
         android:id="@+id/item_manage"
         android:title="Manage"
-        android:icon="@drawable/manage" />
+        android:icon="@drawable/manage_icon" />
 
     <item
         android:id="@+id/item_dashboard"
