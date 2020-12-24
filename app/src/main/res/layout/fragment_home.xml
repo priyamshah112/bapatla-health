@@ -1,14 +1,428 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-127dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="27dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="53dp"
+                    android:layout_height="53dp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BAPATLA"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorPrimary"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textSize="28sp"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="63dp"
+                    android:background="@drawable/bnav_btn"
+                    android:drawableLeft="@drawable/person_icon"
+                    android:text="Chomo"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textSize="18sp"
+                    android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true" >
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bnav_btn"
+                        android:src="@drawable/search_icon"
+                        />
+
+                    <ImageButton
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="63dp"
+                        android:background="@drawable/bnav_btn"
+                        android:src="@drawable/alarm_icon"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:background="@drawable/bnav_btn" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="HEALTH GUIDANCE"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/temperature_range"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12.5dp"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5.39dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#F1D316"
+                        android:text="Mild Fever"
+                        android:textSize="14dp"
+                        android:fontFamily="@font/attenroundnewbold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:text="100.5"
+                        android:textSize="24dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/attenroundnewbold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@android:color/white"
+                        android:text="°F"
+                        android:layout_gravity="top"
+                        android:textSize="16dp"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/attenroundnewbold"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginTop="13dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:background="@drawable/bnav_btn"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DAILY TREND"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/attenroundnewmedium"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/group_185"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:orientation="vertical"
+                    android:background="@drawable/bnav_btn"
+                    android:layout_marginLeft="7dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="AIR QUALITY"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/attenroundnewmedium"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="72dp"
+                        android:src="@drawable/air_quality"
+                        android:layout_marginTop="6.66dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+            </GridLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="vertical"
+                android:background="@drawable/bnav_btn" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="TIME LINE"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:text="20 DEC 20"
+                                android:textSize="12dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/attenroundnewbold"
+                                />
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/blue_circle"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:text="100.3°F Mild Fever"
+                                android:textSize="14dp"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/attenroundnewbook"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="8:40 pm"
+                            android:textSize="14dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/attenroundnewbook"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="55dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/white_circle"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="Cold, Cough, Chills"
+                                    android:textSize="14dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/attenroundnewbook"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="Symptoms Reported"
+                                    android:textSize="8dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/attenroundnewbook"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="4:20 pm"
+                            android:textSize="14dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/attenroundnewbook"
+                            />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="55dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginRight="6dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/blue_circle"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="Asthma"
+                                    android:textSize="14dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/attenroundnewbook"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/white"
+                                    android:text="Pre-existing Condition"
+                                    android:textSize="8dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="@font/attenroundnewbook"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="12:43 pm"
+                            android:textSize="14dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/attenroundnewbook"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
