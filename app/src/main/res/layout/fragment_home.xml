@@ -91,7 +91,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:orientation="vertical"
-                android:background="@drawable/bnav_btn" >
+                android:background="@drawable/rounded_corners_teal_color"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -162,7 +166,11 @@
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill_horizontal"
-                    android:background="@drawable/bnav_btn"
+                    android:background="@drawable/rounded_corners_teal_color"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
                     android:layout_marginRight="7dp"
                     android:orientation="vertical">
 
@@ -190,7 +198,11 @@
                     android:layout_columnWeight="1"
                     android:layout_gravity="fill_horizontal"
                     android:orientation="vertical"
-                    android:background="@drawable/bnav_btn"
+                    android:background="@drawable/rounded_corners_teal_color"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
                     android:layout_marginLeft="7dp">
 
                     <TextView
@@ -217,7 +229,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
                 android:orientation="vertical"
-                android:background="@drawable/bnav_btn" >
+                android:background="@drawable/rounded_corners_teal_color"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp" >
 
                 <TextView
                     android:layout_width="match_parent"
