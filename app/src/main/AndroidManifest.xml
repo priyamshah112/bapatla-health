@@ -59,6 +59,8 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".BottomNav"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Timeline"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
