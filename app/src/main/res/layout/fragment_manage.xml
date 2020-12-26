@@ -26,6 +26,7 @@
                 >
 
                 <LinearLayout
+                    android:id="@+id/profileButton"
                     android:layout_width="0dp"
                     android:layout_height="135dp"
                     android:layout_columnWeight="1"
@@ -55,6 +56,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/familyButton"
                     android:layout_width="0dp"
                     android:layout_height="135dp"
                     android:layout_columnWeight="1"
@@ -84,6 +86,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/doctorButton"
                     android:layout_width="0dp"
                     android:layout_height="135dp"
                     android:layout_columnWeight="1"
@@ -113,6 +116,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/prescriptionButton"
                     android:layout_width="0dp"
                     android:layout_height="135dp"
                     android:layout_columnWeight="1"

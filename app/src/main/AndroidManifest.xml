@@ -37,8 +37,6 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Registration"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".Record"
-            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Vitals"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Health"

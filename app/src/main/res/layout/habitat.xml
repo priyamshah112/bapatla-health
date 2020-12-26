@@ -129,22 +129,22 @@
                 android:textStyle="bold"
                 android:layout_marginTop="41.5dp"/>
             
-            <LinearLayout
+            <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="34.5dp"
-                android:layout_marginEnd="40dp">
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="26dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Water TDS [ppm]"
+                    android:layout_marginTop="11dp"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:fontFamily="@font/attenroundnewbook"
-                    android:layout_marginTop="26dp"
-                    android:layout_marginEnd="170dp"
                     android:textSize="16sp"/>
 
                 <EditText
@@ -154,30 +154,30 @@
                     android:text="000"
                     android:textSize="18sp"
                     android:textColor="@color/colorGrey"
-                    android:layout_marginTop="26dp"
                     android:paddingStart="8dp"
                     android:paddingTop="7dp"
                     android:paddingRight="7dp"
-                    android:paddingBottom="4dp"/>
+                    android:paddingBottom="4dp"
+                    android:layout_alignParentEnd="true"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="34.5dp"
-                android:layout_marginEnd="40dp">
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Water PH"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="11dp"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:fontFamily="@font/attenroundnewbook"
-                    android:layout_marginEnd="224dp"
                     android:textSize="16sp"/>
 
                 <EditText
@@ -186,31 +186,31 @@
                     android:background="@drawable/rounded_corners"
                     android:text="000"
                     android:textSize="18sp"
-                    android:layout_marginTop="11dp"
+                    android:layout_alignParentEnd="true"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="7dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="34.5dp"
-                android:layout_marginEnd="40dp">
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Air Temperature [°F]"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="11dp"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:fontFamily="@font/attenroundnewbook"
-                    android:layout_marginEnd="154dp"
                     android:textSize="16sp"/>
 
                 <EditText
@@ -219,31 +219,31 @@
                     android:background="@drawable/rounded_corners"
                     android:text="000"
                     android:textSize="18sp"
-                    android:layout_marginTop="11dp"
+                    android:layout_alignParentEnd="true"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="7dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="34.5dp"
-                android:layout_marginEnd="40dp">
+                android:layout_marginEnd="40dp"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Air Relative Humidity [%]"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="11dp"
                     android:textColor="@android:color/black"
                     android:textStyle="bold"
                     android:fontFamily="@font/attenroundnewbook"
-                    android:layout_marginEnd="121dp"
                     android:textSize="16sp"/>
 
                 <EditText
@@ -252,16 +252,17 @@
                     android:background="@drawable/rounded_corners"
                     android:text="000"
                     android:textSize="18sp"
-                    android:layout_marginTop="11dp"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="7dp"
                     android:paddingRight="7dp"
-                    android:paddingBottom="4dp"/>
+                    android:paddingBottom="4dp"
+                    android:layout_alignParentEnd="true"/>
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <Button
+                android:id="@+id/healthGuidanceButton"
                 android:layout_width="fill_parent"
                 android:layout_height="56dp"
                 android:layout_gravity="center|bottom"

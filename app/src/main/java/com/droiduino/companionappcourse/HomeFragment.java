@@ -76,6 +76,15 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        LinearLayout healthGuidanceButton = (LinearLayout)view.findViewById(R.id.healthGuidanceButton);
+        healthGuidanceButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), HealthGuidance.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
         return view;
     }
 }

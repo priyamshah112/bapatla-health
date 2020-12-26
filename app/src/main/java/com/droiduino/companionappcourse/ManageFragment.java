@@ -1,5 +1,6 @@
 package com.droiduino.companionappcourse;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,44 @@ public class ManageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_manage, container, false);
+        View view = inflater.inflate(R.layout.fragment_manage, container, false);
+
+        LinearLayout profileButton = (LinearLayout)view.findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), Profile.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
+        LinearLayout doctorButton = (LinearLayout)view.findViewById(R.id.doctorButton);
+        doctorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), Doctor.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
+        LinearLayout familyButton = (LinearLayout)view.findViewById(R.id.familyButton);
+        familyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), Family.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
+        LinearLayout prescriptionButton = (LinearLayout)view.findViewById(R.id.prescriptionButton);
+        prescriptionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), Prescription.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
+        return view;
     }
 }

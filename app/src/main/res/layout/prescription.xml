@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Prescription">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="259dp">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:layout_editor_absoluteX="0dp"-->
+<!--        tools:layout_editor_absoluteY="259dp">-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -207,23 +207,32 @@
                 android:theme="@style/SwitchTheme"
                 android:textStyle="bold"/>
 
-            <Button
-                android:layout_width="fill_parent"
-                android:layout_height="56dp"
-                android:layout_gravity="center|bottom"
-                android:layout_marginTop="200dp"
-                android:layout_marginStart="11dp"
-                android:layout_marginEnd="11dp"
-                android:background="@drawable/rounded_corner_button"
-                android:fontFamily="@font/attenroundnewbook"
-                android:text="Save"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:orientation="vertical" >
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginEnd="11dp"
+                    android:background="@drawable/rounded_corner_button"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:text="Save"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
