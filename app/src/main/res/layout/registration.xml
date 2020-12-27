@@ -280,6 +280,7 @@
                 android:textStyle="bold" />
 
             <Button
+                android:id="@+id/registerButton"
                 android:layout_width="fill_parent"
                 android:layout_height="56dp"
                 android:layout_gravity="center|bottom"
@@ -304,7 +305,6 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/registerButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/attenroundnewbook"
@@ -316,6 +316,7 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/loginButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/attenroundnewbook"

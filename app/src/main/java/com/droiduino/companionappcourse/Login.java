@@ -22,13 +22,33 @@ public class Login extends AppCompatActivity {
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("LOGIN");
 
-        TextView forgotPasswordButton = findViewById(R.id.forgotPasswordButton);
+        Button loginButton = findViewById(R.id.loginButton);
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(Login.this, DeviceSetup1.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
+        TextView forgotPasswordButton = findViewById(R.id.forgotPasswordButton);
         forgotPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
                 Intent intent = new Intent(Login.this, ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView registerButton = findViewById(R.id.registerButton);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(Login.this, Registration.class);
                 startActivity(intent);
             }
         });

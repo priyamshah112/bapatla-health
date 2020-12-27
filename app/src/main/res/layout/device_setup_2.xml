@@ -70,12 +70,22 @@
                 android:layout_weight="0.8"
                 android:fontFamily="@font/attenroundnewbook"/>
 
-            <ImageView
-                android:layout_width="78dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_marginRight="17dp"
-                android:src="@drawable/on"
+<!--            <ImageView-->
+<!--                android:layout_width="78dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_marginRight="17dp"-->
+<!--                android:src="@drawable/on"-->
+<!--                android:layout_weight="0.1"/>-->
+
+            <Switch
+                android:id="@+id/bluetoothSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:switchMinWidth="56dp"
+                android:checked="false"
+                android:textOff="OFF"
+                android:textOn="ON"
                 android:layout_weight="0.1"/>
 
         </LinearLayout>
@@ -119,13 +129,23 @@
                 android:layout_weight="0.8"
                 android:fontFamily="@font/attenroundnewbook"/>
 
-            <ImageView
-                android:layout_width="78dp"
-                android:layout_height="24dp"
-                android:layout_gravity="end"
-                android:layout_marginRight="17dp"
-                android:src="@drawable/on"
-                android:layout_weight="0.1"/>
+<!--            <ImageView-->
+<!--                android:layout_width="78dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_marginRight="17dp"-->
+<!--                android:src="@drawable/on"-->
+<!--                android:layout_weight="0.1"/>-->
+
+                <Switch
+                    android:id="@+id/locationSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:switchMinWidth="56dp"
+                    android:checked="false"
+                    android:textOff="OFF"
+                    android:textOn="ON"
+                    android:layout_weight="0.1"/>
 
         </LinearLayout>
 
@@ -140,6 +160,22 @@
             android:textSize="14sp"
             android:fontFamily="@font/attenroundnewbook" />
 
+<!--        <TextView-->
+<!--            android:id="@+id/textBluetoothStatus"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Bluetooth is Disconnected"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="24sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textLedStatus"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Temperature"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="24sp" />-->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dip"
@@ -148,6 +184,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/redirectToHomeButton"
                 android:layout_height="56dp"
                 android:layout_width="fill_parent"
                 android:background="@drawable/rounded_corner_button"

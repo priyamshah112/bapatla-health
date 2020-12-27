@@ -40,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //calling the splash screen which is the first page that is to be loaded
+        // Intent intentx = new Intent(MainActivity.this, SplashScreen.class);
+        // startActivity(intentx);
+        // finish(); //this is like pushReplacement(). i.e., if you call finish() after an intent you can't go back to the previous activity with the "back" button
+
+        //calling the first page that is to be loaded
+        //Intent intentx = new Intent(MainActivity.this, BottomNav.class);
+        //startActivity(intentx);
+        //finish(); //this is like pushReplacement(). i.e., if you call finish() after an intent you can't go back to the previous activity with the "back" button
+
         // Instantiate UI
         final TextView bluetoothStatus = findViewById(R.id.textBluetoothStatus);
         Button buttonConnect = findViewById(R.id.buttonConnect);
