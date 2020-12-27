@@ -15,8 +15,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +24,155 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/rounded_corners_teal_color">
+                android:layout_marginStart="27.5dp"
+                android:layout_marginEnd="27.5dp"
+                android:background="@drawable/rounded_corners_teal_color"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/mild_fever"
+                    android:layout_marginTop="37dp"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/rounded_corners"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18.5dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:paddingStart="16.5dp"
+                        android:paddingRight="16.5dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/rounded_corners_health_guidance"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:text="10 years old"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:paddingStart="16.5dp"
+                        android:paddingRight="16.5dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/rounded_corners_health_guidance"
+                        android:fontFamily="@font/attenroundnewregular"
+                        android:text="Cold"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/rounded_corners"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="You have symptoms of COVID-19. You must self- isolate at home and arrange to have a test to see if you have COVID-19."
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="8.5dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="For a covid-19 medical assistance, you should ring 104. To help prevent the spread at home, wash-hands regularly and dis-infect surfaces. "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="If your test result is negative"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    android:lineSpacingExtra="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="You can end self-isolation immediately. "
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="If your test result is positive"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    android:lineSpacingExtra="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="You must ensure you remain at home and complete the self-isolation period of at least 14 days from when your symptoms started."
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="For a medical emergency, you should ring 144."
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp" />
 
             </LinearLayout>
 
