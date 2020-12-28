@@ -15,4 +15,8 @@
         <item name="itemIconTint">@color/colorAccent</item>
         <item name="itemTextColor">@color/colorAccent</item>
     </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
 </resources>

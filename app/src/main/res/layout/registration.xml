@@ -36,6 +36,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -49,7 +50,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,6 +67,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/surname"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -78,7 +81,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,6 +98,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/aadhar_number"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -107,7 +112,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,6 +129,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/birthday"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -136,45 +143,52 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:focusable="false"
+                android:clickable="true"
+                android:editable="false"/>
 
             <RadioGroup
-                android:id="@+id/radio_group"
+                android:id="@+id/gender_radio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/view_below"
                 android:layout_marginTop="13dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:checkedButton="@+id/male">
 
                 <RadioButton
-                    android:id="@+id/radio1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/male"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="45dp"
                     android:layout_weight="1"
                     android:text="Male"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorPrimary" />
 
                 <RadioButton
-                    android:id="@+id/radio2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/female"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:text="Female"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorPrimary" />
 
                 <RadioButton
-                    android:id="@+id/radio3"
+                    android:id="@+id/others"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:text="Others"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorPrimary"/>
 
             </RadioGroup>
 
@@ -192,6 +206,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/mobile"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -205,7 +220,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -221,6 +237,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -234,7 +251,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -250,6 +268,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -263,7 +282,39 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="17.5dp"
+                android:layout_marginTop="17.5dp"
+                android:layout_weight="0"
+                android:fontFamily="@font/attenroundnewbook"
+                android:text="Password"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="2.5dp"
+                android:layout_marginEnd="17dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/login_password_icon"
+                android:fontFamily="@font/attenroundnewbook"
+                android:hint="@string/register_password"
+                android:inputType="textPassword"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -276,6 +327,20 @@
                 android:paddingBottom="15dp"
                 android:text="By clicking Register you agree to our Terms of use and Privacy Policy."
                 android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="42.5dp"
+                android:fontFamily="@font/attenroundnewbook"
+                android:visibility="gone"
+                android:textColor="@android:color/holo_red_light"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

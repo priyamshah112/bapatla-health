@@ -15,6 +15,7 @@
     <string name="register_mobile_no">Mobile No.</string>
     <string name="register_email_id">Enter Email ID</string>
     <string name="register_home_address">House No, Landmark, Village, Mandal</string>
+    <string name="register_password">Enter Password</string>
 
     <string name="travel_city">Enter City</string>
     <string name="travel_state">Enter State</string>
