@@ -41,6 +41,7 @@
                 android:fontFamily="@font/attenroundnewbook"/>
 
             <EditText
+                android:id="@+id/loginEmail"
                 android:layout_height="56dp"
                 android:layout_width="match_parent"
                 android:inputType="text"
@@ -55,6 +56,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/attenroundnewbook"
                 android:drawableLeft="@drawable/forgot_password_email_icon"
+                android:textCursorDrawable = "@null"
                 />
 
             <TextView
@@ -69,23 +71,64 @@
                 android:layout_weight="0"
                 android:fontFamily="@font/attenroundnewbook"/>
 
-            <EditText
-                android:layout_height="56dp"
+<!--            <EditText-->
+<!--                android:id="@+id/loginPassword"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:textColorHint="@color/colorPrimary"-->
+<!--                android:layout_marginTop="2.5dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:layout_marginStart="17dp"-->
+<!--                android:layout_marginEnd="17dp"-->
+<!--                android:hint="@string/login_password"-->
+<!--                android:background="@drawable/rounded_corners"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textAlignment="textStart"-->
+<!--                android:fontFamily="@font/attenroundnewbook"-->
+<!--                android:drawableLeft="@drawable/login_password_icon"-->
+<!--                android:drawableRight="@drawable/login_password_visibility_icon"-->
+<!--                />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPasswordLayout"
                 android:layout_width="match_parent"
-                android:inputType="text"
+                android:layout_height="wrap_content"
                 android:textColorHint="@color/colorPrimary"
-                android:layout_marginTop="2.5dp"
-                android:textSize="14sp"
-                android:layout_marginStart="17dp"
-                android:layout_marginEnd="17dp"
-                android:hint="@string/login_password"
-                android:background="@drawable/rounded_corners"
-                android:textColor="@color/colorPrimary"
-                android:textAlignment="textStart"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loginPassword"
+                    android:layout_height="56dp"
+                    android:layout_width="match_parent"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/colorPrimary"
+                    android:layout_marginTop="2.5dp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="17dp"
+                    android:hint="@string/login_password"
+                    android:background="@drawable/rounded_corners"
+                    android:textColor="@color/colorPrimary"
+                    android:textAlignment="textStart"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textCursorDrawable = "@null"
+                    android:drawableStart="@drawable/login_password_icon"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="42.5dp"
                 android:fontFamily="@font/attenroundnewbook"
-                android:drawableLeft="@drawable/login_password_icon"
-                android:drawableRight="@drawable/login_password_visibility_icon"
-                />
+                android:visibility="gone"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/loginButton"
