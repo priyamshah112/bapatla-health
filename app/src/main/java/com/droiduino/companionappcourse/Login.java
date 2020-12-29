@@ -3,6 +3,7 @@ package com.droiduino.companionappcourse;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,8 +69,7 @@ public class Login extends AppCompatActivity {
                 //startActivity(intent);
                 //finish();
 
-                loginButton.setEnabled(false);
-                loginButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+
 
                 // Toast.makeText(Registration.this,gender,Toast.LENGTH_SHORT).show();
 
@@ -78,6 +78,18 @@ public class Login extends AppCompatActivity {
 
                 final EditText passwordField = (EditText) findViewById(R.id.loginPassword);
                 String password = passwordField.getText().toString();
+
+                if(TextUtils.isEmpty(email)) {
+                    emailField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(password)) {
+                    passwordField.setError("Please fill this field.");
+                    return;
+                }
+
+                loginButton.setEnabled(false);
+                loginButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 
 //                Toast.makeText(Login.this,password,Toast.LENGTH_SHORT).show();
 

@@ -3,6 +3,7 @@ package com.droiduino.companionappcourse;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,13 +45,18 @@ public class ForgotPassword extends AppCompatActivity {
                 // startActivity(intent);
                 // finish();
 
-                forgotPasswordButton.setEnabled(false);
-                forgotPasswordButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-
                 // Toast.makeText(Registration.this,gender,Toast.LENGTH_SHORT).show();
 
                 final EditText emailField = (EditText) findViewById(R.id.forgotPasswordEmail);
                 String email = emailField.getText().toString();
+
+                if(TextUtils.isEmpty(email)) {
+                    emailField.setError("Please fill this field.");
+                    return;
+                }
+
+                forgotPasswordButton.setEnabled(false);
+                forgotPasswordButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 
                 String payload = "{\"email\": \""+email+"\"}";
                 new ForgotPassword.PostData().execute(payload);

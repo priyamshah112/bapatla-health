@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -100,9 +101,6 @@ public class Registration extends AppCompatActivity {
                 // startActivity(intent);
                 // finish();
 
-                registerButton.setEnabled(false);
-                registerButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-
                 RadioGroup gender_radio=(RadioGroup)findViewById(R.id.gender_radio);
 
                 int selectedId=gender_radio.getCheckedRadioButtonId();
@@ -130,6 +128,38 @@ public class Registration extends AppCompatActivity {
 
                 final EditText passwordField = (EditText) findViewById(R.id.password);
                 String password = passwordField.getText().toString();
+
+                if(TextUtils.isEmpty(name)) {
+                    nameField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(surname)) {
+                    surnameField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(aadhar_number)) {
+                    aadhar_numberField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(mobile)) {
+                    mobileField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(email)) {
+                    emailField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(address)) {
+                    addressField.setError("Please fill this field.");
+                    return;
+                }
+                if(TextUtils.isEmpty(password)) {
+                    passwordField.setError("Please fill this field.");
+                    return;
+                }
+
+                registerButton.setEnabled(false);
+                registerButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 
                 System.out.println(birthday[0]);
                 String payload = "{\"name\": \""+name+"\", \"surname\": \""+surname+"\", \"aadhar_number\": \""+aadhar_number+"\", \"mobile\": \""+mobile+"\", \"email\": \""+email+"\", \"address\": \""+address+"\", \"password\": \""+password+"\", \"gender\": \""+gender+"\", \"birthday\": \""+ birthday[0] +"\"}";
