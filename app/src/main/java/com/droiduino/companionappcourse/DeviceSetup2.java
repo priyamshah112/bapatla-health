@@ -152,16 +152,16 @@ public class DeviceSetup2  extends AppCompatActivity {
 //            }
 //        };
 //
-//        Button redirectToHomeButton = findViewById(R.id.redirectToHomeButton);
-//        redirectToHomeButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // This is the code to move to another screen
-//                Intent intent = new Intent(DeviceSetup2.this, BottomNav.class);
+        Button thermoPairingButton = findViewById(R.id.thermoPairingButton);
+        thermoPairingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(DeviceSetup2.this, SuccessfulThermometerPairing.class);
 //                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startActivity(intent);
-//            }
-//        });
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
