@@ -35,6 +35,16 @@ public class Login extends AppCompatActivity {
         // final TextView heading = findViewById(R.id.heading);
         // heading.setText("Did you know");
 
+        Session session;//global variable
+        session = new Session(getApplicationContext());
+        String loginid = session.getid();
+        if(loginid!=""){
+            // redirecting to device setup 1
+            Intent intentx = new Intent(Login.this, DeviceSetup1.class);
+            startActivity(intentx);
+            finish();
+        }
+
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("LOGIN");
@@ -69,8 +79,6 @@ public class Login extends AppCompatActivity {
                 //startActivity(intent);
                 //finish();
 
-
-
                 // Toast.makeText(Registration.this,gender,Toast.LENGTH_SHORT).show();
 
                 final EditText emailField = (EditText) findViewById(R.id.loginEmail);
@@ -97,12 +105,12 @@ public class Login extends AppCompatActivity {
                 new Login.PostData().execute(payload);
             }
         });
-
     }
 
     private class PostData extends AsyncTask< String, Void, Void > {
 
         String resultvalue;
+        String name;
 
         protected Void doInBackground(String...params) {
 
@@ -167,6 +175,7 @@ public class Login extends AppCompatActivity {
                     JSONArray rval = jsonObj.getJSONArray("result");
                     JSONObject j2 = new JSONObject(rval.getString(0));
                     resultvalue = j2.get("id").toString();
+                    name = j2.get("name").toString();
                 }
                 else{
                     resultvalue = jsonObj.getString("result");
@@ -185,6 +194,12 @@ public class Login extends AppCompatActivity {
             System.out.println("inpostexecute------"+resultvalue);
 
             if(!resultvalue.equals("error") && !resultvalue.equals("not_existing")){
+
+                Session session;//global variable
+                session = new Session(getApplicationContext());
+                session.setname(name);
+                session.setid(resultvalue);
+
                 Intent intent = new Intent(Login.this, DeviceSetup1.class);
                 startActivity(intent);
                 finish();

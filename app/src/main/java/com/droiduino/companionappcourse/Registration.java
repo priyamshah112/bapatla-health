@@ -14,6 +14,10 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,6 +38,7 @@ public class Registration extends AppCompatActivity {
 
     final Calendar myCalendar = Calendar.getInstance();
     EditText edittext;
+    String registname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +115,7 @@ public class Registration extends AppCompatActivity {
 
                 final EditText nameField = (EditText) findViewById(R.id.name);
                 String name = nameField.getText().toString();
+                registname = name;
 
                 final EditText surnameField = (EditText) findViewById(R.id.surname);
                 String surname = surnameField.getText().toString();
@@ -228,9 +234,18 @@ public class Registration extends AppCompatActivity {
                 ex.printStackTrace();
             }
             uc.disconnect();
-            System.out.println(jsonString.toString().substring(11,jsonString.toString().lastIndexOf("\"")));
+//            System.out.println(jsonString.toString().substring(11,jsonString.toString().lastIndexOf("\"")));
 
-            resultvalue = jsonString.toString().substring(11,jsonString.toString().lastIndexOf("\""));
+//            resultvalue = jsonString.toString().substring(11,jsonString.toString().lastIndexOf("\""));
+
+            try {
+                JSONObject jsonObj = new JSONObject(jsonString.toString());
+                resultvalue = jsonObj.getString("result");
+
+                System.out.println("JSOOOOOOOOOOOOOO"+resultvalue);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
 
 
@@ -242,7 +257,14 @@ public class Registration extends AppCompatActivity {
             //do stuff
             System.out.println("inpostexecute------"+resultvalue);
 
-            if(resultvalue.equals("success")){
+            if(!resultvalue.equals("already_registered") && !resultvalue.equals("error")){
+//                System.out.println("RRRRRRRRRRRRRRRRRRRRRRRRRRRRR"+registname);
+
+                Session session;//global variable
+                session = new Session(getApplicationContext());
+                session.setname(registname);
+                session.setid(resultvalue);
+
                 Intent intent = new Intent(Registration.this, DeviceSetup1.class);
                 startActivity(intent);
                 finish();
