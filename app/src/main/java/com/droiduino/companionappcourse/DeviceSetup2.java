@@ -12,6 +12,8 @@ import android.os.Looper;
 import android.os.Message;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -55,6 +57,8 @@ public class DeviceSetup2  extends AppCompatActivity {
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("DEVICE SETUP");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
+
+        getSupportActionBar().setLogo(R.drawable.heart);
 
         // asking permission for bluetooth and location
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_ADMIN, Manifest.permission.ACCESS_FINE_LOCATION}, 101);
@@ -151,7 +155,7 @@ public class DeviceSetup2  extends AppCompatActivity {
 //                }
 //            }
 //        };
-//
+
         Button thermoPairingButton = findViewById(R.id.thermoPairingButton);
         thermoPairingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -180,6 +184,24 @@ public class DeviceSetup2  extends AppCompatActivity {
                 break;
             default:
                 super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.topnav_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        switch(item.getItemId()){
+            case R.id.menu_item:   //this item has your app icon
+                Intent intent = new Intent(DeviceSetup2.this, DeviceSetupInfo.class);
+                startActivity(intent);
+                return true;
+            default: return super.onOptionsItemSelected(item);
         }
     }
 

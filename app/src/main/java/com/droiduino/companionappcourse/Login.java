@@ -37,6 +37,7 @@ public class Login extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("LOGIN");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         TextView forgotPasswordButton = findViewById(R.id.forgotPasswordButton);
         forgotPasswordButton.setOnClickListener(new View.OnClickListener() {

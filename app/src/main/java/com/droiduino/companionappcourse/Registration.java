@@ -45,7 +45,7 @@ public class Registration extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("REGISTER");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
 
         TextView loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
