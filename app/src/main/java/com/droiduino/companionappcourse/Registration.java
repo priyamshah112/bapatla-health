@@ -58,8 +58,8 @@ public class Registration extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(Registration.this, Login.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Registration.this, Login.class);
+//                startActivity(intent);
                 finish();
             }
         });
