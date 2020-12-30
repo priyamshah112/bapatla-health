@@ -1,5 +1,6 @@
 package com.droiduino.companionappcourse;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,18 @@ public class MonitorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_monitor, container, false);
+        View view = inflater.inflate(R.layout.fragment_monitor, container, false);
+
+        LinearLayout callSupportButton = (LinearLayout)view.findViewById(R.id.callSupportButton);
+        callSupportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), CallSupport.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
+        return view;
+
     }
 }

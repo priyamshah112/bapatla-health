@@ -254,6 +254,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/travelButton"
                 android:layout_width="fill_parent"
                 android:layout_height="56dp"
                 android:layout_gravity="center|bottom"

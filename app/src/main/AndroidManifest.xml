@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.droiduino.companionappcourse">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <!-- Permissions for Bluetooth access -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -37,8 +38,6 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Registration"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".Record"
-            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Vitals"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Health"
@@ -58,6 +57,8 @@
         <activity android:name=".HealthGuidance"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".BottomNav"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Timeline"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>

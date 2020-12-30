@@ -40,6 +40,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //calling the splash screen which is the first page that is to be loaded
+        Intent intentx = new Intent(MainActivity.this, SplashScreen.class);
+        startActivity(intentx);
+        finish(); //this is like pushReplacement(). i.e., if you call finish() after an intent you can't go back to the previous activity with the "back" button
+
+        //calling the first page that is to be loaded
+        //Intent intentx = new Intent(MainActivity.this, BottomNav.class);
+        //startActivity(intentx);
+        //finish(); //this is like pushReplacement(). i.e., if you call finish() after an intent you can't go back to the previous activity with the "back" button
+
         // Instantiate UI
         final TextView bluetoothStatus = findViewById(R.id.textBluetoothStatus);
         Button buttonConnect = findViewById(R.id.buttonConnect);
@@ -118,15 +128,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // my buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
-        Button callSupportButton = findViewById(R.id.callSupportButton);
-        callSupportButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, CallSupport.class);
-                startActivity(intent);
-            }
-        });
 
         Button successfulThermometerPairingButton = findViewById(R.id.successfulThermometerPairingButton);
         successfulThermometerPairingButton.setOnClickListener(new View.OnClickListener() {
@@ -188,112 +189,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button manageButton = findViewById(R.id.manageButton);
-        manageButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Manage.class);
-                startActivity(intent);
-            }
-        });
-
         Button registerButton = findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
                 Intent intent = new Intent(MainActivity.this, Registration.class);
-                startActivity(intent);
-            }
-        });
-
-        Button recordButton = findViewById(R.id.recordButton);
-        recordButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Record.class);
-                startActivity(intent);
-            }
-        });
-
-        Button vitalsButton = findViewById(R.id.vitalsButton);
-        vitalsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Vitals.class);
-                startActivity(intent);
-            }
-        });
-
-        Button healthButton = findViewById(R.id.healthButton);
-        healthButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Health.class);
-                startActivity(intent);
-            }
-        });
-
-        Button travelButton = findViewById(R.id.travelButton);
-        travelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Travel.class);
-                startActivity(intent);
-            }
-        });
-
-        Button habitatButton = findViewById(R.id.habitatButton);
-        habitatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Habitat.class);
-                startActivity(intent);
-            }
-        });
-
-        Button profileButton = findViewById(R.id.profileButton);
-        profileButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Profile.class);
-                startActivity(intent);
-            }
-        });
-
-        Button familyButton = findViewById(R.id.familyButton);
-        familyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Family.class);
-                startActivity(intent);
-            }
-        });
-
-        Button doctorButton = findViewById(R.id.doctorButton);
-        doctorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Doctor.class);
-                startActivity(intent);
-            }
-        });
-
-        Button prescriptionButton = findViewById(R.id.prescriptionButton);
-        prescriptionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, Prescription.class);
                 startActivity(intent);
             }
         });
@@ -307,18 +208,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        Button healthGuidanceButton = findViewById(R.id.healthGuidanceButton);
-        healthGuidanceButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(MainActivity.this, HealthGuidance.class);
-                startActivity(intent);
-            }
-        });
-
-
     }
 
     /* ============================ Thread to Create Connection ================================= */

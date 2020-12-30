@@ -20,7 +20,7 @@ public class DeviceSetup1 extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("DEVICE SETUP");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
 
         Button deviceSetup2Button = findViewById(R.id.deviceSetup2Button);
         deviceSetup2Button.setOnClickListener(new View.OnClickListener() {

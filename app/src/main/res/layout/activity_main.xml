@@ -87,13 +87,6 @@
                 android:text="Splash Screen" />
 
             <Button
-                android:id="@+id/callSupportButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Call Support" />
-
-            <Button
                 android:id="@+id/successfulThermometerPairingButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,13 +122,6 @@
                 android:text="Login Button" />
 
             <Button
-                android:id="@+id/manageButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Manage Button" />
-
-            <Button
                 android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,81 +129,11 @@
                 android:text="Registration Button" />
 
             <Button
-                android:id="@+id/recordButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Record Button" />
-
-            <Button
-                android:id="@+id/vitalsButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Vitals Button" />
-
-            <Button
-                android:id="@+id/healthButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Health Button" />
-
-            <Button
-                android:id="@+id/travelButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Travel Button" />
-
-            <Button
-                android:id="@+id/habitatButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Habitat Button" />
-
-            <Button
-                android:id="@+id/doctorButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Doctor Button" />
-
-            <Button
-                android:id="@+id/profileButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Profile Button" />
-
-            <Button
-                android:id="@+id/familyButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Family Button" />
-
-            <Button
-                android:id="@+id/prescriptionButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Prescription Button" />
-
-            <Button
                 android:id="@+id/bottomNavButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Bottom Nav Button" />
-
-            <Button
-                android:id="@+id/healthGuidanceButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Health Guidance Button" />
 
         </LinearLayout>
     </LinearLayout>

@@ -1,14 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RecordFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Record" />
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/rounded_corners">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/attenroundnewregular"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="96.5"
+                    android:textSize="50sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/colorGreen"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textStyle="bold">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" °F"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorGreen"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textStyle="bold">
+                </TextView>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mild"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/temperature_range"
+                android:layout_gravity="center"
+                android:layout_marginTop="9.5dp"
+                android:layout_marginBottom="16.5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vitalsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="34dp"
+            android:background="@drawable/rounded_corners">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Health Data"
+                android:textSize="24sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginStart="24dp"
+                android:fontFamily="@font/attenroundnewregular"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="84.76dp"
+                    android:src="@drawable/pad"
+                    android:layout_marginTop="21.75dp"
+                    android:layout_marginStart="49.83dp"
+                    android:layout_marginEnd="61.46dp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/plus"
+                    android:layout_marginTop="49dp"
+                    android:layout_marginBottom="64.47dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorYellow1"
+                    android:layout_marginTop="56.5dp"
+                    android:layout_marginBottom="50.5dp"
+                    android:layout_marginStart="16.5dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
