@@ -137,7 +137,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@drawable/rounded_corners"
                 android:layout_marginStart="11dp"
                 android:layout_marginTop="7.5dp">
 
@@ -152,7 +151,8 @@
                     android:textAlignment="textStart"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    android:paddingRight="30dp"/>
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -166,7 +166,8 @@
                     android:textAlignment="textStart"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    android:paddingRight="30dp"/>
 
             </LinearLayout>
 

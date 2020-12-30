@@ -86,6 +86,7 @@
                 android:checked="false"
                 android:textOff="OFF"
                 android:textOn="ON"
+                android:theme="@style/SwitchTheme"
                 android:layout_weight="0.1"/>
 
         </LinearLayout>
@@ -145,6 +146,7 @@
                     android:checked="false"
                     android:textOff="OFF"
                     android:textOn="ON"
+                    android:theme="@style/SwitchTheme"
                     android:layout_weight="0.1"/>
 
         </LinearLayout>
