@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reminder Name"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2.5dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/account_icon"
+            android:fontFamily="@font/attenroundnewbook"
+            android:hint="@string/reminder_dialog_remindmeto"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textCursorDrawable = "@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/attenroundnewbook"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:layout_marginStart="154dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/attenroundnewbook"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="2.5dp">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/login_password_icon"
+                android:fontFamily="@font/attenroundnewbook"
+                android:hint="@string/doctor_date"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginStart="19dp"
+                android:background="@drawable/rounded_corners"
+                android:drawableLeft="@drawable/login_password_icon"
+                android:fontFamily="@font/attenroundnewbook"
+                android:hint="@string/doctor_time"
+                android:inputType="text"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/simpleSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="@font/attenroundnewbook"
+            android:textSize="16sp"
+            android:layout_marginTop="12.5dp"
+            android:text="Repeat Reminder                                                       "
+            android:textOn="On"
+            android:textOff="Off"
+            android:theme="@style/SwitchTheme"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat Every"
+            android:layout_marginTop="18dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/repeat"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/account_icon"
+            android:fontFamily="@font/attenroundnewbook"
+            android:hint="@string/reminder_dialog_repeat"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textCursorDrawable = "@null"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+    
+            <Button
+                android:id="@+id/reminder_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CLEAR"
+                android:fontFamily="@font/attenroundnewregular"
+                android:textStyle="bold"
+                android:background="@android:color/white"/>
+
+            <Button
+                android:id="@+id/reminder_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SAVE"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/attenroundnewregular"
+                android:textStyle="bold"
+                android:background="@android:color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

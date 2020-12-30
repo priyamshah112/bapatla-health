@@ -1,15 +1,62 @@
 package com.droiduino.companionappcourse;
 
+import android.app.Dialog;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Prescription extends AppCompatActivity {
 
+    private Button button;
+    Dialog dialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.prescription);
+
+        dialog=new Dialog(Prescription.this);
+        dialog.setContentView(R.layout.reminder_dialog);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background));
+        }
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+        Button clear = dialog.findViewById(R.id.reminder_clear);
+        Button save = dialog.findViewById(R.id.reminder_save);
+
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Prescription.this, "clear", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(Prescription.this, "save", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+            }
+        });
+
+        button = findViewById(R.id.dialog_btn);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.show();
+            }
+        });
 
         // final TextView heading = findViewById(R.id.heading);
         // heading.setText("Did you know");

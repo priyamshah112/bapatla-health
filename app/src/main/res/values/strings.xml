@@ -29,5 +29,10 @@
     <string name="prescription_doctor_name">Enter Doctor Name</string>
     <string name="prescription_medication_name">Enter Medication</string>
 
+    <string name="reminder_dialog_remindmeto">Remind me to...</string>
+    <string name="reminder_dialog_repeat">Every Hour</string>
+
+
+
 
 </resources>

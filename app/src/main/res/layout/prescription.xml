@@ -33,12 +33,11 @@
                     android:text="Medication"
                     android:textSize="31sp"
                     android:gravity="left"
+                    android:layout_marginStart="10dp"
                     android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:textStyle="bold"
                     android:layout_marginTop="25.5dp"/>
-
-
 
             </LinearLayout>
 
@@ -46,11 +45,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
                 android:background="@android:color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:text="Doctor Name"
                 android:layout_marginTop="15dp"
                 android:textSize="16sp"
@@ -61,6 +63,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="7.5dp"
                 android:background="@drawable/rounded_corners"
                 android:drawableLeft="@drawable/account_icon"
@@ -206,6 +209,17 @@
                 android:textOff="Off"
                 android:theme="@style/SwitchTheme"
                 android:textStyle="bold"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dialog_btn"
+                android:text="Reminder Modal"
+                android:onClick=""
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="match_parent"
