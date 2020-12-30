@@ -29,6 +29,7 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -264,6 +265,15 @@ public class Registration extends AppCompatActivity {
                 session = new Session(getApplicationContext());
                 session.setname(registname);
                 session.setid(resultvalue);
+                session.setPrimaryId(resultvalue);
+
+                // setting family list
+                ArrayList<String> allusers = new ArrayList<String>();
+                allusers.add(resultvalue);
+                allusers.add(registname);
+
+                TinyDB tinydb = new TinyDB(getApplicationContext());
+                tinydb.putListString("allusers", allusers);
 
                 Intent intent = new Intent(Registration.this, DeviceSetup1.class);
                 startActivity(intent);

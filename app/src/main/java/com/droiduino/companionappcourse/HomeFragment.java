@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
@@ -72,6 +74,10 @@ public class HomeFragment extends Fragment {
         session = new Session(getActivity().getApplicationContext());
         String name = session.getname();
         String id = session.getid();
+
+        TinyDB tinydb = new TinyDB(getActivity().getApplicationContext());
+        ArrayList<String> allusers = tinydb.getListString("allusers");
+        System.out.println("ALLUSERSS"+allusers);
 
         final TextView homeFragmentUsername = (TextView)view.findViewById(R.id.homeFragmentUsername);
         homeFragmentUsername.setText(name);

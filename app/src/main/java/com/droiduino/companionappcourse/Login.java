@@ -22,6 +22,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -111,6 +112,8 @@ public class Login extends AppCompatActivity {
 
         String resultvalue;
         String name;
+        JSONArray family;
+        boolean family_present = false; // stores true if family is present for the current user
 
         protected Void doInBackground(String...params) {
 
@@ -176,11 +179,18 @@ public class Login extends AppCompatActivity {
                     JSONObject j2 = new JSONObject(rval.getString(0));
                     resultvalue = j2.get("id").toString();
                     name = j2.get("name").toString();
+
+                    if(!jsonObj.getString("family").equals("none")){
+                        // if family is present
+                        family = jsonObj.getJSONArray("family");
+                        family_present = true;
+                    }
+                    System.out.println(jsonObj.getString("family"));
                 }
                 else{
                     resultvalue = jsonObj.getString("result");
                 }
-                System.out.println("JSOOOOOOOOOOOOOO"+resultvalue);
+//                System.out.println("JSOOOOOOOOOOOOOO"+resultvalue);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -199,6 +209,30 @@ public class Login extends AppCompatActivity {
                 session = new Session(getApplicationContext());
                 session.setname(name);
                 session.setid(resultvalue);
+                session.setPrimaryId(resultvalue);
+
+                // setting family list
+                ArrayList<String> allusers = new ArrayList<String>();
+                allusers.add(resultvalue);
+                allusers.add(name);
+
+                if(family_present == true){
+                    for(int i=0;i<family.length();i++){
+                        try {
+                            System.out.println(family.getString(i));
+                            JSONObject j2 = new JSONObject(family.getString(i));
+                            allusers.add(j2.get("familyMemberId").toString());
+                            allusers.add(j2.get("familyMemberName").toString());
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+                System.out.println(allusers);
+
+                TinyDB tinydb = new TinyDB(getApplicationContext());
+                tinydb.putListString("allusers", allusers);
 
                 Intent intent = new Intent(Login.this, DeviceSetup1.class);
                 startActivity(intent);

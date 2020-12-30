@@ -13,12 +13,23 @@ public class Session {
         prefs = PreferenceManager.getDefaultSharedPreferences(cntx);
     }
 
+    // the current user (could be a family member)
     public void setid(String id) {
         prefs.edit().putString("id", id).commit();
     }
 
     public String getid() {
         String id = prefs.getString("id","");
+        return id;
+    }
+
+    // the person who logs into the app (CANNOT be a family member)
+    public void setPrimaryId(String id) {
+        prefs.edit().putString("primaryUserId", id).commit();
+    }
+
+    public String getPrimaryId() {
+        String id = prefs.getString("primaryUserId","");
         return id;
     }
 
