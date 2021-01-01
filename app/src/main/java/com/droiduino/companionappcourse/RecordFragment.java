@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -62,6 +63,14 @@ public class RecordFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_record, container, false);
+
+        Session session;//global variable
+        session = new Session(getActivity().getApplicationContext());
+        String fever = session.getfever();
+        float temperature = session.gettemperature();
+
+        final TextView record_temperature = (TextView)view.findViewById(R.id.record_temperature);
+        record_temperature.setText(Float.toString(temperature));
 
         LinearLayout vitalsButton = (LinearLayout)view.findViewById(R.id.vitalsButton);
         vitalsButton.setOnClickListener(new View.OnClickListener() {

@@ -29,6 +29,7 @@ public class Habitat extends AppCompatActivity {
                 // This is the code to move to another screen
                 Intent intent = new Intent(Habitat.this, HealthGuidance.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

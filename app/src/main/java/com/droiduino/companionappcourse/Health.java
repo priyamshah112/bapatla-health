@@ -29,6 +29,7 @@ public class Health extends AppCompatActivity {
                 // This is the code to move to another screen
                 Intent intent = new Intent(Health.this, Travel.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

@@ -42,4 +42,22 @@ public class Session {
         return name;
     }
 
+    public void settemperature(float temperature) {
+        prefs.edit().putFloat("temperature", temperature).commit();
+    }
+
+    public float gettemperature() {
+        float temperature = prefs.getFloat("temperature", 0.0f);
+        return temperature;
+    }
+
+    public void setfever(String fever){
+        prefs.edit().putString("fever", fever).commit();
+    }
+
+    public String getfever() {
+        String fever = prefs.getString("fever","");
+        return fever;
+    }
+
 }

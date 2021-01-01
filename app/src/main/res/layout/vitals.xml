@@ -180,17 +180,20 @@
                     android:textStyle="bold"/>
 
                 <EditText
+                    android:id="@+id/body_temperature"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
-                    android:text="000"
+                    android:hint="000"
+                    android:inputType="numberDecimal"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
-                    android:paddingTop="7dp"
+                    android:paddingTop="4dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginRight="21.5dp"/>
+                    android:layout_marginRight="21.5dp"
+                    android:textCursorDrawable = "@null"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -212,14 +215,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
-                    android:text="000"
+                    android:hint="000"
                     android:paddingStart="8dp"
-                    android:paddingTop="7dp"
+                    android:paddingTop="4dp"
                     android:textColor="@color/colorGrey"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"
                     android:layout_marginEnd="21.5dp"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_alignParentEnd="true"
+                    android:textCursorDrawable = "@null"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -241,14 +245,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/vitals_border_green"
-                    android:text="014"
+                    android:hint="014"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
-                    android:paddingTop="7dp"
+                    android:paddingTop="4dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="21.5dp"/>
+                    android:layout_marginEnd="21.5dp"
+                    android:textCursorDrawable = "@null"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -270,14 +275,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/vitals_border_green"
-                    android:text="100"
+                    android:hint="100"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
-                    android:paddingTop="7dp"
+                    android:paddingTop="4dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"
                     android:layout_marginEnd="21.5dp"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_alignParentEnd="true"
+                    android:textCursorDrawable = "@null"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -299,14 +305,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/vitals_border_yellow"
-                    android:text="060"
+                    android:hint="060"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
-                    android:paddingTop="7dp"
+                    android:paddingTop="4dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"
                     android:layout_marginEnd="21.5dp"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_alignParentEnd="true"
+                    android:textCursorDrawable = "@null"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -328,15 +335,31 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/vitals_border_red"
-                    android:text="110"
+                    android:hint="110"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
-                    android:paddingTop="7dp"
+                    android:paddingTop="4dp"
                     android:paddingRight="7dp"
                     android:paddingBottom="4dp"
                     android:layout_marginEnd="21.5dp"
-                    android:layout_alignParentEnd="true"/>
+                    android:layout_alignParentEnd="true"
+                    android:textCursorDrawable = "@null"/>
             </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="42.5dp"
+                android:fontFamily="@font/attenroundnewbook"
+                android:visibility="gone"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/healthButton"

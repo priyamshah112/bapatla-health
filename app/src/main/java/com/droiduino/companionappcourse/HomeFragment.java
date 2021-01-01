@@ -74,6 +74,8 @@ public class HomeFragment extends Fragment {
         session = new Session(getActivity().getApplicationContext());
         String name = session.getname();
         String id = session.getid();
+        String fever = session.getfever();
+        float temperature = session.gettemperature();
 
         TinyDB tinydb = new TinyDB(getActivity().getApplicationContext());
         ArrayList<String> allusers = tinydb.getListString("allusers");
@@ -81,6 +83,12 @@ public class HomeFragment extends Fragment {
 
         final TextView homeFragmentUsername = (TextView)view.findViewById(R.id.homeFragmentUsername);
         homeFragmentUsername.setText(name);
+
+        final TextView home_fever_text = (TextView)view.findViewById(R.id.home_fever_text);
+        home_fever_text.setText(fever);
+
+        final TextView home_temperature = (TextView)view.findViewById(R.id.home_temperature);
+        home_temperature.setText(Float.toString(temperature));
 
         LinearLayout timelineButton = (LinearLayout)view.findViewById(R.id.timelineButton);
         timelineButton.setOnClickListener(new View.OnClickListener() {

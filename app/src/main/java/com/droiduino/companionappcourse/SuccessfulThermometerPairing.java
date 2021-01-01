@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.nio.file.FileVisitOption;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SuccessfulThermometerPairing extends AppCompatActivity {
@@ -26,10 +28,19 @@ public class SuccessfulThermometerPairing extends AppCompatActivity {
         redirectToHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // This is the code to move to another screen
-                Intent intent = new Intent(SuccessfulThermometerPairing.this, BottomNav.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+
+            //setting temperature and fever
+            Session session;//global variable
+            session = new Session(getApplicationContext());
+            session.settemperature(96); //setting it to default 96F
+            Fever f = new Fever();
+            String fever = f.findfever(96);
+            session.setfever(fever);
+
+            // This is the code to move to another screen
+            Intent intent = new Intent(SuccessfulThermometerPairing.this, BottomNav.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
             }
         });
     }
