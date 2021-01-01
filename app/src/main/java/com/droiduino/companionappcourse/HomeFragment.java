@@ -268,7 +268,7 @@ public class HomeFragment extends Fragment {
                                 LinearLayout.LayoutParams.MATCH_PARENT,
                                 LinearLayout.LayoutParams.WRAP_CONTENT
                         );
-                        params.setMargins(0, getpx(14), 0, 0);
+                        params.setMargins(0, 0, 0, 0);
                         timeline_box.setLayoutParams(params);
 
 //                        ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) timeline_box.getLayoutParams();
@@ -278,7 +278,7 @@ public class HomeFragment extends Fragment {
 
                         timeline_box.setOrientation(LinearLayout.VERTICAL);
                         timeline_box.setBackground(ContextCompat.getDrawable(getActivity().getApplicationContext(), R.drawable.rounded_corners_teal_color));
-                        timeline_box.setPadding(getpx(13), getpx(14), getpx(13), getpx(14));
+//                        timeline_box.setPadding(getpx(13), getpx(14), getpx(13), getpx(14));
 
                         LinearLayout inner_parent = new LinearLayout(getActivity().getApplicationContext());
                         LinearLayout.LayoutParams inner_parent_params = new LinearLayout.LayoutParams(
