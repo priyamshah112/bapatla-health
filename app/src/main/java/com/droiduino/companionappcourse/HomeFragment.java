@@ -1,5 +1,7 @@
 package com.droiduino.companionappcourse;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -87,7 +90,7 @@ public class HomeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
@@ -100,11 +103,57 @@ public class HomeFragment extends Fragment {
         float temperature = session.gettemperature();
 
         TinyDB tinydb = new TinyDB(getActivity().getApplicationContext());
-        ArrayList<String> allusers = tinydb.getListString("allusers");
+        final ArrayList<String> allusers = tinydb.getListString("allusers");
         System.out.println("ALLUSERSS"+allusers);
 
         final TextView homeFragmentUsername = (TextView)view.findViewById(R.id.homeFragmentUsername);
         homeFragmentUsername.setText(name);
+        homeFragmentUsername.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String allusernames[] = new String[allusers.size()/2];
+                final String alluserids[] = new String[allusers.size()/2];
+                int counter=0;
+                int id_counter=0;
+                for(int i=0;i<allusers.size();i++){
+                    if(i%2!=0){
+                        allusernames[counter]=allusers.get(i);
+                        counter+=1;
+                    }else{
+                        alluserids[id_counter]=allusers.get(i);
+                        id_counter+=1;
+                    }
+                }
+
+                final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Choose user");
+                builder.setItems(allusernames, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // the user clicked on allusernames[which]
+                        Session session;//global variable
+                        session = new Session(getActivity());
+                        session.setname(allusernames[which]);
+                        session.setid(alluserids[which]);
+
+                        session.settemperature(96); //setting it to default 96F
+                        Fever f = new Fever();
+                        String fever = f.findfever(96);
+                        session.setfever(fever);
+
+                        dialog.dismiss();
+
+                        // reloading activity
+                        Fragment currentFragment = getActivity().getSupportFragmentManager().findFragmentById(R.id.container);
+                        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                        fragmentTransaction.detach(currentFragment);
+                        fragmentTransaction.attach(currentFragment);
+                        fragmentTransaction.commit();
+                    }
+                });
+                builder.show();
+            }
+        });
 
         final TextView home_fever_text = (TextView)view.findViewById(R.id.home_fever_text);
         home_fever_text.setText(fever);
@@ -129,6 +178,8 @@ public class HomeFragment extends Fragment {
                 getActivity().startActivity(myIntent);
             }
         });
+
+
 
         String payload = "{\"userId\": \""+id+"\"}";
         new HomeFragment.PostData().execute(payload);
@@ -553,9 +604,17 @@ public class HomeFragment extends Fragment {
 
             }
             else{
-                final TextView heading = getActivity().findViewById(R.id.errorText);
-                heading.setVisibility(View.VISIBLE);
-                heading.setText("There was some error. Please try again in a few minutes.");
+                LinearLayout parent = (LinearLayout) getActivity().findViewById(R.id.parent);
+
+                TextView errortexttv = new TextView(getActivity().getApplicationContext());
+                errortexttv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                errortexttv.setTextColor(Color.parseColor("#ffffff"));
+                errortexttv.setGravity(Gravity.CENTER_VERTICAL);
+                errortexttv.setTextSize(12);
+                errortexttv.setText("No data");
+
+                parent.addView(errortexttv);
+
             }
         }
 
