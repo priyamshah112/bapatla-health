@@ -48,28 +48,32 @@ public class Vitals extends AppCompatActivity {
                 final TextView body_temperature_field = findViewById(R.id.body_temperature);
 
                 if(body_temperature_field.getText().toString().equals("")) {
-                    body_temperature_field.setError("Please fill this field.");
-                    return;
+                    // body_temperature_field.setError("Please fill this field.");
+                    // return;
+                    Intent intent = new Intent(Vitals.this, Health.class);
+                    startActivity(intent);
+                    finish();
                 }
+                else{
+                    float body_temperature = Float.parseFloat(body_temperature_field.getText().toString());
 
-                float body_temperature = Float.parseFloat(body_temperature_field.getText().toString());
+                    healthButton.setEnabled(false);
+                    healthButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
 
-                healthButton.setEnabled(false);
-                healthButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    Calendar calendar = Calendar.getInstance();
+                    SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yy hh:mm a");
+                    sdf.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
+                    String datetime = sdf.format(calendar.getTime());
+                    System.out.println(datetime);
 
-                Calendar calendar = Calendar.getInstance();
-                SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yy hh:mm a");
-                sdf.setTimeZone(TimeZone.getTimeZone("Asia/Calcutta"));
-                String datetime = sdf.format(calendar.getTime());
-                System.out.println(datetime);
+                    //getting current user id
+                    Session session;//global variable
+                    session = new Session(getApplicationContext());
+                    int userId = Integer.parseInt(session.getid());
 
-                //getting current user id
-                Session session;//global variable
-                session = new Session(getApplicationContext());
-                int userId = Integer.parseInt(session.getid());
-
-                String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"date_time\": \""+datetime+"\"}";
-                new Vitals.PostData().execute(payload);
+                    String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"date_time\": \""+datetime+"\"}";
+                    new Vitals.PostData().execute(payload);
+                }
             }
         });
     }
