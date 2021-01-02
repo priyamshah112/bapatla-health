@@ -472,13 +472,16 @@ public class Timeline extends AppCompatActivity {
 
             }
             else{
-                final TextView heading = findViewById(R.id.errorText);
-                heading.setVisibility(View.VISIBLE);
-                heading.setText("There was some error. Please try again in a few minutes.");
+                LinearLayout parent = (LinearLayout) findViewById(R.id.parent);
 
-                Button healthButton = findViewById(R.id.healthButton);
-                healthButton.setEnabled(true);
-                healthButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                TextView errortexttv = new TextView(getApplicationContext());
+                errortexttv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                errortexttv.setTextColor(getResources().getColor(R.color.colorPrimary));
+                errortexttv.setGravity(Gravity.CENTER_VERTICAL);
+                errortexttv.setTextSize(12);
+                errortexttv.setText("No data");
+
+                parent.addView(errortexttv);
             }
         }
 
