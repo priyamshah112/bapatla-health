@@ -8,6 +8,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -55,6 +57,24 @@ public class Timeline extends AppCompatActivity {
 
         String payload = "{\"userId\": \""+userId+"\"}";
         new Timeline.PostData().execute(payload);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.timeline_top_nav, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        switch(item.getItemId()){
+            case R.id.menu_item:   //this item has your app icon
+                BottomSheetDialog bottomSheet = new BottomSheetDialog();
+                bottomSheet.show(getSupportFragmentManager(),"ModalBottomSheet");
+//                return true;
+            default: return super.onOptionsItemSelected(item);
+        }
     }
 
     private class PostData extends AsyncTask< String, Void, Void > {
