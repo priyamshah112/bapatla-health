@@ -17,22 +17,185 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Have you tested covid-19 positive prior to vaccination?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Pregnant at the time of vaccination? (For Women adult)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Pre-existing acute illness 30 days prior to vaccination?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Date of Vaccination"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/dateofvaccination"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="2.5dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/calendar_icon"
+            android:fontFamily="@font/attenroundnewbook"
+            android:hint="@string/register_birth_date"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:clickable="true"
+            android:editable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Time of Vaccination"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/timeofvaccination"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="2.5dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/calendar_icon"
+            android:fontFamily="@font/attenroundnewbook"
+            android:hint="@string/covid_vaccine_time_of_vaccination"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="14sp"
+            android:focusable="false"
+            android:clickable="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Please select Dose"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/doseSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:backgroundTint="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="17sp"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="2.5dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Vaccination Center Details"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="2.5dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/facility_name_icon"
+            android:fontFamily="@font/attenroundnewbook"
+            android:hint="@string/covid_vaccine_facility_name"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textCursorDrawable = "@null" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_corners"
+            android:drawableLeft="@drawable/facility_location_icon"
+            android:fontFamily="@font/attenroundnewbook"
+            android:hint="@string/covid_vaccine_location"
+            android:inputType="text"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textCursorDrawable = "@null" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:text="Adverse events (health problems) following immunization?"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/healthGuidanceButton"
             android:layout_width="fill_parent"
             android:layout_height="56dp"
             android:layout_gravity="center|bottom"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginStart="27dp"
             android:layout_marginEnd="26dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/rounded_corner_button"
             android:fontFamily="@font/attenroundnewbook"
-            android:text="Next"
+            android:text="SUBMIT"
             android:textColor="@android:color/white"
             android:textSize="16sp"
             android:textStyle="bold" />

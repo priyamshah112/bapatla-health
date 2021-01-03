@@ -60,4 +60,27 @@ public class Session {
         return fever;
     }
 
+    public void setSymptomsFlag(){
+        prefs.edit().putString("symptoms", "set").commit();
+    }
+
+    public String getSymptomsFlag() {
+        String symptoms = prefs.getString("symptoms","");
+        return symptoms;
+    }
+
+    public void setConditionsFlag(){
+        prefs.edit().putString("conditions", "set").commit();
+    }
+
+    public String getConditionsFlag() {
+        String conditions = prefs.getString("conditions","");
+        return conditions;
+    }
+
+    public void destroyFlags(){
+        prefs.edit().putString("symptoms", "").commit();
+        prefs.edit().putString("conditions", "").commit();
+    }
+
 }

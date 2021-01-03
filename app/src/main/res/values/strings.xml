@@ -32,7 +32,9 @@
     <string name="reminder_dialog_remindmeto">Remind me to...</string>
     <string name="reminder_dialog_repeat">Every Hour</string>
 
-
+    <string name="covid_vaccine_facility_name">Facility Name</string>
+    <string name="covid_vaccine_location">Location</string>
+    <string name="covid_vaccine_time_of_vaccination">HH:MM</string>
 
 
 </resources>

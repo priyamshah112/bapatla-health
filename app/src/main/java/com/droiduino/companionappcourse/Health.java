@@ -27,6 +27,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Health extends AppCompatActivity {
 
+    boolean symptompsflag=false;
+    boolean preexistingconditionsflag=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -159,10 +162,14 @@ public class Health extends AppCompatActivity {
                     session = new Session(getApplicationContext());
                     int userId = Integer.parseInt(session.getid());
 
-                    if(!symptoms_reported.equals("") && symptoms_reported.charAt(0)==',')
-                        symptoms_reported=symptoms_reported.substring(2);
-                    if(!preexisting_conditions.equals("") && preexisting_conditions.charAt(0)==',')
-                        preexisting_conditions=preexisting_conditions.substring(2);
+                    if(!symptoms_reported.equals("") && symptoms_reported.charAt(0)==',') {
+                        symptoms_reported = symptoms_reported.substring(2);
+                        symptompsflag=true;
+                    }
+                    if(!preexisting_conditions.equals("") && preexisting_conditions.charAt(0)==',') {
+                        preexisting_conditions = preexisting_conditions.substring(2);
+                        preexistingconditionsflag=true;
+                    }
 
                     String payload = "{\"userId\": \""+userId+"\", \"symptoms_reported\": \""+symptoms_reported+"\", \"preexisting_conditions\": \""+preexisting_conditions+"\", \"date_time\": \""+datetime+"\"}";
                     new Health.PostData().execute(payload);
@@ -256,6 +263,19 @@ public class Health extends AppCompatActivity {
 
             if(!resultvalue.equals("error")){
 //                System.out.println("RRRRRRRRRRRRRRRRRRRRRRRRRRRRR"+registname);
+                Session session;//global variable
+                session = new Session(getApplicationContext());
+                if(symptompsflag==true){
+                    session.setSymptomsFlag();
+                }
+
+                if(preexistingconditionsflag==true){
+                    session.setConditionsFlag();
+                }
+
+                System.out.println("symptoms:"+session.getSymptomsFlag());
+                System.out.println("pre-existing conditions:"+session.getConditionsFlag());
+                // session.destroyFlags();
 
                 // This is the code to move to another screen
                 Intent intent = new Intent(Health.this, Covid19Vaccine.class);

@@ -40,6 +40,8 @@
 
             </LinearLayout>
 
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
@@ -49,17 +51,23 @@
                 android:background="@drawable/rounded_corners"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flexboxlayout"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="18.5dp"
-                    android:orientation="horizontal">
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    android:layout_marginTop="18dp"
+                    app:justifyContent="center"/>
 
-                    <EditText
+                    <TextView
+                        android:id="@+id/agetag"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
                         android:paddingStart="16.5dp"
                         android:paddingRight="16.5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:layout_marginStart="8dp"
                         android:background="@drawable/rounded_corners_health_guidance"
                         android:fontFamily="@font/attenroundnewregular"
@@ -67,19 +75,19 @@
                         android:textColor="@android:color/black"
                         android:textSize="20sp" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="wrap_content"
                         android:paddingStart="16.5dp"
                         android:paddingRight="16.5dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
                         android:layout_marginStart="10dp"
                         android:background="@drawable/rounded_corners_health_guidance"
                         android:fontFamily="@font/attenroundnewregular"
                         android:text="Cold"
                         android:textColor="@android:color/black"
                         android:textSize="20sp" />
-
-                </LinearLayout>
 
             </LinearLayout>
 
