@@ -239,7 +239,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/air_quality"
+                        android:src="@drawable/covid_va_not_taken"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 

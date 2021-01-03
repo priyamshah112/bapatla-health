@@ -244,8 +244,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/vitals_border_green"
-                    android:hint="014"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="000"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
@@ -274,8 +274,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/vitals_border_green"
-                    android:hint="100"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="000"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
@@ -304,8 +304,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/vitals_border_yellow"
-                    android:hint="060"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="000"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
@@ -334,8 +334,8 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/vitals_border_red"
-                    android:hint="110"
+                    android:background="@drawable/rounded_corners"
+                    android:hint="000"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"

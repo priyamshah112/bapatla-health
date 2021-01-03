@@ -3,7 +3,9 @@ package com.droiduino.companionappcourse;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +27,7 @@ import java.util.Calendar;
 import java.util.TimeZone;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class Vitals extends AppCompatActivity {
 
@@ -41,11 +44,48 @@ public class Vitals extends AppCompatActivity {
         getSupportActionBar().setTitle("VITALS");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
 
+        final TextView body_temperature_field = findViewById(R.id.body_temperature);
+
+        body_temperature_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+                System.out.println("text changed=="+s.toString());
+                if(s.toString().length()!=0){
+                    float tempr = Float.parseFloat(s.toString());
+                    if(tempr>=96 && tempr<99){
+                        body_temperature_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_green));
+                    }
+                    else if(tempr>=99 && tempr<104){
+                        body_temperature_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else if(tempr>=104){
+                        body_temperature_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_red));
+                    }
+                    else {
+                        body_temperature_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners));
+                    }
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                // TODO Auto-generated method stub
+            }
+        });
+
         final Button healthButton = findViewById(R.id.healthButton);
         healthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final TextView body_temperature_field = findViewById(R.id.body_temperature);
 
                 if(body_temperature_field.getText().toString().equals("")) {
                     // body_temperature_field.setError("Please fill this field.");
