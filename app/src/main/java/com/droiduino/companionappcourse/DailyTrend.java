@@ -249,7 +249,8 @@ public class DailyTrend extends AppCompatActivity {
                     chart.animateY(1000);
                     chart.getXAxis().setGranularityEnabled(true);
                     chart.getXAxis().setGranularity(1.0f);
-                    chart.getXAxis().setLabelCount(lineDataSet.getEntryCount());
+//                    chart.getXAxis().setLabelCount(lineDataSet.getEntryCount());
+                    chart.getXAxis().setLabelCount(5);
                     chart.setData(lineData);
                     chart.invalidate();
                 }
