@@ -316,7 +316,8 @@
                 android:textSize="14sp"
                 android:textCursorDrawable = "@null" />
 
-            <TextView
+            <CheckBox
+                android:id="@+id/termsCheckBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -351,12 +352,13 @@
                 android:layout_gravity="center|bottom"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="10dp"
-                android:background="@drawable/rounded_corner_button"
+                android:background="@drawable/disabled_rounded_corner_button"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Register"
                 android:textColor="@android:color/white"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:enabled="false"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"

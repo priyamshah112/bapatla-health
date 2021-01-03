@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -34,6 +35,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 public class Registration extends AppCompatActivity {
 
@@ -77,7 +79,7 @@ public class Registration extends AppCompatActivity {
                 myCalendar.set(Calendar.MONTH, monthOfYear);
                 myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-                String myFormat = "YYYY-mm-dd"; //In which you need put here
+                String myFormat = "yyyy-MM-dd"; //In which you need put here
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 birthday[0] = sdf.format(myCalendar.getTime());
@@ -99,6 +101,24 @@ public class Registration extends AppCompatActivity {
         });
 
         final Button registerButton = findViewById(R.id.registerButton);
+
+        final CheckBox termsCheckBox = findViewById(R.id.termsCheckBox);
+        termsCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                if(registerButton.isEnabled()==false){
+                    registerButton.setEnabled(true);
+                    registerButton.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corner_button));
+                }
+                else{
+                    registerButton.setEnabled(false);
+                    registerButton.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.disabled_rounded_corner_button));
+                }
+
+            }
+        });
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

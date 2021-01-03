@@ -60,6 +60,11 @@ public class DeviceSetup2  extends AppCompatActivity {
 
         getSupportActionBar().setLogo(R.drawable.heart);
 
+        Session session = new Session(getApplicationContext());
+        String name = session.getname();
+        final TextView hitext = findViewById(R.id.hitext);
+        hitext.setText("Hi "+name+", let's get you ready!");
+
         // asking permission for bluetooth and location
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BLUETOOTH, Manifest.permission.BLUETOOTH_ADMIN, Manifest.permission.ACCESS_FINE_LOCATION}, 101);
 

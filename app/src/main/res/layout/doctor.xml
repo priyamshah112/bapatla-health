@@ -96,6 +96,17 @@
                 android:layout_marginTop="22dp">
 
                 <CheckBox
+                    android:id="@+id/checkBox0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:text="  Covid-19 Vaccine Reaction"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18sp"/>
+
+                <CheckBox
                     android:id="@+id/checkBox1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -103,7 +114,6 @@
                     android:text="  Common Cold"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
-                    android:layout_marginTop="15dp"
                     android:textSize="18sp"/>
 
                 <CheckBox

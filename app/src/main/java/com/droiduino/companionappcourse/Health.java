@@ -60,6 +60,9 @@ public class Health extends AppCompatActivity {
                 CheckBox checkBox11 = findViewById(R.id.checkBox11);
                 CheckBox checkBox12 = findViewById(R.id.checkBox12);
                 CheckBox checkBox13 = findViewById(R.id.checkBox13);
+                CheckBox checkBox18 = findViewById(R.id.checkBox18);
+                CheckBox checkBox19 = findViewById(R.id.checkBox19);
+                CheckBox checkBox21 = findViewById(R.id.checkBox21);
                 if(checkBox1.isChecked()){
 //                    System.out.println("YESSSSSSSSSSSS"+checkBox1.getText().toString());
                     symptoms_reported += checkBox1.getText().toString().trim();
@@ -100,12 +103,22 @@ public class Health extends AppCompatActivity {
                 if(checkBox13.isChecked()){
                     symptoms_reported += ", "+checkBox13.getText().toString().trim();
                 }
+                if(checkBox18.isChecked()){
+                    symptoms_reported += ", "+checkBox18.getText().toString().trim();
+                }
+                if(checkBox19.isChecked()){
+                    symptoms_reported += ", "+checkBox19.getText().toString().trim();
+                }
+                if(checkBox21.isChecked()){
+                    symptoms_reported += ", "+checkBox21.getText().toString().trim();
+                }
 
                 String preexisting_conditions = "";
                 CheckBox checkBox14 = findViewById(R.id.checkBox14);
                 CheckBox checkBox15 = findViewById(R.id.checkBox15);
                 CheckBox checkBox16 = findViewById(R.id.checkBox16);
                 CheckBox checkBox17 = findViewById(R.id.checkBox17);
+                CheckBox checkBox20 = findViewById(R.id.checkBox20);
                 if(checkBox14.isChecked()){
                     preexisting_conditions += checkBox14.getText().toString().trim();
                 }
@@ -118,13 +131,16 @@ public class Health extends AppCompatActivity {
                 if(checkBox17.isChecked()){
                     preexisting_conditions += ", "+checkBox17.getText().toString().trim();
                 }
+                if(checkBox20.isChecked()){
+                    preexisting_conditions += ", "+checkBox20.getText().toString().trim();
+                }
 
                 System.out.println(symptoms_reported);
                 System.out.println(preexisting_conditions);
 
                 if(symptoms_reported.equals("") && preexisting_conditions.equals("")){
                     // This is the code to move to another screen
-                    Intent intent = new Intent(Health.this, Travel.class);
+                    Intent intent = new Intent(Health.this, Covid19Vaccine.class);
                     startActivity(intent);
                     finish();
                 }
@@ -242,7 +258,7 @@ public class Health extends AppCompatActivity {
 //                System.out.println("RRRRRRRRRRRRRRRRRRRRRRRRRRRRR"+registname);
 
                 // This is the code to move to another screen
-                Intent intent = new Intent(Health.this, Travel.class);
+                Intent intent = new Intent(Health.this, Covid19Vaccine.class);
                 startActivity(intent);
                 finish();
             }

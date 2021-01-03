@@ -60,6 +60,10 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Timeline"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".DailyTrend"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Covid19Vaccine"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
