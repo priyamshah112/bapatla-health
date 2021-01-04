@@ -2,6 +2,7 @@ package com.droiduino.companionappcourse;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -42,6 +43,8 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
 
 public class HealthGuidance extends AppCompatActivity {
 
@@ -152,6 +155,7 @@ public class HealthGuidance extends AppCompatActivity {
                 }
                 else{
                     resultvalue = jsonObj.getString("result");
+                    birthdate = jsonObj.getJSONArray("age").getJSONObject(0).getString("birthday");
                 }
 
                 System.out.println("JSOOOOOOOOOOOOOO"+resultvalue);
@@ -167,64 +171,129 @@ public class HealthGuidance extends AppCompatActivity {
             //do stuff
             System.out.println("inpostexecute------"+resultvalue);
 
-            if(!resultvalue.equals("not_existing")){
-//                System.out.println("HERRRRROOOO");
-//                System.out.println(timeline);
-                Session session;//global variable
-                session = new Session(getApplicationContext());
-                session.destroyFlags();
+//          System.out.println("HERRRRROOOO");
+//          System.out.println(timeline);
+            Session session;//global variable
+            session = new Session(getApplicationContext());
 
-                final FlexboxLayout flexboxLayout = findViewById(R.id.flexboxlayout);
+            Typeface attenroundnewregular = ResourcesCompat.getFont(getApplicationContext(), R.font.attenroundnewregular);
 
-                DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-                try {
-                    Date bday = format.parse(birthdate);
-                    Date today = format.parse(format.format(new Date()));
-                    long difference_In_Time = today.getTime() - bday.getTime();
+            final FlexboxLayout flexboxLayout = findViewById(R.id.flexboxlayout);
 
-                    long difference_In_Years
-                            = (difference_In_Time
-                            / (1000l * 60 * 60 * 24 * 365));
+            DateFormat format = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+            try {
+                Date bday = format.parse(birthdate);
+                Date today = format.parse(format.format(new Date()));
+                long difference_In_Time = today.getTime() - bday.getTime();
 
-                    System.out.println("AGE= "+difference_In_Years);
+                long difference_In_Years
+                        = (difference_In_Time
+                        / (1000l * 60 * 60 * 24 * 365));
+
+                System.out.println("AGE= "+difference_In_Years);
 
 //                    final TextView agetag = findViewById(R.id.agetag);
 //                    agetag.setText(difference_In_Years+" years old");
 
-                    TextView agetv = new TextView(getApplicationContext());
-                    agetv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                    agetv.setTextColor(Color.parseColor("#ffffff"));
-                    agetv.setGravity(Gravity.CENTER_VERTICAL);
-                    agetv.setTextSize(12);
-                    agetv.setText(difference_In_Years+" years old");
+                TextView agetv = new TextView(getApplicationContext());
+                FlexboxLayout.LayoutParams params = new FlexboxLayout.LayoutParams(FlexboxLayout.LayoutParams.WRAP_CONTENT, FlexboxLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(8,8,0,0);
+                agetv.setLayoutParams(params);
+                agetv.setTextColor(Color.parseColor("#000000"));
+                agetv.setPadding(16, 5, 16, 5);
+                agetv.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners_health_guidance));
+                agetv.setGravity(Gravity.CENTER_VERTICAL);
+                agetv.setTypeface(attenroundnewregular);
+                agetv.setTextSize(20);
+                agetv.setText(difference_In_Years+" years old");
 
-                    flexboxLayout.addView(agetv);
+                flexboxLayout.addView(agetv);
 
-                } catch (ParseException e) {
-                    e.printStackTrace();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            if(!resultvalue.equals("not_existing")){
+                //symptoms ani pre existing conditions ghe ani print kar
+
+                String symptoms=session.getSymptomsFlag();
+                String preexistingconditions=session.getConditionsFlag();
+
+                if(symptoms!="") {
+                    for (int i = 0; i <timeline.length(); i++) {
+                        try {
+                            JSONObject j1 = new JSONObject(timeline.getString(i));
+                            // System.out.println(j1);
+                            if(!j1.getString("symptoms_reported").equals("")){
+                                String allsymptoms = j1.getString("symptoms_reported");
+                                System.out.println(allsymptoms);
+
+                                String[] onesymptom = allsymptoms.split(",");
+                                for(int j=0;j<onesymptom.length;j++){
+                                    System.out.println(onesymptom[j]);
+                                    TextView agetv = new TextView(getApplicationContext());
+                                    FlexboxLayout.LayoutParams params = new FlexboxLayout.LayoutParams(FlexboxLayout.LayoutParams.WRAP_CONTENT, FlexboxLayout.LayoutParams.WRAP_CONTENT);
+                                    params.setMargins(8,8,0,0);
+                                    agetv.setLayoutParams(params);
+                                    agetv.setTextColor(Color.parseColor("#000000"));
+                                    agetv.setPadding(16, 5, 16, 5);
+                                    agetv.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners_health_guidance));
+                                    agetv.setGravity(Gravity.CENTER_VERTICAL);
+                                    agetv.setTypeface(attenroundnewregular);
+                                    agetv.setTextSize(20);
+                                    agetv.setText(onesymptom[j].trim());
+
+                                    flexboxLayout.addView(agetv);
+
+                                }
+
+                                break;
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 }
 
-                //symptoms ani pre existing conditions ghe ani print kar
-                int counter=1;
-                for(int i=timeline.length()-1;i>=0;i--){
-                    try {
-//                        System.out.println("i="+i);
-                        JSONObject j1 = new JSONObject(timeline.getString(i));
-//                        System.out.println(j1);
+                if(preexistingconditions!="") {
+                    for (int i = 0; i <timeline.length(); i++) {
+                        try {
+                            JSONObject j1 = new JSONObject(timeline.getString(i));
+                            // System.out.println(j1);
+                            if(!j1.getString("preexisting_conditions").equals("")){
+                                String allconditions = j1.getString("preexisting_conditions");
+                                System.out.println(allconditions);
 
-                        String date_time = j1.getString("date_time");
-                        String date = date_time.substring(0,9);
-                        String time = date_time.substring(10);
-//                        System.out.println(time);
+                                String[] onecondition = allconditions.split(",");
+                                for(int j=0;j<onecondition.length;j++){
+                                    System.out.println(onecondition[j]);
+                                    TextView agetv = new TextView(getApplicationContext());
+                                    FlexboxLayout.LayoutParams params = new FlexboxLayout.LayoutParams(FlexboxLayout.LayoutParams.WRAP_CONTENT, FlexboxLayout.LayoutParams.WRAP_CONTENT);
+                                    params.setMargins(8,8,0,0);
+                                    agetv.setLayoutParams(params);
+                                    agetv.setTextColor(Color.parseColor("#000000"));
+                                    agetv.setPadding(16, 5, 16, 5);
+                                    agetv.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners_health_guidance));
+                                    agetv.setGravity(Gravity.CENTER_VERTICAL);
+                                    agetv.setTypeface(attenroundnewregular);
+                                    agetv.setTextSize(20);
+                                    agetv.setText(onecondition[j].trim());
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+                                    flexboxLayout.addView(agetv);
+
+                                }
+
+                                break;
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             }
-            else{
-
-            }
+            session.destroyFlags();
         }
     }
 }
