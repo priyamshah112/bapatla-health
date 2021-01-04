@@ -78,9 +78,19 @@ public class Session {
         return conditions;
     }
 
+    public void setVitalsCovid19Flag(){
+        prefs.edit().putString("vitals_covid", "set").commit();
+    }
+
+    public String getVitalsCovid19Flag() {
+        String vitals_covid = prefs.getString("vitals_covid","");
+        return vitals_covid;
+    }
+
     public void destroyFlags(){
         prefs.edit().putString("symptoms", "").commit();
         prefs.edit().putString("conditions", "").commit();
+        prefs.edit().putString("vitals_covid", "").commit();
     }
 
 }

@@ -29,6 +29,7 @@ public class Covid19AEFI3 extends AppCompatActivity {
                 // This is the code to move to another screen
                 Intent intent = new Intent(Covid19AEFI3.this, CovidAEFISubmitReferenceNo.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

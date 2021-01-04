@@ -25,29 +25,35 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <CheckBox
+            android:id="@+id/positive_before_vaccination"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
+            app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Have you tested covid-19 positive prior to vaccination?"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
 
         <CheckBox
+            android:id="@+id/pregnant"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
+            app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Pregnant at the time of vaccination? (For Women adult)"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
 
         <CheckBox
+            android:id="@+id/preexisting_illness"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingLeft="10dp"
+            app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Pre-existing acute illness 30 days prior to vaccination?"
             android:textColor="@color/colorPrimary"
@@ -145,6 +151,7 @@
             android:textSize="16sp" />
 
         <EditText
+            android:id="@+id/facility_name"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="2.5dp"
@@ -160,6 +167,7 @@
             android:textCursorDrawable = "@null" />
 
         <EditText
+            android:id="@+id/facility_location"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="5dp"
@@ -175,14 +183,30 @@
             android:textCursorDrawable = "@null" />
 
         <CheckBox
+            android:id="@+id/adverse_events"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:paddingLeft="10dp"
+            app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Adverse events (health problems) following immunization?"
             android:textColor="@color/colorPrimary"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="42.5dp"
+            android:fontFamily="@font/attenroundnewbook"
+            android:visibility="gone"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/healthGuidanceButton"
