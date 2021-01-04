@@ -135,6 +135,27 @@
                 android:layout_weight="1"
                 android:text="Bottom Nav Button" />
 
+            <Button
+                android:id="@+id/covid19aefi1button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Covid-19 AEFI 1 Button" />
+
+            <Button
+                android:id="@+id/covid19aefi2button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Covid-19 AEFI 2 Button" />
+
+            <Button
+                android:id="@+id/covid19aefi3button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Covid-19 AEFI 3 Button" />
+
         </LinearLayout>
     </LinearLayout>
 

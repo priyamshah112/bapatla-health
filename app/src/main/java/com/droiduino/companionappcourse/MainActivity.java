@@ -208,6 +208,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button covid19aefi1button = findViewById(R.id.covid19aefi1button);
+        covid19aefi1button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Covid19AEFI1.class);
+                startActivity(intent);
+            }
+        });
+
+        Button covid19aefi2button = findViewById(R.id.covid19aefi2button);
+        covid19aefi2button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Covid19AEFI2.class);
+                startActivity(intent);
+            }
+        });
+
+        Button covid19aefi3button = findViewById(R.id.covid19aefi3button);
+        covid19aefi3button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(MainActivity.this, Covid19AEFI3.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     /* ============================ Thread to Create Connection ================================= */

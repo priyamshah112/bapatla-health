@@ -147,6 +147,15 @@ public class RecordFragment extends Fragment {
             }
         });
 
+        LinearLayout covid19aefibutton = (LinearLayout)view.findViewById(R.id.covid19aefibutton);
+        covid19aefibutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), Covid19AEFI1.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
         return view;
     }
 }
