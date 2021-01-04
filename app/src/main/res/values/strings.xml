@@ -36,5 +36,13 @@
     <string name="covid_vaccine_location">Location</string>
     <string name="covid_vaccine_time_of_vaccination">HH:MM</string>
 
+    <string name="covid_aefi1_batch_no">000000</string>
+    <string name="covid_aefi1_notes">Description of the adverse events</string>
+
+    <string name="aefi_reporters_name">Enter Reporters Name</string>
+    <string name="aefi_reporters_designation">Enter Reporters Designation</string>
+    <string name="aefi_reporters_mobile_no">Enter Reporters Mobile No.</string>
+    <string name="aefi_reporters_address">House No, Landmark, Village, Mandal</string>
+
 
 </resources>

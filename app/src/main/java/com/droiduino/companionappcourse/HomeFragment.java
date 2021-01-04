@@ -7,6 +7,7 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
@@ -102,6 +103,61 @@ public class HomeFragment extends Fragment {
         String fever = session.getfever();
         float temperature = session.gettemperature();
 
+        final TextView home_fever_text = (TextView)view.findViewById(R.id.home_fever_text);
+        home_fever_text.setText(fever);
+
+        ImageView homepage_temperature_bar = (ImageView)view.findViewById(R.id.homepage_temperature_bar);
+        if(temperature<99){
+//            return("No Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
+            }
+            home_fever_text.setTextColor(0xAA74BD4E);
+        }
+        else if(temperature>=99 && temperature<101){
+//            return("Mild Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar));
+            }
+            home_fever_text.setTextColor(0xAAF1D316);
+        }
+        else if(temperature>=101 && temperature<104){
+//            return("Moderate Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar));
+            }
+            home_fever_text.setTextColor(0xAAF39700);
+        }
+        else if(temperature>=104){
+//            return("High Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar));
+            }
+            home_fever_text.setTextColor(0xAAD44E57);
+        }
+        else {
+//            return "No Fever";
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
+            }
+            home_fever_text.setTextColor(0xAA74BD4E);
+        }
+
         TinyDB tinydb = new TinyDB(getActivity().getApplicationContext());
         final ArrayList<String> allusers = tinydb.getListString("allusers");
         System.out.println("ALLUSERSS"+allusers);
@@ -155,9 +211,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        final TextView home_fever_text = (TextView)view.findViewById(R.id.home_fever_text);
-        home_fever_text.setText(fever);
-
         final TextView home_temperature = (TextView)view.findViewById(R.id.home_temperature);
         home_temperature.setText(Float.toString(temperature));
 
@@ -191,7 +244,7 @@ public class HomeFragment extends Fragment {
 
 
         String payload = "{\"userId\": \""+id+"\"}";
-        new HomeFragment.PostData().execute(payload);
+        new PostData().execute(payload);
 
         return view;
     }

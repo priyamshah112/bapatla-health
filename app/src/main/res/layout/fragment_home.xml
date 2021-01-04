@@ -126,6 +126,7 @@
                     />
 
                 <ImageView
+                    android:id="@+id/homepage_temperature_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/temperature_range"

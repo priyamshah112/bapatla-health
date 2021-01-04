@@ -64,6 +64,14 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Covid19Vaccine"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Covid19AEFI1"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Covid19AEFI2"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Covid19AEFI3"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".Covid19AEFI3"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

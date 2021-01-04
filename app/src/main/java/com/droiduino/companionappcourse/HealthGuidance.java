@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -65,6 +67,67 @@ public class HealthGuidance extends AppCompatActivity {
         Session session;//global variable
         session = new Session(getApplicationContext());
         int userId = Integer.parseInt(session.getid());
+        String fever = session.getfever();
+        float temperature = session.gettemperature();
+
+        final TextView health_guidance_fever_text = (TextView)findViewById(R.id.health_guidance_fever_text);
+        health_guidance_fever_text.setText(fever);
+
+        ImageView health_guidance_temperature_bar = (ImageView)findViewById(R.id.health_guidance_temperature_bar);
+
+        if(temperature<99){
+//            return("No Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar, getApplicationContext().getTheme()));
+            }
+            else{
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
+            }
+            health_guidance_fever_text.setTextColor(0xAA74BD4E);
+        }
+        else if(temperature>=99 && temperature<101){
+//            return("Mild Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar, getApplicationContext().getTheme()));
+            }
+            else{
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar));
+            }
+            health_guidance_fever_text.setTextColor(0xAAF1D316);
+        }
+        else if(temperature>=101 && temperature<104){
+//            return("Moderate Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar, getApplicationContext().getTheme()));
+            }
+            else{
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar));
+            }
+            health_guidance_fever_text.setTextColor(0xAAF39700);
+        }
+        else if(temperature>=104){
+//            return("High Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar, getApplicationContext().getTheme()));
+            }
+            else{
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar));
+            }
+            health_guidance_fever_text.setTextColor(0xAAD44E57);
+        }
+        else {
+//            return "No Fever";
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar, getApplicationContext().getTheme()));
+            }
+            else{
+                health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
+            }
+            health_guidance_fever_text.setTextColor(0xAA74BD4E);
+        }
+
+        final TextView health_guidance_temperature = (TextView)findViewById(R.id.health_guidance_temperature);
+        health_guidance_temperature.setText(Float.toString(temperature));
 
         String payload = "{\"userId\": \""+userId+"\"}";
         new HealthGuidance.PostData().execute(payload);
