@@ -70,7 +70,7 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Covid19AEFI3"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".Covid19AEFI3"
+        <activity android:name=".CovidAEFISubmitReferenceNo"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
