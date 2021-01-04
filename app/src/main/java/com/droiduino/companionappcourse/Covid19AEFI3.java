@@ -27,7 +27,7 @@ public class Covid19AEFI3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // This is the code to move to another screen
-                Intent intent = new Intent(Covid19AEFI3.this, DeviceSetup2.class);
+                Intent intent = new Intent(Covid19AEFI3.this, CovidAEFISubmitReferenceNo.class);
                 startActivity(intent);
             }
         });
