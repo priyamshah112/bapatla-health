@@ -1,6 +1,7 @@
 package com.droiduino.companionappcourse;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -68,6 +70,70 @@ public class RecordFragment extends Fragment {
         session = new Session(getActivity().getApplicationContext());
         String fever = session.getfever();
         float temperature = session.gettemperature();
+
+        ImageView fragment_record_page_tablet = (ImageView)view.findViewById(R.id.fragment_record_page_tablet);
+        ImageView fragment_record_page_bar = (ImageView)view.findViewById(R.id.fragment_record_page_bar);
+
+        if(temperature<99){
+//            return("No Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_tablet, getActivity().getApplicationContext().getTheme()));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_tablet));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
+
+            }
+        }
+        else if(temperature>=99 && temperature<101){
+//            return("Mild Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_tablet, getActivity().getApplicationContext().getTheme()));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_tablet));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar));
+
+            }
+        }
+        else if(temperature>=101 && temperature<104){
+//            return("Moderate Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_tablet, getActivity().getApplicationContext().getTheme()));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_tablet));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar));
+
+            }
+        }
+        else if(temperature>=104){
+//            return("High Fever");
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_tablet, getActivity().getApplicationContext().getTheme()));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_tablet));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar));
+
+            }
+        }
+        else {
+//            return "No Fever";
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_tablet, getActivity().getApplicationContext().getTheme()));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar, getActivity().getApplicationContext().getTheme()));
+            }
+            else{
+                fragment_record_page_tablet.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_tablet));
+                fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
+
+            }
+        }
 
         final TextView record_temperature = (TextView)view.findViewById(R.id.record_temperature);
         record_temperature.setText(Float.toString(temperature));

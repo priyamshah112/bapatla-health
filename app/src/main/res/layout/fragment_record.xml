@@ -68,12 +68,14 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/fragment_record_page_tablet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/mild"
                 android:layout_gravity="center"/>
 
             <ImageView
+                android:id="@+id/fragment_record_page_bar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/temperature_range"
