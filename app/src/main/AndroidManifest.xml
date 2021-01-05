@@ -72,6 +72,8 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".CovidAEFISubmitReferenceNo"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".HeatMapWebview"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
