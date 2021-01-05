@@ -90,6 +90,8 @@ public class HomeFragment extends Fragment {
 
     }
 
+    AsyncTask task;
+
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
@@ -244,7 +246,7 @@ public class HomeFragment extends Fragment {
 
 
         String payload = "{\"userId\": \""+id+"\"}";
-        new PostData().execute(payload);
+        task = new PostData().execute(payload);
 
         return view;
     }
@@ -688,6 +690,14 @@ public class HomeFragment extends Fragment {
                     r.getDisplayMetrics()
             );
             return px;
+        }
+    }
+
+    public void onDestroy() {
+        super.onDestroy();
+
+        if(task != null && task.getStatus() != AsyncTask.Status.FINISHED) {
+            task.cancel(true);
         }
     }
 }
