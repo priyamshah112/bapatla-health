@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -147,6 +148,7 @@ public class HealthGuidance extends AppCompatActivity {
         String resultvalue = "";
         JSONArray timeline;
         String birthdate = "";
+        JSONArray covid_vaccination;
 
         protected Void doInBackground(String...params) {
 
@@ -215,13 +217,15 @@ public class HealthGuidance extends AppCompatActivity {
                     timeline = jsonObj.getJSONArray("result");
                     System.out.println(jsonObj.getJSONArray("age").getJSONObject(0).getString("birthday"));
                     birthdate = jsonObj.getJSONArray("age").getJSONObject(0).getString("birthday");
+                    covid_vaccination = jsonObj.getJSONArray("covid_vaccination");
                 }
                 else{
                     resultvalue = jsonObj.getString("result");
                     birthdate = jsonObj.getJSONArray("age").getJSONObject(0).getString("birthday");
+                    covid_vaccination = jsonObj.getJSONArray("covid_vaccination");
                 }
 
-                System.out.println("JSOOOOOOOOOOOOOO"+resultvalue);
+                System.out.println("JSOOOOOOOOOOOOOO"+covid_vaccination);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -281,7 +285,8 @@ public class HealthGuidance extends AppCompatActivity {
 
                 String symptoms=session.getSymptomsFlag();
                 String preexistingconditions=session.getConditionsFlag();
-
+                String covid = session.getVitalsCovid19Flag();
+                System.out.println(covid);
                 if(symptoms!="") {
                     for (int i = 0; i <timeline.length(); i++) {
                         try {
@@ -349,6 +354,61 @@ public class HealthGuidance extends AppCompatActivity {
 
                                 break;
                             }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                if(covid!="") {
+                    for (int i = covid_vaccination.length()-1; i>=0; i--) {
+                        try {
+                            JSONObject j1 = new JSONObject(covid_vaccination.getString(i));
+                            System.out.println(j1);
+                            String date_of_vaccination = j1.getString("date_of_vaccination");
+                            String time_of_vaccination = j1.getString("time_of_vaccination");
+                            int dose = j1.getInt("dose");
+                            String facility_name = j1.getString("facility_name");
+                            String facility_location = j1.getString("facility_location");
+
+                            LinearLayout vaccination_report = findViewById(R.id.vaccination_report);
+                            vaccination_report.setVisibility(View.VISIBLE);
+
+                            TextView temptv = new TextView(getApplicationContext());
+                            LinearLayout.LayoutParams temptvparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                            temptvparams.setMargins(0,10,0,0);
+                            temptv.setLayoutParams(temptvparams);
+                            temptv.setTextColor(Color.parseColor("#00AAAA"));
+                            temptv.setGravity(Gravity.CENTER_HORIZONTAL);
+                            temptv.setTypeface(attenroundnewregular);
+                            temptv.setTextSize(15);
+                            temptv.setText("Covid 19 Vaccination Report");
+
+                            TextView datetimetv = new TextView(getApplicationContext());
+                            LinearLayout.LayoutParams datetimetvparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                            datetimetvparams.setMargins(10,13,0,0);
+                            datetimetv.setLayoutParams(datetimetvparams);
+                            datetimetv.setTextColor(Color.parseColor("#000000"));
+//                            datetimetv.setGravity(Gravity.CENTER_HORIZONTAL);
+                            datetimetv.setTypeface(attenroundnewregular);
+                            datetimetv.setTextSize(15);
+                            datetimetv.setText(date_of_vaccination+", "+time_of_vaccination);
+
+                            TextView reporttv = new TextView(getApplicationContext());
+                            LinearLayout.LayoutParams reporttvparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                            reporttvparams.setMargins(10,13,0,20);
+                            reporttv.setLayoutParams(reporttvparams);
+                            reporttv.setTextColor(Color.parseColor("#000000"));
+                            reporttv.setTypeface(attenroundnewregular);
+                            reporttv.setTextSize(15);
+                            reporttv.setText("Vaccination done at "+facility_name+", "+facility_location+" and dosage given "+dose);
+
+                            vaccination_report.addView(temptv);
+                            vaccination_report.addView(datetimetv);
+                            vaccination_report.addView(reporttv);
+
+                            break;
 
                         } catch (JSONException e) {
                             e.printStackTrace();
