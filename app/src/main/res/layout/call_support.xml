@@ -6,7 +6,79 @@
     android:layout_height="match_parent"
     tools:context=".CallSupport">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="2dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/doctorbackbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_arrow_back_24"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginRight="20.06dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Call Support"
+                        android:textSize="24dp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="@font/attenroundnewbook"
+                        android:layout_marginTop="11.5dp"
+                        />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/homeFragmentUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/header_btn"
+                    android:drawableLeft="@drawable/header_person_icon"
+                    android:text="Chomo"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textSize="16sp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="11dp"
+                    android:drawableRight="@drawable/homepage_dropdown_icon"/>
+
+            </RelativeLayout>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
     <ScrollView
+        android:layout_marginTop="49dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
