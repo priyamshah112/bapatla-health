@@ -2,10 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:drawable="@drawable/user_icon"
-        android:width="30.8dp"
-        android:height="35dp"
-        android:right="10dp"
+        android:drawable="@drawable/down_arrow"
+        android:width="14dp"
+        android:height="12dp"
+        android:left="10dp"
         />
 
 </layer-list >

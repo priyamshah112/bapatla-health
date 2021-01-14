@@ -20,6 +20,6 @@ public class DeviceSetupInfo extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("DEVICE SETUP");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
     }
 }

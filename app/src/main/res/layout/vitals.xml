@@ -212,10 +212,12 @@
                     android:textStyle="bold"/>
 
                 <EditText
+                    android:id="@+id/heartrate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
                     android:hint="000"
+                    android:inputType="numberDecimal"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
                     android:textColor="@color/colorGrey"
@@ -242,10 +244,12 @@
                     android:textStyle="bold"/>
 
                 <EditText
+                    android:id="@+id/rr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
                     android:hint="000"
+                    android:inputType="numberDecimal"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
@@ -272,10 +276,12 @@
                     android:textStyle="bold"/>
 
                 <EditText
+                    android:id="@+id/bpsys"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
                     android:hint="000"
+                    android:inputType="numberDecimal"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
@@ -302,10 +308,12 @@
                     android:textStyle="bold"/>
 
                 <EditText
+                    android:id="@+id/bpdia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
                     android:hint="000"
+                    android:inputType="numberDecimal"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"
@@ -332,10 +340,12 @@
                     android:textStyle="bold"/>
 
                 <EditText
+                    android:id="@+id/spo2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_corners"
                     android:hint="000"
+                    android:inputType="numberDecimal"
                     android:textColor="@color/colorGrey"
                     android:paddingStart="8dp"
                     android:paddingTop="4dp"

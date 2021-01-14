@@ -35,15 +35,15 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="53dp"
-                        android:layout_height="53dp"
-                        android:src="@drawable/logo" />
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/logo_dots" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="BAPATLA"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="8dp"
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/colorPrimary"
                         android:fontFamily="@font/attenroundnewregular"
@@ -54,9 +54,9 @@
 
                 <ImageButton
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="50dp"
                     android:background="@drawable/circuler_teal"
-                    android:src="@drawable/hamburger"
+                    android:src="@drawable/hamburger_icon"
                     android:layout_alignParentEnd="true"
                     />
 
@@ -81,14 +81,14 @@
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textSize="18sp"
-                    android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"/>
+                    android:drawableRight="@drawable/homepage_dropdown_icon"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true" >
                     <ImageButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="64dp"
                         android:layout_height="63dp"
                         android:background="@drawable/bnav_btn"
                         android:src="@drawable/search_icon"
@@ -96,7 +96,7 @@
 
                     <ImageButton
                         android:layout_marginLeft="10dp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="64dp"
                         android:layout_height="63dp"
                         android:background="@drawable/bnav_btn"
                         android:src="@drawable/alarm_icon"
@@ -240,7 +240,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/covid_va_not_taken"
+                        android:src="@drawable/covid_va_not_taken_png"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 

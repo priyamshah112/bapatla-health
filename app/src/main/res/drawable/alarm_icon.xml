@@ -3,8 +3,8 @@
 
     <item
         android:drawable="@drawable/ic_baseline_access_alarm_24"
-        android:width="28dp"
-        android:height="28dp"
+        android:width="34dp"
+        android:height="34dp"
         />
 
 </layer-list >

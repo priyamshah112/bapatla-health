@@ -55,9 +55,9 @@
                         android:id="@+id/record_temperature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="96.5"
-                        android:textSize="50sp"
-                        android:layout_marginTop="8dp"
+                        android:text="96.0"
+                        android:textSize="40sp"
+                        android:layout_marginTop="0dp"
                         android:textColor="@color/colorGreen"
                         android:fontFamily="@font/attenroundnewregular"
                         android:textStyle="bold">
@@ -76,8 +76,8 @@
 
                 <ImageView
                     android:id="@+id/fragment_record_page_tablet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
                     android:src="@drawable/mild"
                     android:layout_gravity="center"/>
 
@@ -111,7 +111,7 @@
                     android:layout_marginStart="24dp"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textStyle="bold"
-                    android:layout_marginTop="24dp">
+                    android:layout_marginTop="10dp">
                 </TextView>
 
                 <LinearLayout
@@ -120,19 +120,19 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="84.76dp"
+                        android:layout_width="57dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/pad"
-                        android:layout_marginTop="21.75dp"
-                        android:layout_marginStart="49.83dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginStart="40.83dp"
                         android:layout_marginEnd="61.46dp"/>
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:src="@drawable/plus"
-                        android:layout_marginTop="49dp"
-                        android:layout_marginBottom="64.47dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="45dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -140,8 +140,7 @@
                         android:text="Add"
                         android:textSize="24sp"
                         android:textColor="@color/colorYellow1"
-                        android:layout_marginTop="56.5dp"
-                        android:layout_marginBottom="50.5dp"
+                        android:layout_marginTop="23.5dp"
                         android:layout_marginStart="16.5dp"
                         android:fontFamily="@font/attenroundnewregular"
                         android:textStyle="bold"/>
@@ -168,29 +167,28 @@
                     android:layout_marginStart="24dp"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textStyle="bold"
-                    android:layout_marginTop="24dp">
+                    android:layout_marginTop="10dp">
                 </TextView>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="84.76dp"
+                        android:layout_width="57dp"
+                        android:layout_height="80dp"
                         android:src="@drawable/pad"
-                        android:layout_marginTop="21.75dp"
-                        android:layout_marginStart="49.83dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginStart="40.83dp"
                         android:layout_marginEnd="61.46dp"/>
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
                         android:src="@drawable/plus"
-                        android:layout_marginTop="49dp"
-                        android:layout_marginBottom="64.47dp"/>
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="45dp"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -198,8 +196,7 @@
                         android:text="Add"
                         android:textSize="24sp"
                         android:textColor="@color/colorYellow1"
-                        android:layout_marginTop="56.5dp"
-                        android:layout_marginBottom="50.5dp"
+                        android:layout_marginTop="23.5dp"
                         android:layout_marginStart="16.5dp"
                         android:fontFamily="@font/attenroundnewregular"
                         android:textStyle="bold"/>

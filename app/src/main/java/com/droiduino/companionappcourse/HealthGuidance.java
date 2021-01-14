@@ -362,7 +362,7 @@ public class HealthGuidance extends AppCompatActivity {
                 }
 
                 if(covid!="") {
-                    for (int i = covid_vaccination.length()-1; i>=0; i--) {
+                    for (int i = 0; i<covid_vaccination.length(); i++) {
                         try {
                             JSONObject j1 = new JSONObject(covid_vaccination.getString(i));
                             System.out.println(j1);

@@ -72,6 +72,15 @@ public class MonitorFragment extends Fragment {
             }
         });
 
+        LinearLayout dailyTrendButton = (LinearLayout)view.findViewById(R.id.dailyTrendButton);
+        dailyTrendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), DailyTrend.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
         return view;
 
     }

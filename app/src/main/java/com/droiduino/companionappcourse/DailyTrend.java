@@ -240,12 +240,14 @@ public class DailyTrend extends AppCompatActivity {
                     chart.getXAxis().setValueFormatter(new ValueFormatter() {
                         @Override
                         public String getAxisLabel(float value, AxisBase axis) {
-//                            System.out.println("xxxx="+xLabel);
+                            System.out.println("xxxx="+xLabel+" value="+value);
+                            if(timeline.length()==1)
+                                value=1.0f;
                             return xLabel.get((int)value-1);
 //                            return "your text"+value;
                         }
                     });
-//                    chart.getXAxis().setValueFormatter(new MyXAxisValueFormatter());
+//                     chart.getXAxis().setValueFormatter(new MyXAxisValueFormatter());
                     chart.animateY(1000);
                     chart.getXAxis().setGranularityEnabled(true);
                     chart.getXAxis().setGranularity(1.0f);

@@ -68,13 +68,191 @@ public class Vitals extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
                 // TODO Auto-generated method stub
             }
+            @Override
+            public void afterTextChanged(Editable s) {
 
+                // TODO Auto-generated method stub
+            }
+        });
+
+        final TextView heartrate_field = findViewById(R.id.heartrate);
+
+        heartrate_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+                System.out.println("text changed=="+s.toString());
+                if(s.toString().length()!=0){
+                    float tempr = Float.parseFloat(s.toString());
+                    if(tempr>=41 && tempr<50){
+                        heartrate_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else if(tempr>=50 && tempr<71){
+                        heartrate_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_green));
+                    }
+                    else if(tempr>=71){
+                        heartrate_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else {
+                        heartrate_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners));
+                    }
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                // TODO Auto-generated method stub
+            }
+        });
+
+        final TextView rr_field = findViewById(R.id.rr);
+
+        rr_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+                System.out.println("text changed=="+s.toString());
+                if(s.toString().length()!=0){
+                    float tempr = Float.parseFloat(s.toString());
+                    if(tempr>=11 && tempr<12){
+                        rr_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else if(tempr>=12 && tempr<21){
+                        rr_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_green));
+                    }
+                    else if(tempr>=20){
+                        rr_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else {
+                        rr_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners));
+                    }
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                // TODO Auto-generated method stub
+            }
+        });
+
+        final TextView bpsys_field = findViewById(R.id.bpsys);
+
+        bpsys_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+                System.out.println("text changed=="+s.toString());
+                if(s.toString().length()!=0){
+                    float tempr = Float.parseFloat(s.toString());
+                    if(tempr>=101 && tempr<110){
+                        bpsys_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else if(tempr>=110 && tempr<151){
+                        bpsys_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_green));
+                    }
+                    else if(tempr>=151){
+                        bpsys_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else {
+                        bpsys_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners));
+                    }
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                // TODO Auto-generated method stub
+            }
+        });
+
+        final TextView bpdia_field = findViewById(R.id.bpdia);
+
+        bpdia_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+                System.out.println("text changed=="+s.toString());
+                if(s.toString().length()!=0){
+                    float tempr = Float.parseFloat(s.toString());
+                    if(tempr>=61 && tempr<70){
+                        bpdia_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else if(tempr>=70 && tempr<91){
+                        bpdia_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_green));
+                    }
+                    else if(tempr>=91){
+                        bpdia_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else {
+                        bpdia_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners));
+                    }
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
+            @Override
+            public void afterTextChanged(Editable s) {
+
+                // TODO Auto-generated method stub
+            }
+        });
+
+        final TextView spo2_field = findViewById(R.id.spo2);
+
+        spo2_field.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                // TODO Auto-generated method stub
+                System.out.println("text changed=="+s.toString());
+                if(s.toString().length()!=0){
+                    float tempr = Float.parseFloat(s.toString());
+                    if(tempr>=81 && tempr<90){
+                        spo2_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_red));
+                    }
+                    else if(tempr>=90 && tempr<95){
+                        spo2_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_yellow));
+                    }
+                    else if(tempr>=95){
+                        spo2_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.vitals_border_green));
+                    }
+                    else {
+                        spo2_field.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corners));
+                    }
+                }
+            }
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                // TODO Auto-generated method stub
+            }
             @Override
             public void afterTextChanged(Editable s) {
 
@@ -87,7 +265,7 @@ public class Vitals extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(body_temperature_field.getText().toString().equals("")) {
+                if(body_temperature_field.getText().toString().equals("") && heartrate_field.getText().toString().equals("") && rr_field.getText().toString().equals("") && bpsys_field.getText().toString().equals("") && bpdia_field.getText().toString().equals("") && spo2_field.getText().toString().equals("")) {
                     // body_temperature_field.setError("Please fill this field.");
                     // return;
                     Intent intent = new Intent(Vitals.this, Health.class);
@@ -95,7 +273,41 @@ public class Vitals extends AppCompatActivity {
                     finish();
                 }
                 else{
+                    if(body_temperature_field.getText().toString().equals("")){
+                        body_temperature_field.setError("Please fill this field.");
+                        return;
+                    }
                     float body_temperature = Float.parseFloat(body_temperature_field.getText().toString());
+
+                    if(heartrate_field.getText().toString().equals("")){
+                        heartrate_field.setError("Please fill this field.");
+                        return;
+                    }
+                    float heartrate = Float.parseFloat(heartrate_field.getText().toString());
+
+                    if(rr_field.getText().toString().equals("")){
+                        rr_field.setError("Please fill this field.");
+                        return;
+                    }
+                    float rr = Float.parseFloat(rr_field.getText().toString());
+
+                    if(bpsys_field.getText().toString().equals("")){
+                        bpsys_field.setError("Please fill this field.");
+                        return;
+                    }
+                    float bpsys = Float.parseFloat(bpsys_field.getText().toString());
+
+                    if(bpdia_field.getText().toString().equals("")){
+                        bpdia_field.setError("Please fill this field.");
+                        return;
+                    }
+                    float bpdia = Float.parseFloat(bpdia_field.getText().toString());
+
+                    if(spo2_field.getText().toString().equals("")){
+                        spo2_field.setError("Please fill this field.");
+                        return;
+                    }
+                    float spo2 = Float.parseFloat(spo2_field.getText().toString());
 
                     healthButton.setEnabled(false);
                     healthButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
@@ -111,7 +323,7 @@ public class Vitals extends AppCompatActivity {
                     session = new Session(getApplicationContext());
                     int userId = Integer.parseInt(session.getid());
 
-                    String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"date_time\": \""+datetime+"\"}";
+                    String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"heartrate\": \""+heartrate+"\", \"rr\": \""+rr+"\", \"bpsys\": \""+bpsys+"\", \"bpdia\": \""+bpdia+"\", \"spo2\": \""+spo2+"\", \"date_time\": \""+datetime+"\"}";
                     new Vitals.PostData().execute(payload);
                 }
             }

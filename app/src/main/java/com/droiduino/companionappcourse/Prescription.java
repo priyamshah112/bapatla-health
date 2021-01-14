@@ -1,8 +1,11 @@
 package com.droiduino.companionappcourse;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -12,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Prescription extends AppCompatActivity {
 
-    private Button button;
+//    private Button button;
     Dialog dialog;
 
     @Override
@@ -49,14 +52,14 @@ public class Prescription extends AppCompatActivity {
             }
         });
 
-        button = findViewById(R.id.dialog_btn);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                dialog.show();
-            }
-        });
+//        button = findViewById(R.id.dialog_btn);
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                dialog.show();
+//            }
+//        });
 
         // final TextView heading = findViewById(R.id.heading);
         // heading.setText("Did you know");
@@ -66,5 +69,23 @@ public class Prescription extends AppCompatActivity {
         getSupportActionBar().setTitle("PRESCRIPTION");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.prescription_topnav, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        switch(item.getItemId()){
+            case R.id.menu_item:   //this item has your app icon
+                dialog.show();
+
+                return true;
+            default: return super.onOptionsItemSelected(item);
+        }
     }
 }

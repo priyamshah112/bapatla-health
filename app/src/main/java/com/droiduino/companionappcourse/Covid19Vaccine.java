@@ -99,8 +99,17 @@ public class Covid19Vaccine extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(Covid19Vaccine.this, R.style.TimePickerTheme, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        time_of_vaccination[0] = selectedHour+":"+selectedMinute;
-                        timeofvaccination.setText( selectedHour + ":" + selectedMinute);
+                        String selHour=String.valueOf(selectedHour);
+                        String selMin=String.valueOf(selectedMinute);
+                        if(selectedHour/10==0)
+                            selHour="0"+selectedHour;
+                        if(selectedMinute==0)
+                            selMin="00";
+                        else if(selectedMinute/10==0)
+                            selMin="0"+selectedMinute;
+
+                        time_of_vaccination[0] = selHour+":"+selMin;
+                        timeofvaccination.setText( selHour + ":" + selMin);
                         System.out.println(time_of_vaccination[0]);
                     }
                 }, hour, minute, true);//Yes 24 hour time

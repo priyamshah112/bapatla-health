@@ -366,6 +366,12 @@ public class HomeFragment extends Fragment {
                         light_circle.setLayoutParams(lp);
                         light_circle.setBackgroundResource(R.drawable.blue_circle);
 
+                        ImageView first_line_light_circle = new ImageView(getActivity().getApplicationContext());
+                        LinearLayout.LayoutParams fllp = new LinearLayout.LayoutParams(getpx(12), getpx(12));
+                        fllp.setMargins(getpx(9), getpx(3), getpx(6), 0);
+                        first_line_light_circle.setLayoutParams(fllp);
+                        first_line_light_circle.setBackgroundResource(R.drawable.blue_circle);
+
                         // ~~~~~~~~~~~~~~~``UI  CONSTANTS DEFINED ~~~~~~~~~~~~~~~~~~~~~~~~~
 
                         // ~~~~~~~~~~~~~~~~~~~~~~~`` start timeline box ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -429,7 +435,7 @@ public class HomeFragment extends Fragment {
                         datetv.setText(date);
 
                         fc_l.addView(datetv);
-                        fc_l.addView(light_circle);
+                        fc_l.addView(first_line_light_circle);
 
                         if(j1.getDouble("temperature")!=0){
                             // displaying the temperature line
