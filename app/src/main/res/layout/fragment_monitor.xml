@@ -1,11 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MonitorFragment">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONITOR"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:layout_marginTop="11.5dp"
+                    />
+
+                <Button
+                    android:id="@+id/homeFragmentUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/header_btn"
+                    android:drawableLeft="@drawable/header_person_icon"
+                    android:text="Chomo"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:textSize="16sp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="11dp"
+                    android:drawableRight="@drawable/homepage_dropdown_icon"/>
+
+            </RelativeLayout>
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
     <ScrollView
+        android:layout_marginTop="49dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
