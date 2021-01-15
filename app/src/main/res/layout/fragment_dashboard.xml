@@ -29,6 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DASHBOARD"
+                    android:textStyle="bold"
                     android:textSize="24dp"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/attenroundnewbook"
@@ -73,6 +74,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="HEAT\nMAP"
+                    android:textStyle="bold"
+
                     android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textSize="24sp"/>
@@ -96,6 +99,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CLUSTER\nMAP"
+                    android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textSize="24sp"/>
@@ -119,6 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="RESOURCE\nMAP"
+                    android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textSize="24sp"/>

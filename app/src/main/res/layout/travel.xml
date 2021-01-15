@@ -60,6 +60,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Have you tested covid-19 positive prior to\n  vaccine"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="15dp"
@@ -94,6 +95,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Work in the medical facilty"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="8dp"
@@ -105,6 +107,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Work in the transport sector"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"/>
@@ -139,6 +142,7 @@
                     android:text="  Have you recently travelled to a foreign  \n  country ?"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11.5dp"
+                    android:textColor="@android:color/black"
                     android:layout_marginTop="4.5dp"
                     android:layout_marginBottom="11.5dp"
                     android:textSize="14sp"/>

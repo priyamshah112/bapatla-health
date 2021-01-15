@@ -32,7 +32,7 @@
             app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Have you tested covid-19 positive prior to vaccination?"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <CheckBox
@@ -44,7 +44,7 @@
             app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Pregnant at the time of vaccination? (For Women adult)"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <CheckBox
@@ -56,7 +56,7 @@
             app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Pre-existing acute illness 30 days prior to vaccination?"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -191,7 +191,7 @@
             app:buttonTint="@color/colorPrimary"
             android:fontFamily="@font/attenroundnewbook"
             android:text="Adverse events (health problems) following immunization?"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@android:color/black"
             android:textSize="16sp" />
 
         <TextView

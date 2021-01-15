@@ -218,18 +218,21 @@ public class DailyTrend extends AppCompatActivity {
                     chart.setPinchZoom(true);
                     Collections.sort(lineEntries, new EntryXComparator());
 
+                    int redcolor = ContextCompat.getColor(getApplicationContext(), R.color.colorRed);
+                    int circlecolor = ContextCompat.getColor(getApplicationContext(), R.color.colorYellow1);
+
                     LineDataSet lineDataSet = new LineDataSet(lineEntries, "Temperature");
                     lineDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);
                     lineDataSet.setHighlightEnabled(true);
                     lineDataSet.setLineWidth(2);
-                    lineDataSet.setColor(R.color.colorPrimary);
-                    lineDataSet.setCircleColor(R.color.colorGreen);
+                    lineDataSet.setColor(redcolor);
+                    lineDataSet.setCircleColor(circlecolor);
                     lineDataSet.setCircleRadius(6);
                     lineDataSet.setCircleHoleRadius(3);
                     lineDataSet.setDrawHighlightIndicators(true);
                     lineDataSet.setHighLightColor(Color.RED);
                     lineDataSet.setValueTextSize(12);
-                    lineDataSet.setValueTextColor(R.color.colorRed);
+                    lineDataSet.setValueTextColor(redcolor);
 
                     LineData lineData = new LineData(lineDataSet);
 
@@ -252,7 +255,7 @@ public class DailyTrend extends AppCompatActivity {
                     chart.getXAxis().setGranularityEnabled(true);
                     chart.getXAxis().setGranularity(1.0f);
 //                    chart.getXAxis().setLabelCount(lineDataSet.getEntryCount());
-                    chart.getXAxis().setLabelCount(5);
+                    chart.getXAxis().setLabelCount(3);
                     chart.setData(lineData);
                     chart.invalidate();
                 }

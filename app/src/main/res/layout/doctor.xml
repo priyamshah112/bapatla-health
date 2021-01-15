@@ -151,7 +151,7 @@
 
                 <EditText
                     android:id="@+id/time"
-                    android:layout_width="wrap_content"
+                    android:layout_width="980dp"
                     android:layout_height="56dp"
                     android:layout_marginStart="19dp"
                     android:background="@drawable/rounded_corners"
@@ -183,6 +183,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Covid-19 Vaccine Reaction"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:layout_marginTop="15dp"
@@ -194,6 +195,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Common Cold"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -204,6 +206,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  FLU(also called Influenza)"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -213,6 +216,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
+                    android:textColor="@android:color/black"
                     android:text="  Coronavirus"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
@@ -224,6 +228,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Viral fever"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -234,6 +239,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Dengue"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -244,6 +250,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Malaria"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -254,6 +261,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Chikungunya"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -264,6 +272,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Typhoid fever "
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -274,6 +283,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Pneumonia"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -284,6 +294,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Tuberculosis"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -294,6 +305,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Diarrheal Disease"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -304,6 +316,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Chicken pox"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>
@@ -314,6 +327,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Heat Stroke"
+                    android:textColor="@android:color/black"
                     android:fontFamily="@font/attenroundnewbook"
                     android:layout_marginStart="11dp"
                     android:textSize="18sp"/>

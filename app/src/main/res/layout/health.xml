@@ -39,10 +39,9 @@
                 android:text="Do you have any of the following symptoms ?"
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
+                android:layout_gravity="center"
                 android:fontFamily="@font/attenroundnewbook"
                 android:textStyle="bold"
-                android:layout_marginStart="26.5dp"
-                android:layout_marginEnd="46.5dp"
                 android:layout_marginTop="14dp"/>
 
             <LinearLayout
@@ -60,6 +59,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Cough"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="11dp"
                     android:textSize="14sp"
@@ -71,6 +71,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Chills"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -81,6 +82,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Shortness of Breath or Difficulty Breathing"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -90,6 +92,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
+                    android:textColor="@android:color/black"
                     android:text="  Muscle or Body Aches"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
@@ -101,6 +104,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Sore Throat"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -111,6 +115,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  New loss of Taste or Smell"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -121,6 +126,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Diarrhea"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -131,6 +137,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Headache"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -151,6 +158,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  New Fatigue"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -161,6 +169,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Congestion or Runny Nose"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -171,6 +180,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Seizures"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -181,6 +191,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Pain at injection site"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -191,6 +202,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Facial Swelling"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -201,6 +213,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Joint pains"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -211,6 +224,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Skin rash"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginBottom="12dp"
                     android:textSize="14sp"
@@ -224,11 +238,10 @@
                 android:text="Do you have any of these pre-existing conditions?"
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
+                android:layout_gravity="center"
                 android:fontFamily="@font/attenroundnewbook"
                 android:textStyle="bold"
-                android:layout_marginStart="19.5dp"
-                android:layout_marginEnd="37.5dp"
-                android:layout_marginTop="13dp"/>
+                android:layout_marginTop="14dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -245,6 +258,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Asthma or lung disease"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="11dp"
                     android:textSize="14sp"
@@ -256,6 +270,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Heart disease"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -266,6 +281,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Hypertension"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -276,6 +292,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Diabetes"
+                    android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -288,6 +305,7 @@
                     android:text="  Medical History of allergic reactions"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginBottom="12dp"
+                    android:textColor="@android:color/black"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
 

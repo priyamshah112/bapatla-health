@@ -9,8 +9,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="259dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-224dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,8 +23,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="27.5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="27.5dp"
                 android:background="@drawable/rounded_corners_teal_color"
                 android:orientation="vertical">
@@ -33,62 +33,56 @@
                     android:id="@+id/health_guidance_temperature_bar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/temperature_range"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="37dp"
-                    android:layout_gravity="center"/>
+                    android:src="@drawable/temperature_range" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:paddingBottom="25dp"
-                    android:layout_marginTop="5.39dp">
+                    android:layout_marginTop="5.39dp"
+                    android:paddingBottom="25dp">
 
                     <TextView
                         android:id="@+id/health_guidance_fever_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#F1D316"
-                        android:text="Mild Fever"
-                        android:textSize="14dp"
                         android:fontFamily="@font/attenroundnewbold"
-                        />
+                        android:text="Mild Fever"
+                        android:textColor="#F1D316"
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/health_guidance_temperature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
-                        android:text="100.5"
-                        android:textSize="24dp"
                         android:layout_marginStart="5dp"
                         android:fontFamily="@font/attenroundnewbold"
-                        />
+                        android:text="100.5"
+                        android:textColor="@android:color/white"
+                        android:textSize="24dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:textColor="@android:color/white"
-                        android:text="°F"
                         android:layout_gravity="top"
-                        android:textSize="16dp"
                         android:layout_marginStart="5dp"
                         android:fontFamily="@font/attenroundnewbold"
-                        />
+                        android:text="°F"
+                        android:textColor="@android:color/white"
+                        android:textSize="16dp" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="9dp"
                 android:background="@drawable/rounded_corners"
                 android:orientation="vertical">
@@ -97,31 +91,30 @@
                     android:id="@+id/flexboxlayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:flexDirection="row"
-                    app:flexWrap="wrap"
                     android:layout_marginTop="9dp"
                     android:layout_marginBottom="9dp"
-                    app:justifyContent="flex_start"/>
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="flex_start" />
 
             </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/vaccination_report"
-            android:visibility="gone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginEnd="9dp"
-            android:background="@drawable/rounded_corners"
-            android:orientation="vertical">
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/vaccination_report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="9dp"
+                android:background="@drawable/rounded_corners"
+                android:orientation="vertical"
+                android:visibility="gone"></LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="9dp"
                 android:background="@drawable/rounded_corners"
                 android:orientation="vertical">
@@ -130,110 +123,110 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="8.5dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    android:lineSpacingExtra="7dp"
                     android:text="What to Expect after Getting a COVID-19 Vaccine?"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="8.5dp"
-                    android:fontFamily="@font/attenroundnewbold"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="8.5dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp"
                     android:text="COVID-19 vaccination will help protect you from getting COVID-19. You may have some side effects, which are normal signs that your body is building protection. These side effects may affect your ability to do daily activities, but they should go away in a few days."
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="8.5dp"
-                    android:fontFamily="@font/attenroundnewregular"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    android:lineSpacingExtra="7dp"
                     android:text="Common side effects"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/attenroundnewbold"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="8.5dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp"
                     android:text="On the arm where you got the vaccine:\n 1. Pain\n 2. Swelling"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="8.5dp"
-                    android:fontFamily="@font/attenroundnewregular"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp"
                     android:text="Throughout the rest of your body:\n 1. Fever\n 2. Chills\n 3. Tiredness\n 4. Headache"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/attenroundnewregular"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    android:lineSpacingExtra="7dp"
                     android:text="Helpful Tips"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/attenroundnewbold"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewregular"
+                    android:lineSpacingExtra="7dp"
                     android:text="If you have pain or discomfort, talk to your doctor about taking an over-the-counter medicine, such as ibuprofen or Paracetamol.\n\nWhen to call the doctor\nIn most cases, discomfort from fever or pain is normal."
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/attenroundnewregular"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="20dp"
                     android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/attenroundnewbold"
+                    android:lineSpacingExtra="7dp"
                     android:text="Contact your doctor:"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/attenroundnewbold"
-                    android:lineSpacingExtra="7dp" />
+                    android:textSize="15sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:text="If the redness or tenderness where you got the vaccine increases after 24 hours\nIf your side effects are worrying you or do not seem to be going away after a few days"
-                    android:textColor="@android:color/black"
-                    android:textSize="15sp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginBottom="20dp"
                     android:fontFamily="@font/attenroundnewregular"
-                    android:lineSpacingExtra="7dp" />
+                    android:lineSpacingExtra="7dp"
+                    android:text="If the redness or tenderness where you got the vaccine increases after 24 hours\nIf your side effects are worrying you or do not seem to be going away after a few days"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
