@@ -1,6 +1,11 @@
 package com.droiduino.companionappcourse;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +14,15 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,12 +38,20 @@ import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
 import java.util.TimeZone;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 public class Vitals extends AppCompatActivity {
+
+    LocationCallback locationCallback;
+    LocationRequest locationRequest;
+    FusedLocationProviderClient fusedLocationProviderClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +65,94 @@ public class Vitals extends AppCompatActivity {
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("VITALS");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
+
+        final Button healthButton = findViewById(R.id.healthButton);
+        healthButton.setEnabled(false);
+        healthButton.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+
+        final float[] currentlatitude = new float[1];
+        final float[] currentlongitude = new float[1];
+
+        locationRequest = LocationRequest.create()
+                .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
+                .setInterval(30 * 1000)
+                .setFastestInterval(5 * 1000);
+
+        locationCallback = new LocationCallback() {
+            @Override
+            public void onLocationResult(LocationResult locationResult) {
+                super.onLocationResult(locationResult);
+                //Location received
+                System.out.println("LOCATIONNN");
+                System.out.println(locationResult.getLocations().get(0).getLatitude());
+                System.out.println(locationResult.getLocations().get(0).getLongitude());
+
+                currentlatitude[0]= (float) locationResult.getLocations().get(0).getLatitude();
+                currentlongitude[0] = (float) locationResult.getLocations().get(0).getLongitude();
+
+                fusedLocationProviderClient.removeLocationUpdates(locationCallback);
+
+                healthButton.setEnabled(true);
+                healthButton.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corner_button));
+            }
+        };
+
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getApplicationContext());
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        fusedLocationProviderClient.requestLocationUpdates(locationRequest, locationCallback, null);
+
+
+        //initializing fusedLocationProviderClient
+//        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
+//
+//        //now checking location permission
+//        if(ActivityCompat.checkSelfPermission(Vitals.this,
+//                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+//            //permission granted
+//            System.out.println("permissions granted");
+////            getLocation();
+//            fusedLocationProviderClient.getLastLocation().addOnCompleteListener(new OnCompleteListener<Location>() {
+//                @Override
+//                public void onComplete(@NonNull Task<Location> task) {
+//                    Location location = task.getResult();
+//                    System.out.println("task resulted");
+//                    if (location != null){
+//                        System.out.println("location not null");
+//                        try {
+//                            //initialize geocoder
+//                            Geocoder geocoder = new Geocoder(Vitals.this,
+//                                    Locale.getDefault());
+//                            //Initialize address list
+//                            List<Address> addresses = geocoder.getFromLocation(
+//                                    location.getLatitude(), location.getLongitude(),1
+//                            );
+//                            System.out.println("ADDDDDDDDDDDDREEEEEEEEEEESSSSSSSSSS");
+//                            System.out.println(addresses.get(0).getLatitude());
+//                            currentlatitude[0] = (float) addresses.get(0).getLatitude();
+//                            currentlongitude[0] = (float) addresses.get(0).getLongitude();
+//
+//                            healthButton.setEnabled(true);
+//                            healthButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+//
+//                        } catch (IOException e) {
+//                            e.printStackTrace();
+//
+//                            Toast.makeText(Vitals.this, "There was some error in fetching your location. Please try again later.", Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                    else{
+//                        Toast.makeText(Vitals.this, "There was some error in fetching your location. Please try again later.", Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
+//        }
+//        else{
+//            ActivityCompat.requestPermissions(Vitals.this,
+//                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
+//        }
+
 
         final TextView body_temperature_field = findViewById(R.id.body_temperature);
 
@@ -260,7 +370,7 @@ public class Vitals extends AppCompatActivity {
             }
         });
 
-        final Button healthButton = findViewById(R.id.healthButton);
+
         healthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -323,7 +433,7 @@ public class Vitals extends AppCompatActivity {
                     session = new Session(getApplicationContext());
                     int userId = Integer.parseInt(session.getid());
 
-                    String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"heartrate\": \""+heartrate+"\", \"rr\": \""+rr+"\", \"bpsys\": \""+bpsys+"\", \"bpdia\": \""+bpdia+"\", \"spo2\": \""+spo2+"\", \"date_time\": \""+datetime+"\"}";
+                    String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"heartrate\": \""+heartrate+"\", \"rr\": \""+rr+"\", \"bpsys\": \""+bpsys+"\", \"bpdia\": \""+bpdia+"\", \"spo2\": \""+spo2+"\", \"date_time\": \""+datetime+"\", \"latitude\": \""+currentlatitude[0]+"\", \"longitude\": \""+currentlongitude[0]+"\"}";
                     new Vitals.PostData().execute(payload);
                 }
             }
@@ -441,4 +551,11 @@ public class Vitals extends AppCompatActivity {
             }
         }
     }
+
+    public void onDestroy() {
+        super.onDestroy();
+
+        fusedLocationProviderClient.removeLocationUpdates(locationCallback);
+    }
+
 }

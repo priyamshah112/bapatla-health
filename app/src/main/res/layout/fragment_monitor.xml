@@ -103,7 +103,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/chart"
+                        android:src="@drawable/monitor1"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 
@@ -132,7 +132,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/stats"
+                        android:src="@drawable/monitor2"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 
@@ -162,7 +162,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/timeline"
+                        android:src="@drawable/monitor3"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 
@@ -191,7 +191,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/heart"
+                        android:src="@drawable/monitor4"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 
@@ -220,7 +220,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/sthetoscope"
+                        android:src="@drawable/monitor5"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 
@@ -250,7 +250,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="72dp"
-                        android:src="@drawable/call_support"
+                        android:src="@drawable/monitor6"
                         android:layout_marginTop="6.66dp"
                         android:layout_gravity="center"/>
 

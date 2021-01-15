@@ -36,6 +36,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -45,11 +46,13 @@
                 android:drawableLeft="@drawable/account_icon"
                 android:fontFamily="@font/attenroundnewbook"
                 android:hint="@string/register_first_name"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,6 +68,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/surname"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -78,7 +82,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -94,6 +99,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/aadhar_number"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -107,7 +113,8 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -123,6 +130,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/birthday"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -136,45 +144,52 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:focusable="false"
+                android:clickable="true"
+                android:editable="false"/>
 
             <RadioGroup
-                android:id="@+id/radio_group"
+                android:id="@+id/gender_radio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/view_below"
                 android:layout_marginTop="13dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:checkedButton="@+id/male">
 
                 <RadioButton
-                    android:id="@+id/radio1"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/male"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="45dp"
                     android:layout_weight="1"
                     android:text="Male"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorPrimary" />
 
                 <RadioButton
-                    android:id="@+id/radio2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/female"
+                    android:layout_width="45dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:text="Female"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorPrimary" />
 
                 <RadioButton
-                    android:id="@+id/radio3"
+                    android:id="@+id/others"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="0dp"
                     android:layout_weight="1"
                     android:text="Others"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:buttonTint="@color/colorPrimary"/>
 
             </RadioGroup>
 
@@ -192,6 +207,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/mobile"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -201,11 +217,12 @@
                 android:drawableLeft="@drawable/phone_icon"
                 android:fontFamily="@font/attenroundnewbook"
                 android:hint="@string/register_mobile_no"
-                android:inputType="text"
+                android:inputType="number"
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -221,6 +238,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -230,11 +248,13 @@
                 android:drawableLeft="@drawable/forgot_password_email_icon"
                 android:fontFamily="@font/attenroundnewbook"
                 android:hint="@string/register_email_id"
-                android:inputType="text"
+                android:inputType="none"
+                android:focusable="false"
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -250,6 +270,7 @@
                 android:textStyle="bold" />
 
             <EditText
+                android:id="@+id/address"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_marginStart="17dp"
@@ -263,22 +284,50 @@
                 android:textAlignment="textStart"
                 android:textColor="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:textCursorDrawable = "@null" />
 
-            <RadioButton
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Use my current location"
                 android:layout_marginStart="17.5dp"
                 android:layout_marginTop="7.5dp"
                 android:layout_marginEnd="16dp"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:fontFamily="@font/attenroundnewbook"/>
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_my_location_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Use my current location"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="9.5dp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="@font/attenroundnewbook"/>
+
+            </LinearLayout>
+<!--            <RadioButton-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Use my current location"-->
+<!--                android:layout_marginStart="17.5dp"-->
+<!--                android:layout_marginTop="7.5dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:textSize="15dp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@android:color/black"-->
+<!--                android:fontFamily="@font/attenroundnewbook"/>-->
 
 
             <Button
+                android:id="@+id/updateprofilebutton"
                 android:layout_width="fill_parent"
                 android:layout_height="56dp"
                 android:layout_gravity="center|bottom"

@@ -128,36 +128,44 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@drawable/rounded_corners"
                 android:layout_marginStart="11dp"
                 android:layout_marginTop="7.5dp">
 
                 <EditText
+                    android:id="@+id/date"
                     android:layout_width="wrap_content"
                     android:layout_height="56dp"
                     android:background="@drawable/rounded_corners"
                     android:drawableLeft="@drawable/login_password_icon"
                     android:fontFamily="@font/attenroundnewbook"
-                    android:hint="@string/doctor_date"
+                    android:hint="@string/register_birth_date"
+                    android:paddingRight="15dp"
                     android:inputType="text"
                     android:textAlignment="textStart"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:editable="false" />
 
                 <EditText
+                    android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="56dp"
                     android:layout_marginStart="19dp"
                     android:background="@drawable/rounded_corners"
                     android:drawableLeft="@drawable/login_password_icon"
                     android:fontFamily="@font/attenroundnewbook"
-                    android:hint="@string/doctor_time"
+                    android:hint="@string/covid_vaccine_time_of_vaccination"
                     android:inputType="text"
+                    android:paddingRight="10dp"
                     android:textAlignment="textStart"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    android:focusable="false"
+                    android:clickable="true"/>
 
             </LinearLayout>
 

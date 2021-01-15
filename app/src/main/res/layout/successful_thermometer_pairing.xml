@@ -43,6 +43,7 @@
                 android:textAlignment="center"
                 android:layout_gravity="center"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 android:layout_marginStart="24.5dp"
                 android:layout_marginTop="62.79dp"
                 android:layout_marginEnd="24.5dp"

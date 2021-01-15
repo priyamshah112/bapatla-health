@@ -1,11 +1,15 @@
 package com.droiduino.companionappcourse;
 
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
@@ -34,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -53,8 +58,20 @@ public class Registration extends AppCompatActivity {
 
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
-        getSupportActionBar().setTitle("REGISTER");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+//        getSupportActionBar().setTitle("REGISTER");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflater.inflate(R.layout.custom_actionbar, null);
+        ActionBar.LayoutParams p = new ActionBar.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                Gravity.CENTER);
+        ((TextView) v.findViewById(R.id.title)).setText("REGISTER");
+        getSupportActionBar().setCustomView(v, p);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         TextView loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {

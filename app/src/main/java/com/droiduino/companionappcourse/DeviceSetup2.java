@@ -4,6 +4,7 @@ import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -12,9 +13,12 @@ import android.os.Looper;
 import android.os.Message;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -25,6 +29,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -55,10 +60,22 @@ public class DeviceSetup2  extends AppCompatActivity {
 
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
-        getSupportActionBar().setTitle("DEVICE SETUP");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+//        getSupportActionBar().setTitle("DEVICE SETUP");
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+//
+//        getSupportActionBar().setLogo(R.drawable.heart);
 
-        getSupportActionBar().setLogo(R.drawable.heart);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View v = inflater.inflate(R.layout.custom_actionbar, null);
+        ActionBar.LayoutParams p = new ActionBar.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                Gravity.CENTER);
+        ((TextView) v.findViewById(R.id.title)).setText("DEVICE SETUP");
+        getSupportActionBar().setCustomView(v, p);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         Session session = new Session(getApplicationContext());
         String name = session.getname();
