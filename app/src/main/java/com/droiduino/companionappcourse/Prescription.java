@@ -30,6 +30,9 @@ public class Prescription extends AppCompatActivity {
     EditText edittext;
     EditText time;
 
+    EditText dedittext;
+    EditText dtime;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -140,6 +143,75 @@ public class Prescription extends AppCompatActivity {
                         times[0] = selHour+":"+selMin;
                         time.setText( selHour + ":" + selMin);
                         System.out.println(times[0]);
+                    }
+                }, hour, minute, true);//Yes 24 hour time
+                mTimePicker.setTitle("Select Time");
+                mTimePicker.show();
+
+            }
+        });
+
+
+        //for dialog
+        dedittext = (EditText) dialog.findViewById(R.id.ddate);
+        final String[] ddates = new String[1];
+
+        final DatePickerDialog.OnDateSetListener ddate = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int monthOfYear,
+                                  int dayOfMonth) {
+                // TODO Auto-generated method stub
+                myCalendar.set(Calendar.YEAR, year);
+                myCalendar.set(Calendar.MONTH, monthOfYear);
+                myCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
+
+                String myFormat = "yyyy-MM-dd"; //In which you need put here
+                SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
+
+                ddates[0] = sdf.format(myCalendar.getTime());
+                dedittext.setText(sdf.format(myCalendar.getTime()));
+                System.out.println(ddates[0]);
+            }
+
+        };
+
+        dedittext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                System.out.println("here");
+                new DatePickerDialog(Prescription.this, R.style.DialogTheme, ddate, myCalendar
+                        .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
+                        myCalendar.get(Calendar.DAY_OF_MONTH)).show();
+            }
+        });
+
+        final String[] dtimes = new String[1];
+        dtime = (EditText) dialog.findViewById(R.id.dtime);
+        dtime.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                // TODO Auto-generated method stub
+                Calendar mcurrentTime = Calendar.getInstance();
+                int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
+                int minute = mcurrentTime.get(Calendar.MINUTE);
+                TimePickerDialog mTimePicker;
+                mTimePicker = new TimePickerDialog(Prescription.this, R.style.TimePickerTheme, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
+                        String selHour=String.valueOf(selectedHour);
+                        String selMin=String.valueOf(selectedMinute);
+                        if(selectedHour/10==0)
+                            selHour="0"+selectedHour;
+                        if(selectedMinute==0)
+                            selMin="00";
+                        else if(selectedMinute/10==0)
+                            selMin="0"+selectedMinute;
+
+                        dtimes[0] = selHour+":"+selMin;
+                        dtime.setText( selHour + ":" + selMin);
+                        System.out.println(dtimes[0]);
                     }
                 }, hour, minute, true);//Yes 24 hour time
                 mTimePicker.setTitle("Select Time");

@@ -204,7 +204,7 @@
                 android:layout_height="56dp"
                 android:layout_marginTop="2.5dp"
                 android:background="@drawable/rounded_corners"
-                android:drawableLeft="@drawable/calendar_icon"
+                android:drawableLeft="@drawable/clock_icon"
                 android:fontFamily="@font/attenroundnewbook"
                 android:hint="@string/covid_vaccine_time_of_vaccination"
                 android:inputType="text"
