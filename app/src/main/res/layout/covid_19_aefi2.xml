@@ -39,12 +39,11 @@
                 android:id="@+id/aefsdropdown"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@android:drawable/btn_dropdown"
-                android:backgroundTint="@color/colorAccent"
                 android:textAlignment="center"
                 android:textSize="17sp"
                 android:spinnerMode="dropdown"
                 android:layout_marginTop="2.5dp"
+                style="@style/spinner_style"
                 />
 
             <TextView

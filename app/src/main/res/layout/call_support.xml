@@ -214,6 +214,7 @@
                 android:layout_marginStart="28.5dp"
                 android:layout_marginTop="26dp"
                 android:layout_marginEnd="28.5dp"
+                android:layout_marginBottom="22dp"
                 android:textColor="@android:color/black"
                 android:fontFamily="@font/attenroundnewbook" />
 
@@ -221,8 +222,7 @@
                 android:id="@+id/productnamespinner"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:background="@android:drawable/btn_dropdown"
-                android:backgroundTint="@color/colorAccent"
+                style="@style/spinner_style"
                 android:textAlignment="center"
                 android:textSize="17sp"
                 android:spinnerMode="dropdown"
@@ -234,12 +234,12 @@
                 android:layout_width="match_parent"
                 android:inputType="text"
                 android:textColorHint="@color/colorPrimary"
-                android:layout_marginTop="5dp"
                 android:textSize="17sp"
                 android:hint="@string/call_support_sr_no"
                 android:background="@drawable/rounded_corners"
                 android:textColor="@color/colorPrimary"
                 android:textAlignment="center"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/attenroundnewbook" />
 
             <EditText

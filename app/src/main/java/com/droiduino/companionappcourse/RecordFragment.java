@@ -3,6 +3,7 @@ package com.droiduino.companionappcourse;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -92,6 +93,12 @@ public class RecordFragment extends Fragment {
                 fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
 
             }
+
+            final TextView myImageViewText = view.findViewById(R.id.myImageViewText);
+            myImageViewText.setText("No Fever");
+            myImageViewText.setTextSize(8);
+            myImageViewText.setTextColor(Color.parseColor("#74BD4E"));
+
         }
         else if(temperature>=99 && temperature<101){
 //            return("Mild Fever");
@@ -104,6 +111,10 @@ public class RecordFragment extends Fragment {
                 fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar));
 
             }
+
+            final TextView myImageViewText = view.findViewById(R.id.myImageViewText);
+            myImageViewText.setText("Mild");
+            myImageViewText.setTextColor(Color.parseColor("#F1D316"));
         }
         else if(temperature>=101 && temperature<104){
 //            return("Moderate Fever");
@@ -116,6 +127,11 @@ public class RecordFragment extends Fragment {
                 fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar));
 
             }
+
+            final TextView myImageViewText = view.findViewById(R.id.myImageViewText);
+            myImageViewText.setText("Moderate");
+            myImageViewText.setTextSize(8);
+            myImageViewText.setTextColor(Color.parseColor("#F39700"));
         }
         else if(temperature>=104){
 //            return("High Fever");
@@ -128,6 +144,10 @@ public class RecordFragment extends Fragment {
                 fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar));
 
             }
+
+            final TextView myImageViewText = view.findViewById(R.id.myImageViewText);
+            myImageViewText.setText("High");
+            myImageViewText.setTextColor(Color.parseColor("#D44E57"));
         }
         else {
 //            return "No Fever";
@@ -140,6 +160,11 @@ public class RecordFragment extends Fragment {
                 fragment_record_page_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
 
             }
+
+            final TextView myImageViewText = view.findViewById(R.id.myImageViewText);
+            myImageViewText.setText("No Fever");
+            myImageViewText.setTextSize(8);
+            myImageViewText.setTextColor(Color.parseColor("#74BD4E"));
         }
 
         TinyDB tinydb = new TinyDB(getActivity().getApplicationContext());
