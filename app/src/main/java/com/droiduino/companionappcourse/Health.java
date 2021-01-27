@@ -138,6 +138,7 @@ public class Health extends AppCompatActivity {
                     preexisting_conditions += ", "+checkBox20.getText().toString().trim();
                 }
 
+                System.out.println("SYMPPPPPPP");
                 System.out.println(symptoms_reported);
                 System.out.println(preexisting_conditions);
 
@@ -166,8 +167,15 @@ public class Health extends AppCompatActivity {
                         symptoms_reported = symptoms_reported.substring(2);
                         symptompsflag=true;
                     }
+                    else if(!symptoms_reported.equals("")){
+                        symptompsflag=true;
+                    }
+
                     if(!preexisting_conditions.equals("") && preexisting_conditions.charAt(0)==',') {
                         preexisting_conditions = preexisting_conditions.substring(2);
+                        preexistingconditionsflag=true;
+                    }
+                    else if(!preexisting_conditions.equals("")){
                         preexistingconditionsflag=true;
                     }
 

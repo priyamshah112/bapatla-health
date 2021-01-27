@@ -32,6 +32,7 @@
                 android:layout_weight="0"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Outcome"
+                android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -48,6 +49,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Recovering"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="11dp"
                     android:textSize="14sp"
@@ -59,6 +61,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Recovered"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -70,6 +73,7 @@
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Recovered with sequelae"
                     android:layout_marginStart="11.5dp"
+                    android:textStyle="bold"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
 
@@ -79,6 +83,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Not recovered"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -89,6 +94,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Unknown"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -101,6 +107,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="20dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Reporter's Name"
                 android:textColor="@android:color/black"
@@ -129,6 +136,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="20dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Reporter's Designation"
                 android:textColor="@android:color/black"
@@ -157,6 +165,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="20dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Reporter's Mobile Number"
                 android:textColor="@android:color/black"
@@ -185,6 +194,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="20dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Reporter's Address"
                 android:textColor="@android:color/black"

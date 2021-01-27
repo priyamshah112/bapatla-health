@@ -35,7 +35,7 @@ public class Covid19AEFI1 extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("COVID-19 AEFI");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
 
         edittext = (EditText) findViewById(R.id.dateofvaccination);
         final String[] dateofvaccination = new String[1];
@@ -53,7 +53,9 @@ public class Covid19AEFI1 extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 dateofvaccination[0] = sdf.format(myCalendar.getTime());
-                edittext.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(dateofvaccination[0]);
             }
 

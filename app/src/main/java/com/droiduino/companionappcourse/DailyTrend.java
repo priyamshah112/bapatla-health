@@ -1,6 +1,7 @@
 package com.droiduino.companionappcourse;
 
 import android.content.res.Resources;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
@@ -22,7 +24,11 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.github.mikephil.charting.renderer.XAxisRenderer;
 import com.github.mikephil.charting.utils.EntryXComparator;
+import com.github.mikephil.charting.utils.MPPointF;
+import com.github.mikephil.charting.utils.Transformer;
+import com.github.mikephil.charting.utils.Utils;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import org.json.JSONArray;
@@ -236,27 +242,33 @@ public class DailyTrend extends AppCompatActivity {
 
                     LineData lineData = new LineData(lineDataSet);
 
-                    chart.getDescription().setText("Temperature");
+                    chart.getDescription().setText("");
                     chart.getDescription().setTextSize(12);
                     chart.setDrawMarkers(true);
                     chart.getXAxis().setPosition(XAxis.XAxisPosition.BOTH_SIDED);
                     chart.getXAxis().setValueFormatter(new ValueFormatter() {
                         @Override
                         public String getAxisLabel(float value, AxisBase axis) {
-                            System.out.println("xxxx="+xLabel+" value="+value);
+                            //System.out.println("xxxx="+xLabel+" value="+value);
                             if(timeline.length()==1)
                                 value=1.0f;
+                            System.out.println("x label="+xLabel.get((int)value-1));
                             return xLabel.get((int)value-1);
 //                            return "your text"+value;
                         }
                     });
+                    chart.setXAxisRenderer(new CustomXAxisRenderer(chart.getViewPortHandler(), chart.getXAxis(), chart.getTransformer(YAxis.AxisDependency.LEFT)));
 //                     chart.getXAxis().setValueFormatter(new MyXAxisValueFormatter());
                     chart.animateY(1000);
                     chart.getXAxis().setGranularityEnabled(true);
                     chart.getXAxis().setGranularity(1.0f);
 //                    chart.getXAxis().setLabelCount(lineDataSet.getEntryCount());
                     chart.getXAxis().setLabelCount(3);
+                    chart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
                     chart.setData(lineData);
+                    Legend l = chart.getLegend();
+
+                    chart.setExtraOffsets(5f,5f,5f,15f);
                     chart.invalidate();
                 }
 
@@ -265,6 +277,21 @@ public class DailyTrend extends AppCompatActivity {
             else{
 
             }
+        }
+    }
+
+    public class CustomXAxisRenderer extends XAxisRenderer {
+        public CustomXAxisRenderer(ViewPortHandler viewPortHandler, XAxis xAxis, Transformer trans) {
+            super(viewPortHandler, xAxis, trans);
+        }
+
+        @Override
+        protected void drawLabel(Canvas c, String formattedLabel, float x, float y, MPPointF anchor, float angleDegrees) {
+            String line[] = formattedLabel.split("\n");
+            System.out.println("formattedLabel="+formattedLabel);
+            System.out.println("LINE="+line[1].length());
+            Utils.drawXAxisValue(c, line[0], x, y, mAxisLabelPaint, anchor, 0);
+            Utils.drawXAxisValue(c, line[1].trim(), x + mAxisLabelPaint.getTextSize()-20, y + mAxisLabelPaint.getTextSize(), mAxisLabelPaint, anchor, 0);
         }
     }
 }

@@ -128,8 +128,18 @@ public class SuccessfulThermometerPairing extends AppCompatActivity {
 
                 float body_temperature = 96;
 
-                String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"date_time\": \""+datetime+"\", \"latitude\": \""+currentlatitude[0]+"\", \"longitude\": \""+currentlongitude[0]+"\"}";
-                new SuccessfulThermometerPairing.PostData().execute(payload);
+                session.settemperature(96); //setting it to default 96F
+                Fever f = new Fever();
+                String fever = f.findfever(96);
+                session.setfever(fever);
+
+                // This is the code to move to another screen
+                Intent intent = new Intent(SuccessfulThermometerPairing.this, BottomNav.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+
+//                String payload = "{\"userId\": \""+userId+"\", \"temperature\": \""+body_temperature+"\", \"date_time\": \""+datetime+"\", \"latitude\": \""+currentlatitude[0]+"\", \"longitude\": \""+currentlongitude[0]+"\"}";
+//                new SuccessfulThermometerPairing.PostData().execute(payload);
             }
         });
     }

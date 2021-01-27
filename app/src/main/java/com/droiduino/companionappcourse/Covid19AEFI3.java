@@ -20,7 +20,7 @@ public class Covid19AEFI3 extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("COVID-19 AEFI");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
 
         Button covid19aefi3submitbutton = findViewById(R.id.covid19aefi3submitbutton);
         covid19aefi3submitbutton.setOnClickListener(new View.OnClickListener() {

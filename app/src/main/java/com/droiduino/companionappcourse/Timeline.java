@@ -178,6 +178,7 @@ public class Timeline extends AppCompatActivity {
 
                         String date_time = j1.getString("date_time");
                         String date = date_time.substring(0,9);
+                        date=date.substring(0,2)+"."+date.substring(3,6).toUpperCase()+"."+date.substring(7);
                         String time = date_time.substring(10);
 //                        System.out.println(time);
 
@@ -191,6 +192,12 @@ public class Timeline extends AppCompatActivity {
                         lp.gravity = Gravity.CENTER_VERTICAL;
                         light_circle.setLayoutParams(lp);
                         light_circle.setBackgroundResource(R.drawable.blue_circle);
+
+                        ImageView first_line_light_circle = new ImageView(getApplicationContext());
+                        LinearLayout.LayoutParams fllp = new LinearLayout.LayoutParams(getpx(12), getpx(12));
+                        fllp.setMargins(getpx(9), getpx(3), getpx(6), 0);
+                        first_line_light_circle.setLayoutParams(fllp);
+                        first_line_light_circle.setBackgroundResource(R.drawable.blue_circle);
 
                         // ~~~~~~~~~~~~~~~``UI  CONSTANTS DEFINED ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -255,7 +262,7 @@ public class Timeline extends AppCompatActivity {
                         datetv.setText(date);
 
                         fc_l.addView(datetv);
-                        fc_l.addView(light_circle);
+                        fc_l.addView(first_line_light_circle);
 
                         if(j1.getDouble("temperature")!=0){
                             // displaying the temperature line
@@ -272,6 +279,7 @@ public class Timeline extends AppCompatActivity {
                             temptv.setGravity(Gravity.CENTER_VERTICAL);
                             temptv.setTypeface(attenroundnewbook);
                             temptv.setTextSize(14);
+                            temptv.setTypeface(temptv.getTypeface(), Typeface.BOLD);
                             temptv.setText(temptext);
 
                             fc_l.addView(temptv);
@@ -300,12 +308,13 @@ public class Timeline extends AppCompatActivity {
                             nc_l_v.setOrientation(LinearLayout.VERTICAL);
 
                             TextView uppertv = new TextView(getApplicationContext());
-                            uppertv.setLayoutParams(new LinearLayout.LayoutParams(400, LinearLayout.LayoutParams.WRAP_CONTENT));
+                            uppertv.setLayoutParams(new LinearLayout.LayoutParams(370, LinearLayout.LayoutParams.WRAP_CONTENT));
                             uppertv.setTextColor(Color.parseColor("#ffffff"));
                             uppertv.setGravity(Gravity.CENTER_VERTICAL);
                             uppertv.setTypeface(attenroundnewbook);
                             uppertv.setTextSize(14);
                             uppertv.setText(upperstring);
+                            uppertv.setTypeface(uppertv.getTypeface(), Typeface.BOLD);
                             nc_l_v.addView(uppertv);
 
                             TextView lowertv = new TextView(getApplicationContext());
@@ -328,6 +337,7 @@ public class Timeline extends AppCompatActivity {
                         timetv.setGravity(Gravity.CENTER_VERTICAL);
                         timetv.setTypeface(attenroundnewbook);
                         timetv.setTextSize(14);
+                        timetv.setTypeface(timetv.getTypeface(), Typeface.BOLD);
                         timetv.setText(time);
 
                         RelativeLayout.LayoutParams timetvparams = (RelativeLayout.LayoutParams)timetv.getLayoutParams();
@@ -345,6 +355,7 @@ public class Timeline extends AppCompatActivity {
                                 JSONObject j2 = new JSONObject(timeline.getString(j));
                                 String date_time2 = j2.getString("date_time");
                                 String date2 = date_time2.substring(0,9);
+                                date2=date2.substring(0,2)+"."+date2.substring(3,6).toUpperCase()+"."+date2.substring(7);
                                 String time2 = date_time2.substring(10);
                                 i=j; //getting all readings of a day together
                                 if(date2.equals(date)){
@@ -364,7 +375,8 @@ public class Timeline extends AppCompatActivity {
                                             LinearLayout.LayoutParams.WRAP_CONTENT,
                                             LinearLayout.LayoutParams.WRAP_CONTENT
                                     );
-                                    nc_l_params.setMargins(getpx(47),getpx(9),0,0);
+//                                    nc_l_params.setMargins(getpx(47),getpx(9),0,0);
+                                    nc_l_params.setMargins(getpx(52),getpx(9),0,0);
                                     nc_l.setLayoutParams(nc_l_params);
                                     nc_l.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -406,6 +418,7 @@ public class Timeline extends AppCompatActivity {
                                         temptv.setGravity(Gravity.CENTER_VERTICAL);
                                         temptv.setTypeface(attenroundnewbook);
                                         temptv.setTextSize(14);
+                                        temptv.setTypeface(temptv.getTypeface(), Typeface.BOLD);
                                         temptv.setText(temptext);
 
                                         nc_l.addView(temptv);
@@ -435,12 +448,13 @@ public class Timeline extends AppCompatActivity {
                                         nc_l_v.setOrientation(LinearLayout.VERTICAL);
 
                                         TextView uppertv = new TextView(getApplicationContext());
-                                        uppertv.setLayoutParams(new LinearLayout.LayoutParams(400, LinearLayout.LayoutParams.WRAP_CONTENT));
+                                        uppertv.setLayoutParams(new LinearLayout.LayoutParams(370, LinearLayout.LayoutParams.WRAP_CONTENT));
                                         uppertv.setTextColor(Color.parseColor("#ffffff"));
                                         uppertv.setGravity(Gravity.CENTER_VERTICAL);
                                         uppertv.setTypeface(attenroundnewbook);
                                         uppertv.setTextSize(14);
                                         uppertv.setText(upperstring);
+                                        uppertv.setTypeface(uppertv.getTypeface(), Typeface.BOLD);
                                         nc_l_v.addView(uppertv);
 
                                         TextView lowertv = new TextView(getApplicationContext());
@@ -463,6 +477,7 @@ public class Timeline extends AppCompatActivity {
                                     nctimetv.setGravity(Gravity.CENTER_VERTICAL);
                                     nctimetv.setTypeface(attenroundnewbook);
                                     nctimetv.setTextSize(14);
+                                    nctimetv.setTypeface(nctimetv.getTypeface(), Typeface.BOLD);
                                     nctimetv.setText(time2);
 
                                     RelativeLayout.LayoutParams nctimetvparams = (RelativeLayout.LayoutParams)nctimetv.getLayoutParams();

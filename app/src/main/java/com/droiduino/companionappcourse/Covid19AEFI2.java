@@ -36,7 +36,7 @@ public class Covid19AEFI2 extends AppCompatActivity {
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
         getSupportActionBar().setTitle("COVID-19 AEFI");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false); //displays back button on app bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
 
         final Spinner aefsdropdown = findViewById(R.id.aefsdropdown);
         //create a list of items for the spinner.
@@ -63,7 +63,9 @@ public class Covid19AEFI2 extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 dateofadverseevents[0] = sdf.format(myCalendar.getTime());
-                edittext.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(dateofadverseevents[0]);
             }
 
@@ -130,7 +132,9 @@ public class Covid19AEFI2 extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 dateofdeath[0] = sdf.format(myCalendar.getTime());
-                edittext2.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext2.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(dateofdeath[0]);
             }
 

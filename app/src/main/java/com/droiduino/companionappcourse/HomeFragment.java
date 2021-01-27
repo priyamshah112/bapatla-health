@@ -117,7 +117,8 @@ public class HomeFragment extends Fragment {
             else{
                 homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
             }
-            home_fever_text.setTextColor(0xAA74BD4E);
+//            home_fever_text.setTextColor(0xAA74BD4E);
+            home_fever_text.setTextColor(Color.parseColor("#73ff00"));
         }
         else if(temperature>=99 && temperature<101){
 //            return("Mild Fever");
@@ -127,7 +128,8 @@ public class HomeFragment extends Fragment {
             else{
                 homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar));
             }
-            home_fever_text.setTextColor(0xAAF1D316);
+//            home_fever_text.setTextColor(0xAAF1D316);
+            home_fever_text.setTextColor(Color.parseColor("#F1D316"));
         }
         else if(temperature>=101 && temperature<104){
 //            return("Moderate Fever");
@@ -137,7 +139,8 @@ public class HomeFragment extends Fragment {
             else{
                 homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar));
             }
-            home_fever_text.setTextColor(0xAAF39700);
+//            home_fever_text.setTextColor(0xAAF39700);
+            home_fever_text.setTextColor(Color.parseColor("#ffc800"));
         }
         else if(temperature>=104){
 //            return("High Fever");
@@ -147,7 +150,8 @@ public class HomeFragment extends Fragment {
             else{
                 homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar));
             }
-            home_fever_text.setTextColor(0xAAD44E57);
+//            home_fever_text.setTextColor(0xAAD44E57);
+            home_fever_text.setTextColor(Color.parseColor("#D44E57"));
         }
         else {
 //            return "No Fever";
@@ -157,7 +161,8 @@ public class HomeFragment extends Fragment {
             else{
                 homepage_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
             }
-            home_fever_text.setTextColor(0xAA74BD4E);
+//            home_fever_text.setTextColor(0xAA74BD4E);
+            home_fever_text.setTextColor(Color.parseColor("#73ff00"));
         }
 
         TinyDB tinydb = new TinyDB(getActivity().getApplicationContext());
@@ -352,6 +357,7 @@ public class HomeFragment extends Fragment {
 
                         String date_time = j1.getString("date_time");
                         String date = date_time.substring(0,9);
+                        date=date.substring(0,2)+"."+date.substring(3,6).toUpperCase()+"."+date.substring(7);
                         String time = date_time.substring(10);
 //                        System.out.println(time);
 
@@ -452,6 +458,7 @@ public class HomeFragment extends Fragment {
                             temptv.setGravity(Gravity.CENTER_VERTICAL);
                             temptv.setTypeface(attenroundnewbook);
                             temptv.setTextSize(14);
+                            temptv.setTypeface(temptv.getTypeface(), Typeface.BOLD);
                             temptv.setText(temptext);
 
                             fc_l.addView(temptv);
@@ -486,6 +493,7 @@ public class HomeFragment extends Fragment {
                             uppertv.setTypeface(attenroundnewbook);
                             uppertv.setTextSize(14);
                             uppertv.setText(upperstring);
+                            uppertv.setTypeface(uppertv.getTypeface(), Typeface.BOLD);
                             nc_l_v.addView(uppertv);
 
                             TextView lowertv = new TextView(getActivity().getApplicationContext());
@@ -508,6 +516,7 @@ public class HomeFragment extends Fragment {
                         timetv.setGravity(Gravity.CENTER_VERTICAL);
                         timetv.setTypeface(attenroundnewbook);
                         timetv.setTextSize(14);
+                        timetv.setTypeface(timetv.getTypeface(), Typeface.BOLD);
                         timetv.setText(time);
 
                         RelativeLayout.LayoutParams timetvparams = (RelativeLayout.LayoutParams)timetv.getLayoutParams();
@@ -526,6 +535,7 @@ public class HomeFragment extends Fragment {
                                 JSONObject j2 = new JSONObject(timeline.getString(j));
                                 String date_time2 = j2.getString("date_time");
                                 String date2 = date_time2.substring(0,9);
+                                date2=date2.substring(0,2)+"."+date2.substring(3,6).toUpperCase()+"."+date2.substring(7);
                                 String time2 = date_time2.substring(10);
                                 i=j; //getting all readings of a day together
                                 if(date2.equals(date)){
@@ -545,7 +555,8 @@ public class HomeFragment extends Fragment {
                                             LinearLayout.LayoutParams.WRAP_CONTENT,
                                             LinearLayout.LayoutParams.WRAP_CONTENT
                                     );
-                                    nc_l_params.setMargins(getpx(47),getpx(9),0,0);
+//                                    nc_l_params.setMargins(getpx(47),getpx(9),0,0);
+                                    nc_l_params.setMargins(getpx(53),getpx(9),0,0);
                                     nc_l.setLayoutParams(nc_l_params);
                                     nc_l.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -587,6 +598,7 @@ public class HomeFragment extends Fragment {
                                         temptv.setGravity(Gravity.CENTER_VERTICAL);
                                         temptv.setTypeface(attenroundnewbook);
                                         temptv.setTextSize(14);
+                                        temptv.setTypeface(temptv.getTypeface(), Typeface.BOLD);
                                         temptv.setText(temptext);
 
                                         nc_l.addView(temptv);
@@ -622,6 +634,7 @@ public class HomeFragment extends Fragment {
                                         uppertv.setTypeface(attenroundnewbook);
                                         uppertv.setTextSize(14);
                                         uppertv.setText(upperstring);
+                                        uppertv.setTypeface(uppertv.getTypeface(), Typeface.BOLD);
                                         nc_l_v.addView(uppertv);
 
                                         TextView lowertv = new TextView(getActivity().getApplicationContext());
@@ -644,6 +657,7 @@ public class HomeFragment extends Fragment {
                                     nctimetv.setGravity(Gravity.CENTER_VERTICAL);
                                     nctimetv.setTypeface(attenroundnewbook);
                                     nctimetv.setTextSize(14);
+                                    nctimetv.setTypeface(nctimetv.getTypeface(), Typeface.BOLD);
                                     nctimetv.setText(time2);
 
                                     RelativeLayout.LayoutParams nctimetvparams = (RelativeLayout.LayoutParams)nctimetv.getLayoutParams();

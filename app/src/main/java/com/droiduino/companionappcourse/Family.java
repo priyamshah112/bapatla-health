@@ -68,7 +68,9 @@ public class Family extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 birthday[0] = sdf.format(myCalendar.getTime());
-                edittext.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(birthday[0]);
             }
 

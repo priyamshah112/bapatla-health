@@ -49,7 +49,7 @@ public class Covid19Vaccine extends AppCompatActivity {
 
         //APP BAR PROPERTIES
         // getSupportActionBar().hide(); // hides appbar
-        getSupportActionBar().setTitle("Covid 19 Vaccine");
+        getSupportActionBar().setTitle("COVID-19 VACCINE");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //displays back button on app bar
 
         edittext = (EditText) findViewById(R.id.dateofvaccination);
@@ -68,7 +68,9 @@ public class Covid19Vaccine extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 dateofvaccination[0] = sdf.format(myCalendar.getTime());
-                edittext.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(dateofvaccination[0]);
             }
 

@@ -47,7 +47,8 @@
                         android:layout_gravity="center_vertical"
                         android:textColor="@color/colorPrimary"
                         android:fontFamily="@font/attenroundnewregular"
-                        android:textSize="28sp"/>
+                        android:textSize="28sp"
+                        android:textStyle="bold"/>
 
 
                 </LinearLayout>
@@ -78,6 +79,7 @@
                     android:background="@drawable/bnav_btn"
                     android:drawableLeft="@drawable/person_icon"
                     android:text="Chomo"
+                    android:textStyle="bold"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/attenroundnewregular"
                     android:textSize="18sp"

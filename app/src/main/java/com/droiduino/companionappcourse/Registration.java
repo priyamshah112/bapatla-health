@@ -100,7 +100,9 @@ public class Registration extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 birthday[0] = sdf.format(myCalendar.getTime());
-                edittext.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(birthday[0]);
             }
 
@@ -133,6 +135,26 @@ public class Registration extends AppCompatActivity {
                     registerButton.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.disabled_rounded_corner_button));
                 }
 
+            }
+        });
+
+        TextView privacyText = findViewById(R.id.privacyText);
+        privacyText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(Registration.this, PrivacyPolicy.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView termsText = findViewById(R.id.termsText);
+        termsText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // This is the code to move to another screen
+                Intent intent = new Intent(Registration.this, TermsofService.class);
+                startActivity(intent);
             }
         });
 

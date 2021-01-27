@@ -81,7 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
-                    android:text="  Shortness of Breath or Difficulty Breathing"
+                    android:text="  Difficulty Breathing"
                     android:textColor="@android:color/black"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Companion App Course</string>
+    <string name="app_name">Bapatla Health</string>
 
     <string name="call_support_sr_no">Serial Number</string>
     <string name="call_support_email">Email Address</string>
@@ -11,7 +11,7 @@
     <string name="register_first_name">Enter First Name</string>
     <string name="register_last_name">Enter Last Name</string>
     <string name="register_aadhaar_number">12 Digit Aadhaar Number</string>
-    <string name="register_birth_date">YYYY-MM-DD</string>
+    <string name="register_birth_date">DD-MM-YYYY</string>
     <string name="register_mobile_no">Mobile No.</string>
     <string name="register_email_id">Enter Email ID</string>
     <string name="register_home_address">House No, Landmark, Village, Mandal</string>

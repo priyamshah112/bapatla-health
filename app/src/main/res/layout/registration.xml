@@ -318,18 +318,75 @@
 
             <CheckBox
                 android:id="@+id/termsCheckBox"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="43dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="17dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="42.5dp"
+                android:layout_marginEnd="17dp"
                 android:fontFamily="@font/attenroundnewbook"
-                android:paddingBottom="15dp"
-                android:text="By clicking Register you agree to our Terms of use and Privacy Policy."
+                app:buttonTint="@color/colorPrimary"
+                android:text="By clicking Register you agree to our"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="50dp"
+                >
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="right"-->
+<!--                    android:layout_marginStart="17dp"-->
+<!--                    android:layout_marginTop="7dp"-->
+<!--                    android:fontFamily="@font/attenroundnewbook"-->
+<!--                    android:textColor="@android:color/black"-->
+<!--                    android:text="Read our "-->
+<!--                    android:textSize="14sp"-->
+<!--                    android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/privacyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:text="Privacy Policy"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textColor="@color/colorPrimary"
+                    android:text=" and "
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/termsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/attenroundnewbook"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:text="Terms of Service"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
 
             <TextView
                 android:id="@+id/errorText"

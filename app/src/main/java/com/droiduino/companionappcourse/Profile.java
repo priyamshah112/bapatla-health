@@ -26,8 +26,10 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -72,7 +74,9 @@ public class Profile extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
 
                 birthday[0] = sdf.format(myCalendar.getTime());
-                edittext.setText(sdf.format(myCalendar.getTime()));
+
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+                edittext.setText(sdf1.format(myCalendar.getTime()));
                 System.out.println(birthday[0]);
             }
 
@@ -258,8 +262,14 @@ public class Profile extends AppCompatActivity {
                     aadhar_number.setText(jobj.getString("aadhar_number"));
 
                     TextView birthdayfield = findViewById(R.id.birthday);
-                    birthdayfield.setText(jobj.getString("birthday"));
                     birthday[0] = jobj.getString("birthday");
+
+                    SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+                    SimpleDateFormat format2 = new SimpleDateFormat("dd-MM-yyyy");
+                    Date date = format1.parse(jobj.getString("birthday"));
+                    System.out.println(format2.format(date));
+                    birthdayfield.setText(format2.format(date));
+
 
                     TextView mobile = findViewById(R.id.mobile);
                     mobile.setText(jobj.getString("mobile"));
@@ -287,7 +297,7 @@ public class Profile extends AppCompatActivity {
                     updateprofilebutton.setEnabled(true);
                     updateprofilebutton.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.rounded_corner_button));
 
-                } catch (JSONException e) {
+                } catch (JSONException | ParseException e) {
                     e.printStackTrace();
                 }
 

@@ -72,6 +72,24 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        LinearLayout clustermapButton = (LinearLayout)view.findViewById(R.id.clustermapButton);
+        clustermapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), HeatMapWebview.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
+        LinearLayout resourcemapButton = (LinearLayout)view.findViewById(R.id.resourcemapButton);
+        resourcemapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(getActivity(), HeatMapWebview.class);
+                getActivity().startActivity(myIntent);
+            }
+        });
+
         return view;
     }
 }

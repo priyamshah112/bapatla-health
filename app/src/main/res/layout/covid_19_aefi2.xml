@@ -30,6 +30,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Please select the type of AEFIS"
                 android:textColor="@android:color/black"
@@ -52,6 +53,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Please select adverse events"
                 android:textColor="@android:color/black"
@@ -73,6 +75,7 @@
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="11dp"
                     android:textSize="14sp"
+                    android:textStyle="bold"
                     android:fontFamily="@font/attenroundnewbook"/>
 
                 <CheckBox
@@ -81,6 +84,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Seizures"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -91,6 +95,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Abscess"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -101,6 +106,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Sepsis"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -111,6 +117,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Encephalopathy"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -121,6 +128,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Toxic shock syndrome"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -131,6 +139,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Thrombocytopenia"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -141,6 +150,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Anaphylaxis"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -151,6 +161,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Fever≥38°C(100.4)"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -163,6 +174,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="20dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Date of adverse events started"
                 android:textColor="@android:color/black"
@@ -192,6 +204,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Time of adverse events started"
                 android:textColor="@android:color/black"
@@ -220,6 +233,7 @@
                 android:layout_gravity="left"
                 android:layout_marginTop="15dp"
                 android:layout_weight="0"
+                android:textStyle="bold"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Notes"
                 android:textColor="@android:color/black"
@@ -248,6 +262,7 @@
                 android:layout_weight="0"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Serious Events"
+                android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -264,6 +279,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Life threatening"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:layout_marginTop="11dp"
                     android:textSize="14sp"
@@ -275,6 +291,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Disability"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -285,6 +302,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Hospitalization"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -295,6 +313,7 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:text="  Death"
+                    android:textStyle="bold"
                     android:layout_marginStart="11.5dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/attenroundnewbook"/>
@@ -309,6 +328,7 @@
                 android:layout_weight="0"
                 android:fontFamily="@font/attenroundnewbook"
                 android:text="Date of Death"
+                android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 

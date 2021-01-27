@@ -84,7 +84,7 @@ public class HealthGuidance extends AppCompatActivity {
             else{
                 health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
             }
-            health_guidance_fever_text.setTextColor(0xAA74BD4E);
+            health_guidance_fever_text.setTextColor(Color.parseColor("#73ff00"));
         }
         else if(temperature>=99 && temperature<101){
 //            return("Mild Fever");
@@ -94,7 +94,7 @@ public class HealthGuidance extends AppCompatActivity {
             else{
                 health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.mild_fever_bar));
             }
-            health_guidance_fever_text.setTextColor(0xAAF1D316);
+            health_guidance_fever_text.setTextColor(Color.parseColor("#F1D316"));
         }
         else if(temperature>=101 && temperature<104){
 //            return("Moderate Fever");
@@ -104,7 +104,7 @@ public class HealthGuidance extends AppCompatActivity {
             else{
                 health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.moderate_fever_bar));
             }
-            health_guidance_fever_text.setTextColor(0xAAF39700);
+            health_guidance_fever_text.setTextColor(Color.parseColor("#ffc800"));
         }
         else if(temperature>=104){
 //            return("High Fever");
@@ -114,7 +114,7 @@ public class HealthGuidance extends AppCompatActivity {
             else{
                 health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.high_fever_bar));
             }
-            health_guidance_fever_text.setTextColor(0xAAD44E57);
+            health_guidance_fever_text.setTextColor(Color.parseColor("#D44E57"));
         }
         else {
 //            return "No Fever";
@@ -124,7 +124,7 @@ public class HealthGuidance extends AppCompatActivity {
             else{
                 health_guidance_temperature_bar.setImageDrawable(getResources().getDrawable(R.drawable.no_fever_bar));
             }
-            health_guidance_fever_text.setTextColor(0xAA74BD4E);
+            health_guidance_fever_text.setTextColor(Color.parseColor("#73ff00"));
         }
 
         final TextView health_guidance_temperature = (TextView)findViewById(R.id.health_guidance_temperature);
@@ -286,7 +286,7 @@ public class HealthGuidance extends AppCompatActivity {
                 String symptoms=session.getSymptomsFlag();
                 String preexistingconditions=session.getConditionsFlag();
                 String covid = session.getVitalsCovid19Flag();
-                System.out.println(covid);
+                System.out.println("symptoms="+symptoms);
                 if(symptoms!="") {
                     for (int i = 0; i <timeline.length(); i++) {
                         try {
