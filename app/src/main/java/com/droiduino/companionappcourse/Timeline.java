@@ -254,7 +254,7 @@ public class Timeline extends AppCompatActivity {
                         fc_l.setOrientation(LinearLayout.HORIZONTAL);
 
                         TextView datetv = new TextView(getApplicationContext());
-                        datetv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+                        datetv.setLayoutParams(new LinearLayout.LayoutParams(104, LinearLayout.LayoutParams.WRAP_CONTENT));
                         datetv.setTextColor(Color.parseColor("#ffffff"));
                         datetv.setGravity(Gravity.CENTER_VERTICAL);
                         datetv.setTypeface(attenroundnewbold);
@@ -308,7 +308,7 @@ public class Timeline extends AppCompatActivity {
                             nc_l_v.setOrientation(LinearLayout.VERTICAL);
 
                             TextView uppertv = new TextView(getApplicationContext());
-                            uppertv.setLayoutParams(new LinearLayout.LayoutParams(370, LinearLayout.LayoutParams.WRAP_CONTENT));
+                            uppertv.setLayoutParams(new LinearLayout.LayoutParams(365, LinearLayout.LayoutParams.WRAP_CONTENT));
                             uppertv.setTextColor(Color.parseColor("#ffffff"));
                             uppertv.setGravity(Gravity.CENTER_VERTICAL);
                             uppertv.setTypeface(attenroundnewbook);
@@ -376,7 +376,7 @@ public class Timeline extends AppCompatActivity {
                                             LinearLayout.LayoutParams.WRAP_CONTENT
                                     );
 //                                    nc_l_params.setMargins(getpx(47),getpx(9),0,0);
-                                    nc_l_params.setMargins(getpx(52),getpx(9),0,0);
+                                    nc_l_params.setMargins(getpx(54),getpx(9),0,0);
                                     nc_l.setLayoutParams(nc_l_params);
                                     nc_l.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -448,7 +448,7 @@ public class Timeline extends AppCompatActivity {
                                         nc_l_v.setOrientation(LinearLayout.VERTICAL);
 
                                         TextView uppertv = new TextView(getApplicationContext());
-                                        uppertv.setLayoutParams(new LinearLayout.LayoutParams(370, LinearLayout.LayoutParams.WRAP_CONTENT));
+                                        uppertv.setLayoutParams(new LinearLayout.LayoutParams(365, LinearLayout.LayoutParams.WRAP_CONTENT));
                                         uppertv.setTextColor(Color.parseColor("#ffffff"));
                                         uppertv.setGravity(Gravity.CENTER_VERTICAL);
                                         uppertv.setTypeface(attenroundnewbook);
