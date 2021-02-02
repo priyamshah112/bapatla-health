@@ -254,7 +254,7 @@ public class Timeline extends AppCompatActivity {
                         fc_l.setOrientation(LinearLayout.HORIZONTAL);
 
                         TextView datetv = new TextView(getApplicationContext());
-                        datetv.setLayoutParams(new LinearLayout.LayoutParams(104, LinearLayout.LayoutParams.WRAP_CONTENT));
+                        datetv.setLayoutParams(new LinearLayout.LayoutParams(143, LinearLayout.LayoutParams.WRAP_CONTENT));
                         datetv.setTextColor(Color.parseColor("#ffffff"));
                         datetv.setGravity(Gravity.CENTER_VERTICAL);
                         datetv.setTypeface(attenroundnewbold);

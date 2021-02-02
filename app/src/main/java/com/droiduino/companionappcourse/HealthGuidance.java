@@ -272,7 +272,7 @@ public class HealthGuidance extends AppCompatActivity {
                 agetv.setGravity(Gravity.CENTER_VERTICAL);
                 agetv.setTypeface(attenroundnewregular);
                 agetv.setTextSize(20);
-                agetv.setText(difference_In_Years+" years old");
+                agetv.setText(difference_In_Years+" yr");
 
                 flexboxLayout.addView(agetv);
 
